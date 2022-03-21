@@ -4,8 +4,8 @@ import "./products.css"
 
  
 const Products = React.memo(({products}) => {
-   
- 
+    
+        
     return (
          <div className="container">
             
