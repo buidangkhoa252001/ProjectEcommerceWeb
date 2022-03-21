@@ -105,7 +105,8 @@ function Cart() {
                     <div className="detail cart" key={item?._id}>
                         <img src={item?.images?.url} alt="test" />
                         <div className="box-detail">
-                            <h2>{item.title}</h2>
+                            <h2>{item.title}</h2> style={{ textDecoration: "none" , cursor: "pointer" }}
+                          
                             <h3>${item.price * item.quantity}</h3>
                             <p>{item.description}</p>
                             <p>{item.content}</p>
@@ -125,7 +126,7 @@ function Cart() {
             }
                 
             <div className="total">
-                <h3>Total: ${total}  </h3>  
+                <h3>Total: ${total}     </h3>  
                 <PaypalButton
                   total={total}
                 tranSuccess={tranSuccess}

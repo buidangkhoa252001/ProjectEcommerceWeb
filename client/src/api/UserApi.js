@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "../axios/axios"
 
 import { addCart, getUserFailure, getUserStart, getUserSuccess } from "../redux/userSlice"
 import { getCart } from './CartAPI';

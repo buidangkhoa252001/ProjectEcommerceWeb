@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../axios/axios"
 import { logOutCart } from "../redux/cartSlice";
 import { logOutHistory } from "../redux/historySlice";
 import {  loginSuccess,loginFailure,loginStart, getToken, logOut } from "../redux/loginSlice";

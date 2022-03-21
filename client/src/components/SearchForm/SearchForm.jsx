@@ -3,7 +3,7 @@ import './SearchForm.css'
 import { useNavigate } from 'react-router-dom';
 const SearchForm = () => {
 
-  const ref = useRef(0)
+
   const inputRef = useRef()
   const navigate = useNavigate()
   const handleSubmit = (e)=>{
@@ -14,7 +14,7 @@ const SearchForm = () => {
   }
   return (
     <div className='search_form'>
-      <h2>Render: {ref.current++}</h2>
+    
   
       <form onSubmit={handleSubmit}>
         <input type="text" ref={inputRef} />

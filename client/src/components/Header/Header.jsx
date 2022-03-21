@@ -35,10 +35,10 @@ const Header = () => {
     const loggedRouter = () =>{
       return(
           <>
-              <li><Link to="/history">History</Link></li>
-              <li><Link to="/" onClick={logoutUser}>Logout</Link></li>
+              <li><Link style={{ textDecoration: "none" }} to="/history">History</Link></li>
               <li onClick={() => setOpenSearch(true)}>Search</li>
               <li onClick={() => setOpenFilter(true)}>Filter </li>
+              <li><Link to="/" style={{ textDecoration: "none" , cursor: "pointer" }}  onClick={logoutUser}>Logout</Link></li>
               {
         openSearch &&
         <Modal titleTxt="Search" setOpen={setOpenSearch}>
@@ -57,8 +57,8 @@ const Header = () => {
   const adminRouter = () =>{
       return(
           <>
-              <li><Link to="/create_product">Create Product</Link></li>
-              <li><Link to="/category">Categories</Link></li>
+              <li><Link style={{ textDecoration: "none" }} to="/create_product">Create Product</Link></li>
+              <li><Link style={{ textDecoration: "none" }} to="/category">Categories</Link></li>
           </>
       )
   }
@@ -69,12 +69,12 @@ const Header = () => {
             </div>
             <div>
                 <h1>
-                <Link to="/">{admin ? 'Admin' : 'DevAT Shop'}</Link>
+                <Link style={{ textDecoration: "none" }} to="/">{admin ? 'Admin' : 'DevAT Shop'}</Link>
                 </h1>
 
             </div>
             <ul>
-            <li><Link to="/products">{admin ? 'Products' : 'Shop'}</Link></li>
+            <li><Link style={{ textDecoration: "none" }} to="/products">{admin ? 'Products' : 'Shop'}</Link></li>
 
         {admin && adminRouter()}
         {

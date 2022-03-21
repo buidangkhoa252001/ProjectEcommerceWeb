@@ -19,6 +19,8 @@ header ul li{
     display: inline-block;
     opacity: 0.7;
     padding: 0 20px;
+    cursor: pointer;
+    text-transform:uppercase;
 }
 header ul li:hover{
     opacity: 1;
@@ -39,4 +41,7 @@ header ul li:hover{
     right: -10px;
     padding: 5px 7px;
     font-size: 10px;
+}
+li{
+   
 }

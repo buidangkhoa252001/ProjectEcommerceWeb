@@ -31,12 +31,11 @@ const Product = () => {
         `/api/products?limit=${limit}&page=${page}&sort=${sort}`
      )
     useEffect(()=>{
-      dispatch(getPageSuccess(
+     /*  dispatch(getPageSuccess(
          { page: page1,
           sort: sort1}
-      ))
-/*       console.log(sort1)
-      console.log(page1) */
+      )) */
+
     },[page1,sort1,dispatch])
     useEffect(() => {
           if(data?.products) setProducts(data.products)                 

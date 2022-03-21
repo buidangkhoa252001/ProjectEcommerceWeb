@@ -1,6 +1,7 @@
-import axios from "axios"
+
 import { getHistoryFailure, getHistoryStart, getHistorySuccess } from "../redux/historySlice"
 
+import axios from "../axios/axios"
 
 export const getHistory =async(dispatch,token)=>{
     if(token){
@@ -10,8 +11,8 @@ export const getHistory =async(dispatch,token)=>{
                 headers: {Authorization:token}
             })
             dispatch(getHistorySuccess(res.data))
-           
-          
+            console.log(res)
+            
         }catch(err){
               dispatch(getHistoryFailure())
               alert(err.response.data.msg)

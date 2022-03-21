@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+ }
   .sorting select{
     margin-right: 5px;
     border: 2px solid rgb(0, 172, 172);

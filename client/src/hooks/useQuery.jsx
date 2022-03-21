@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "../axios/axios"
 import React from 'react';
 
 import { useState, useEffect } from 'react';

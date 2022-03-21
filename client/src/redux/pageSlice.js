@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+/* import { createSlice } from '@reduxjs/toolkit';
 
 
 export const pageSlice = createSlice({
@@ -24,4 +24,4 @@ export const pageSlice = createSlice({
 
 })
 export const { getPageSuccess, logOutPage} = pageSlice.actions
-export default pageSlice.reducer
+export default pageSlice.reducer */

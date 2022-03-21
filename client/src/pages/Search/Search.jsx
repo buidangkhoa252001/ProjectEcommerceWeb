@@ -6,7 +6,7 @@ import useQuery from '../../hooks/useQuery'
 
 const Search = () => {
   const { value } = useParams()
-  console.log(value)
+
   const [products, setProducts] = useState([])
   
   const { data, loading, error } = useQuery(`/api/products?title[regex]=${value}`)

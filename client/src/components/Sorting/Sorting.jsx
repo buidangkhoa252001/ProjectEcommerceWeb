@@ -1,6 +1,6 @@
 
 import React from 'react'
-
+import "./Sorting.css"
 import useCustomRouter from '../../hooks/useCustomeRouter';
 const Sorting = React.memo(({ page, sort }) => {
   const { pushQuery } = useCustomRouter()
@@ -20,7 +20,7 @@ const Sorting = React.memo(({ page, sort }) => {
         <option value="-price">Price: Hight-Low</option>
         <option value="price">Price: Low-Hight</option>
       </select>
-      <h2>&#8678;Sort</h2>
+  
     </div>
   )
 })
