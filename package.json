@@ -1,5 +1,5 @@
 {
-  "name": "yarn",
+  "name": "khoa",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bkhoa <buidangkhoa252001@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -25,5 +25,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": "https://github.com/buidangkhoa252001/ProjectEcommerceWeb.git"
 }
