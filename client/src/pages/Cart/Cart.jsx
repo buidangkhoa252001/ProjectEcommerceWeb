@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import axios from 'axios'
+import axios from "../../axios/axios"
 import "./cart.css"
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
@@ -105,7 +105,7 @@ function Cart() {
                     <div className="detail cart" key={item?._id}>
                         <img src={item?.images?.url} alt="test" />
                         <div className="box-detail">
-                            <h2>{item.title}</h2> style={{ textDecoration: "none" , cursor: "pointer" }}
+                            <h2>{item.title}</h2> 
                           
                             <h3>${item.price * item.quantity}</h3>
                             <p>{item.description}</p>
