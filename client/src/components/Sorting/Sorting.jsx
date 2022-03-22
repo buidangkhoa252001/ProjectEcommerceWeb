@@ -2,13 +2,13 @@
 import React from 'react'
 import "./Sorting.css"
 import useCustomRouter from '../../hooks/useCustomeRouter';
-const Sorting = React.memo(({ page, sort }) => {
+const Sorting = React.memo(({ page, sort,search }) => {
   const { pushQuery } = useCustomRouter()
 
   const handleSort = (e) => {
     const { value } = e.target;
  
-    pushQuery({page, sort:value})
+    pushQuery({page, sort:value ,search })
   }
 
 

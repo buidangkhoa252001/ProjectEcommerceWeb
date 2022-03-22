@@ -99,10 +99,16 @@ function Cart() {
              <h2 style={{textAlign: "center", fontSize: "8rem"}}>Cart Empty</h2></div>
                 )
     return (
-        <div>
+       
+    <div className="cart">
+         <div className="cart-container">
+            <div className="cart-container_title">
+              <span>Shopping Cart</span>
+             <a href="#" className="btn-remove_cart">Remove all</a>
+            </div>
             {
                cart1.map((item)=>(
-                    <div className="detail cart" key={item?._id}>
+                   /*  <div className="detail cart" key={item?._id}>
                         <img src={item?.images?.url} alt="test" />
                         <div className="box-detail">
                             <h2>{item.title}</h2> 
@@ -121,19 +127,54 @@ function Cart() {
                                 X
                             </div>
                         </div>
+                    </div> */
+                <div className="cart-container_detail" key={item?._id} >
+                    <img className="cart-container_detail-img"  src={item?.images?.url}></img>   
+                    <div className="cart-container_detail-title">
+                        <h1>{item.title}</h1>
+                        <span>{item.description}</span>
                     </div>
+                    <div className="cart-container_detail-change">
+                        <button onClick={()=>inscrease(item._id)}><i className="fa-solid fa-plus"></i></button>
+                        <span>{item.quantity}</span>
+                        <button  onClick={()=>descrease(item)}><i className="fa-solid fa-minus"></i></button>
+                    </div>
+                    <div className="cart-container_detail-price">
+                        <span>${item.price * item.quantity}</span>
+                        <a href="#" onClick={()=>removeCart(item._id)} className="cart-container_detail-price-remove"><i className="fa-solid fa-delete-left"></i></a>
+                    </div>
+                </div>
             )) 
             }
-                
-            <div className="total">
+                <div className="cart-container_line"></div>
+
+                <div className="cart-container_total-price">
+                    <div className="cart-container_total-price-icon">
+                        <i className="fa-solid fa-basket-shopping"></i>
+                    </div>         
+                    <div className="cart-container_total-price-detail">
+                        <div className="cart-container_total-price-detail-title">
+                            <span>Sub-Total</span>
+                            <h1> ${total}</h1>
+                        </div>
+                        <div className="cart-container_total-price-detail-button">
+                        <PaypalButton
+                        total={total}
+                        tranSuccess={tranSuccess}
+                         />
+                        </div>
+                    </div>
+                </div>
+           {/*  <div className="total">
                 <h3>Total: ${total}     </h3>  
                 <PaypalButton
                   total={total}
                 tranSuccess={tranSuccess}
                 />
               
-            </div>
+            </div> */}
         </div>
+ </div>
     )
 }
 

@@ -41,12 +41,11 @@ export const refreshToken = async()=>{
 }
 export const logOutUser = async(dispatch)=>{
     try{
+        await axios.get('/user/logout')
         dispatch(logOut())
         dispatch(logOutCart())
         dispatch(logOutUserStore())
         dispatch(logOutHistory())
-
-        await axios.get('/user/logout')
         localStorage.removeItem("firstLogin")
     }catch(err){
         dispatch(loginFailure())

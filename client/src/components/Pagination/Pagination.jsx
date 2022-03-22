@@ -3,13 +3,14 @@ import "./Pagination.css"
 
 import usePagination from './../../hooks/usePagination';
 import { useSelector } from 'react-redux';
-const Pagination = React.memo(({totalPages,page,sort}) => {
+const Pagination = React.memo(({totalPages,page,sort,search}) => {
 
-  const {firstArr, lastArr,  isActive, prev, next, jump} = usePagination(totalPages,page,sort)
+  const {firstArr, lastArr,  isActive, prev, next, jump} = usePagination(totalPages,page,sort,search)
 
   return (
-    <div className='pagination'>
   
+    <div className='pagination'>
+      
       <button onClick={()=>prev()}>&laquo;</button>
       {
         firstArr.map(num => (
@@ -30,6 +31,7 @@ const Pagination = React.memo(({totalPages,page,sort}) => {
       }
       <button onClick={()=>next()}>&raquo;</button>
     </div>
+    
   )
 })
 

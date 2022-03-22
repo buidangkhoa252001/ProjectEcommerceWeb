@@ -5,12 +5,7 @@ const useCustomRouter = () => {
   const { pathname, search } = useLocation();
 
   const pushQuery = (query) => {
-   /*  const query = {};
-    if(page) query.page = page;
-    if(sort) query.sort = sort;
-    const newQuery = new URLSearchParams(query).toString()
-
-    navigate(`${pathname}?${newQuery}`) */
+  console.log(pathname)
    
     const newQuery = new URLSearchParams(query).toString()
     navigate(`${pathname}?${newQuery}`)

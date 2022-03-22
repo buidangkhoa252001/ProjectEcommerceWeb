@@ -7,7 +7,7 @@
   
   .filter_form form > div{
     position: relative;
-    flex: 1;
+    
   }
   
   .filter_form form > div input{

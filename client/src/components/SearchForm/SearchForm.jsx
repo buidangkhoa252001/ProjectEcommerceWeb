@@ -1,23 +1,32 @@
 import React, { useRef, useState } from 'react'
 import './SearchForm.css'
 import { useNavigate } from 'react-router-dom';
-const SearchForm = () => {
-
+import useCustomRouter from '../../hooks/useCustomeRouter';
+const SearchForm = ({search,page,sort}) => {
 
   const inputRef = useRef()
-  const navigate = useNavigate()
+  const { pushQuery } = useCustomRouter()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const value = inputRef.current.value
+  /*   const { value } = e.target; */
+    if(!value.trim()) return;
+    pushQuery({page:1, sort ,search:value })
+    inputRef.current.value=""
+  }
+ /*  const navigate = useNavigate()
   const handleSubmit = (e)=>{
     e.preventDefault()
     const value = inputRef.current.value
     if(!value.trim()) return;
     return navigate(`/search/${value}`)
-  }
+  } */
   return (
     <div className='search_form'>
     
-  
       <form onSubmit={handleSubmit}>
-        <input type="text" ref={inputRef} />
+        <input type="text"  ref={inputRef}   />
         <button>Search</button>
       </form>
     </div>

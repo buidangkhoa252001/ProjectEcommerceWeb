@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useCustomRouter from './useCustomeRouter'
 
-const usePagination = (totalPages, page,sort) => {
+const usePagination = (totalPages, page,sort,search) => {
   const [firstArr, setFirstArr] = useState([])
   const [lastArr, setLastArr] = useState([])
   const {pushQuery} = useCustomRouter()
@@ -30,16 +30,16 @@ const usePagination = (totalPages, page,sort) => {
 
   const prev = () => {
     const newPage = Math.max(page - 1, 1)
-    pushQuery({page:newPage ,sort})
+    pushQuery({page:newPage ,sort,search})
   }
 
   const next = () => {
     const newPage = Math.min(page + 1, totalPages)
-    pushQuery({page:newPage ,sort})
+    pushQuery({page:newPage ,sort,search})
   }
 
   const jump = (num) => {
-    pushQuery({page:num ,sort})
+    pushQuery({page:num ,sort ,search})
   }
 
   return { firstArr, lastArr,  isActive, prev, next, jump }

@@ -30,7 +30,7 @@ const FilterForm = () => {
             <option value="gte" title='greater than or equal'>GTE</option>
           </select>
         </div>
-        <button>Submit</button>
+        <button>Find</button>
       </form>
       
     </div>
