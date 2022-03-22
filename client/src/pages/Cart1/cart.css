@@ -1,0 +1,212 @@
+.cart {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cart-container {
+    width: 85%;
+    height: 85%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px #1687d933;
+}
+
+.cart-container_title {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px 30px 50px;
+    position: relative;
+}
+
+.cart-container_title span {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.btn-remove_cart {
+    text-decoration: none;
+    padding: 20px 20px 40px 20px;
+    font-size: 1rem;
+    position: relative;
+    color: red;
+}
+
+.btn-remove_cart::after, 
+.btn-remove_cart::before {
+    border: 3px solid black;
+    content: "";
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.btn-remove_cart:hover::after {
+    transform: translate(-5px, -5px);
+}
+
+.btn-remove_cart:hover::before {
+    transform: translate(5px, 5px);
+}
+
+/* cart-container */
+
+.cart-container_detail {
+    height: 25%;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.cart-container_detail-img {
+   /*  background-image: url("https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHNoaXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: 300px 200px;
+    background-repeat: no-repeat; */
+    width: 30%;
+    height: 220px;
+}
+
+.cart-container_detail-img2 {
+    background-image: url("https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80");
+}
+
+.cart-container_detail-title {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.cart-container_detail-title h1,
+.cart-container_detail-title span {
+    padding-bottom: 10px;
+}
+
+
+.cart-container_detail-change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-container_detail-change button {
+    padding: 15px;
+    margin: 0 15px 0 15px;
+    border-radius: 50%;
+    border: none;
+}
+
+.cart-container_detail-change span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cart-container_detail-change button i {
+    font-weight: bold;
+}
+
+.cart-container_detail-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-container_detail-price span {
+    padding-bottom: 10px;
+    padding-top: 15px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.fa-delete-left {
+    padding-top: 30px;
+    font-size: 1.8rem;
+}
+
+.fa-delete-left:hover {
+    color: #CC3333;
+}
+
+.cart-container_line {
+    height: 3px;
+    width: 90%;
+    margin: 20px 50px;
+    background: gainsboro;
+    
+}
+
+.cart-container_total-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 50px;
+}
+
+.cart-container_total-price-icon {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-container_total-price-icon i {
+    font-size: 2rem;
+}
+
+
+
+.cart-container_total-price-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.cart-container_total-price-detail-title {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.cart-container_total-price-detail-title span,
+.cart-container_total-price-detail-title h1 {
+    margin-bottom: 15px;
+}
+
+.cart-container_total-price-detail-title span {
+    font-size: 1.6rem;
+    padding-right: 130px;
+}
+
+.cart-container_total-price-detail-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.cart-container_total-price-detail-button button {
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 25px;
+    width: 90%;
+    height: 40px;
+    background: linear-gradient(225deg, #27d86c 0%, #26caf8 50%,#c625d0 100%);
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+.cart-container_total-price-detail-button button:active {
+    background: #8FD5E7;
+}

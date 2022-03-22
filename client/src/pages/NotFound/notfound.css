@@ -1,0 +1,11 @@
+.containernotfound{
+    width:100%;
+    height:100vh;
+    background-color: #f0f0e9;
+    
+    justify-content:center;
+    align-items:center;
+}
+h1{
+font-size: 50px;
+}
