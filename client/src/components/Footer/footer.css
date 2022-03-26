@@ -1,5 +1,3 @@
-
-
 .footer-container {
     background-image: url("https://ik.imagekit.io/reviewcafe/bg-dark_XOhLpLNAe0S.jpg");
     background-repeat: repeat;
@@ -9,6 +7,7 @@
 
 .row {
     display: flex;
+    flex-direction: row;
     width: 100%;
     color: #C0C0C0;
     justify-content: space-around;

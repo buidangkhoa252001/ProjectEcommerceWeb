@@ -2,8 +2,8 @@ import React, { useRef } from 'react'
 import "./Pagination.css"
 
 import usePagination from './../../hooks/usePagination';
-import { useSelector } from 'react-redux';
-const Pagination = React.memo(({totalPages,page,sort,search}) => {
+
+const Pagination = ({totalPages,page,sort,search}) => {
 
   const {firstArr, lastArr,  isActive, prev, next, jump} = usePagination(totalPages,page,sort,search)
 
@@ -33,6 +33,6 @@ const Pagination = React.memo(({totalPages,page,sort,search}) => {
     </div>
     
   )
-})
+}
 
 export default Pagination

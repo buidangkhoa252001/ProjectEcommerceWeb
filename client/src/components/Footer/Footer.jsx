@@ -1,17 +1,18 @@
-
 import React from 'react';
-
 import "./footer.css"
 import IMG from "./logo1.png"
 function Footer() {
    
     return (
         
-<div className="footer-container">
-    <div className="row">
-        <div className="col1">
+    <div className="footer-container">
+        <div className="row">
+
+        
+        <div className="col1"> 
             <img className="img-footer" src={IMG} alt="" />
-            <button className="button-footer"><i className="icon-H fa-solid fa-heart icon"></i>Cooperate With Us</button>
+            <button className="button-footer"><i className="icon-H fa-solid fa-heart icon" ></i>Cooperate With Us</button>
+
         </div>
         <div className="col2">
             <h2>ABOUT US</h2>
@@ -41,6 +42,5 @@ function Footer() {
     );
 }
 
+
 export default Footer;
-
-
