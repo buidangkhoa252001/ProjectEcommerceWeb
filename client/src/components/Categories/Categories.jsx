@@ -31,7 +31,7 @@ const Categories = ({sort , page}) => {
     <div className='Categories'>
             <span>Filters: </span>
             <select name="category" onChange={handleCategory}>
-                <option value="" > All Products 1</option>
+                <option value="" > All Products 1231</option>
                 {
                     categories.map(category=>(
                         <option value={category._id} key={category._id} >
