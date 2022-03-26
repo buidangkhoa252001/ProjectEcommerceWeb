@@ -10,6 +10,7 @@ import { getPageSuccess } from '../../redux/pageSlice';
 import FilterForm from '../../components/Filter/FilterForm';
 import SearchForm from './../../components/SearchForm/SearchForm';
 import axios from '../../axios/axios';
+import Categories from '../../components/Categories/Categories';
 const Product = () => {
     const [products,setProducts]=useState([])
     const [limit,setLimit]=useState(2)
@@ -19,38 +20,41 @@ const Product = () => {
    
     const {search} = useLocation()
 
-    const dispatch = useDispatch()
-    const { page, sort , search1} = useMemo(() => {
+   
+    const { page, sort , search1,category} = useMemo(() => {
         
         const page = new URLSearchParams(search).get('page') || 1;
         const sort = new URLSearchParams(search).get('sort') || '-createdAt';
+    /*     const category = new URLSearchParams(search).get('category') || ''; */
         const search1 = new URLSearchParams(search).get('search') || '';
        
       console.log(page)
       console.log(sort)
-      console.log(search1)
+    /*   console.log(category) */
+      console.log("search",search1.toLocaleLowerCase())
         return { 
           page: Number(page),
           sort: sort,
-          search1:search1
+       /*    category: category, */
+          search1:search1.toLocaleLowerCase()
         }
     }, [search])
-   /* useEffect(()=>{
-     
-       
-     },[search1]) */
-
+    
     const {data,loading,error} =useQuery(
         `/api/products?limit=${limit}&page=${page}&sort=${sort}&title[regex]=${search1}`
      )
-    
-   /*  useEffect(()=>{
-      dispatch(getPageSuccess(
-         { page: page1,
-          sort: sort1}
-      ))
-
-    },[page1,sort1,dispatch]) */
+ 
+    console.log(totalPages)
+    useEffect(() => {
+          if(data?.result){ 
+          setProducts(data.products)      
+          console.log("data  ", data) } 
+          else{
+            setProducts([])
+            setTotalPages(1)
+          }
+            
+    },[data?.products])
     useEffect(()=>{
       if(search1){    
          const gg = async()=>{      
@@ -60,33 +64,25 @@ const Product = () => {
            if(!res.data?.result) return 0;
            setTotalPages(Math.ceil(pageResult / limit)) 
          }
-        console.log("pageresult",pageResult)
-        console.log("totalapge",totalPages)
-         gg()
-       
+         gg() 
       }
       else{
         if(!data?.count) return 0;
         setTotalPages(Math.ceil(data.count / limit))
-      }
-      
+      }   
     },[data?.result,data?.count,limit,pageResult,search1,totalPages])  
-    console.log(totalPages)
-    useEffect(() => {
-          if(data?.products) setProducts(data.products)      
-          console.log(data)           
-    },[data?.products])
    
     return (
         <div>
               <SearchForm search={search1} page={page} sort={sort}/>
               <Sorting search={search1} page={page} sort={sort}/>
-              <FilterForm />
+              <Categories  page={page} sort={sort} category={category} />
+             {/*  <FilterForm /> */}
            { loading ? <Loading/> 
            : <Products products={products} />
-           }
+          }
+          <Pagination totalPages={totalPages} search={search1} page={page} sort={sort} loading={loading}  />
         
-        { loading ? <Loading/> : <Pagination totalPages={totalPages} search={search1} page={page} sort={sort} loading={loading}  />}
             
            
 

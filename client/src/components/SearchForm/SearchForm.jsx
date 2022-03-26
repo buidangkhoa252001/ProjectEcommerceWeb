@@ -12,7 +12,7 @@ const SearchForm = ({search,page,sort}) => {
     const value = inputRef.current.value
   /*   const { value } = e.target; */
     if(!value.trim()) return;
-    pushQuery({page:1, sort ,search:value })
+    pushQuery({page:1 , sort:sort ,search:value })
     inputRef.current.value=""
   }
  /*  const navigate = useNavigate()

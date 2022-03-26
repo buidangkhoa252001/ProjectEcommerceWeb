@@ -69,7 +69,7 @@ const Header = () => {
             </div>
             <div>
                 <h1>
-                <Link style={{ textDecoration: "none" }} to="/">{admin ? 'Admin' : 'DevAT Shop'}</Link>
+                <Link style={{ textDecoration: "none" }} to="/">{admin ? 'Admin' : 'DevAT qweqweqwShop'}</Link>
                 </h1>
 
             </div>

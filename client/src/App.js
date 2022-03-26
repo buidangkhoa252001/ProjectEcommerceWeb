@@ -73,6 +73,7 @@ function App() {
             </PrivateRoute>
           }
         />
+        
        <Route
           path="/history/:id"
           element={

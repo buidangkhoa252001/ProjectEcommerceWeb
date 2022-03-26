@@ -11,10 +11,13 @@ const Products = React.memo(({products}) => {
             
         <div className="wrapper">
             {
-                products.map(product=>
-                  (<ProductItem key={product._id} product={product}  />)  
-                )
+                products ? products.map(product=>
+                    (<ProductItem key={product._id} product={product}  />)  
+                  )
+                  :
+                  <h1 className="text">dont have the product</h1>
             }
+         
         </div>
      
         </div>
