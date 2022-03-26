@@ -14,6 +14,7 @@ import HistoryDetail from './pages/History/HistoryDetail';
 import Search from './pages/Search/Search';
 import Filter from './pages/Filter/Filter';
 import Cart1 from './pages/Cart1/Cart1';
+import Footer from './components/Footer/Footer.jsx';
 
 
 
@@ -102,7 +103,7 @@ function App() {
         <Route  path="/register" element={<Register />}/> 
       
         <Route  path="*" element={<NotFound/>} />
-
+        <Footer />
       </Routes>
     </BrowserRouter>
   );
