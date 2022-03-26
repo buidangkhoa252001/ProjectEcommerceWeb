@@ -1,3 +1,5 @@
+
+
 .footer-container {
     background-image: url("https://ik.imagekit.io/reviewcafe/bg-dark_XOhLpLNAe0S.jpg");
     background-repeat: repeat;
@@ -175,3 +177,6 @@ li:hover::after {
     color: #A5281E;
 }
 
+.icon{
+    margin-right: 10px;
+}
