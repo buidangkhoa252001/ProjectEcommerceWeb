@@ -14,9 +14,9 @@ export const login = async (dispatch,user)=>{
         const res = await axios.post("/user/login",user)
        
         dispatch(loginSuccess(res.data))  
-        localStorage.setItem("firstLogin",true)
+       /*  localStorage.setItem("firstLogin",true) */
         getUser(dispatch,res.data.accesstoken)
-        /* refreshToken() */
+       /*  refreshToken() */
        
     }catch(err){
         dispatch(loginFailure())
@@ -33,7 +33,7 @@ export const refreshToken = async()=>{
             getToken(token.data.accesstoken)
             setTimeout(()=>{
                 refreshToken()
-            },10*60*1000)
+            },10*60*1000*7)
         }
         refreshToken()
     }
@@ -42,11 +42,11 @@ export const refreshToken = async()=>{
 export const logOutUser = async(dispatch)=>{
     try{
         await axios.get('/user/logout')
-        dispatch(logOut())
         dispatch(logOutCart())
         dispatch(logOutUserStore())
         dispatch(logOutHistory())
-        localStorage.removeItem("firstLogin")
+        dispatch(logOut())
+        localStorage.removeItem("persist:root")
     }catch(err){
         dispatch(loginFailure())
         alert(err.response.data.msg)
