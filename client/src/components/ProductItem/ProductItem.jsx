@@ -1,8 +1,52 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import axios from '../../axios/axios';
 import "./productItem.css"
- 
+import {useState,useEffect} from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+
+import { addCart } from '../../redux/userSlice';
+import { getUser } from '../../api/UserApi';
 const ProductItem = ({product}) => {
+
+    const navigate = useNavigate();
+
+    const dispatch = useDispatch();
+	const { currentToken,isAuth } = useSelector(state => state.login);
+    const {cart} = useSelector(state => state.cart)
+  const [cart1,setCart1] = useState([])
+   const handleaddCart = async(product1)=>{
+  
+    if(!isAuth){
+        navigate("/login", { replace: true })
+        return alert("Please login to continue buy")
+    }
+    const check = cart1.every(item=>{
+        return item._id !== product1._id 
+    })
+    if(check){
+        setCart1([...cart1,{...product1,quantity:1}])
+        
+        await axios.patch('/user/addcart',{cart:[...cart1,{...product1,quantity:1}]},{
+            headers:{Authorization:currentToken.accesstoken}
+        })
+        dispatch(addCart(cart1))
+        getUser(dispatch,currentToken.accesstoken)
+        navigate("/cart", { replace: true })
+        
+    }else{
+        alert("this product has been add")
+
+    }
+    console.log(product)
+    console.log(cart1)
+}   
+useEffect(()=>{
+    setCart1(cart)
+},[cart])
+    const handleBuy = async(product)=>{
+        handleaddCart(product)
+    } 
     return (
         <div className="product_card">
             
@@ -13,8 +57,8 @@ const ProductItem = ({product}) => {
                  <div className="product_price">Price:${product.price}</div>
                  <div className="product_description">Desc:{product.description}</div>
                  <div className="product_button">
-
-                    <button className="product_button_buy">Buy</button>
+           
+                    <button  to="/cart" className="product_button_buy" onClick={()=>handleBuy(product)}>Buy </button>
                     <Link to={`/products/${product._id}`}> <button className="product_button_view">view</button></Link>
                  </div>
             </div>

@@ -94,11 +94,17 @@ const Product = () => {
         setTotalPages(Math.ceil(data1.count / limit))
       }   
     },[data1?.result,data1?.count,limit,pageResult,search1,totalPages,category])  
+
+
+
     if(data1.result === 0) 
         return ( <div>
              <SearchForm search={search1} page={page} sort={sort} />
              <h2 style={{textAlign: "center", fontSize: "8rem"}}>No product</h2></div>
                 )
+
+
+                
     return (
         <div>
               <SearchForm search={search1} page={page} sort={sort} />

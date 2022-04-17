@@ -73,28 +73,7 @@ const DetailProduct = () => {
     },[cart])
     const handleBuy = async(product)=>{
         handleaddCart(product)
-    }
-       /*  useEffect(()=>{
-           
-           const P = async ()=>{
-            if(products!==null && productCategory!==null){
-                 products.map((item) => {
-                    if(item._id === product._id){
-                        const nextProduct = products.filter(product1=>
-                            product1._id !==item._id
-                        )
-                        setProductCategory([...nextProduct])
-                    }   
-                    
-                    return  productCategory
-                })
-                  console.log(productCategory)
-            }
-        
-        }
-            P()
-        },[product,products]) */
-        
+    } 
  
     return (
         <div>

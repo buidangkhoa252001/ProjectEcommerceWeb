@@ -13,16 +13,22 @@ import History from './pages/History/History';
 import HistoryDetail from './pages/History/HistoryDetail';
 import Search from './pages/Search/Search';
 import Filter from './pages/Filter/Filter';
-
-
-
+import { useSelector } from 'react-redux';
 
 
 function App() {
+  const { isAuth } = useSelector(state => state.login);
+  const { user } = useSelector(state => state.user);
+  const [admin,setAdmin] =useState(false)
+  useEffect(()=>{
+    if(user.role===1){
+      setAdmin(true)
+    }
+
+},[user])
   return (
     
     <BrowserRouter>
-     
       <Routes>
       
         <Route
@@ -49,8 +55,7 @@ function App() {
             </PrivateRoute>
           }
         />
-      
-     
+        {/*   <Route path="/category" exact element={admin ? Categories : NotFound} /> */}
        <Route
           path="/products/:id"
           element={
@@ -95,7 +100,6 @@ function App() {
        
         <Route  path="/login" element={<Login />}/>
         <Route  path="/register" element={<Register />}/> 
-      
         <Route  path="*" element={<NotFound/>} />
 
       </Routes>

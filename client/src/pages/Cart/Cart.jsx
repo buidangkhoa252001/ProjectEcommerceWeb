@@ -47,6 +47,17 @@ function Cart() {
             getUser(dispatch,currentToken.accesstoken)            
         }                 
          
+    } 
+    const removeAllCart = async()=>{
+        const newCart=[]
+        if(window.confirm("Do you want to delete all products ?")){
+           
+            await axios.patch('/user/addcart',{cart:newCart},{
+                headers:{Authorization:currentToken.accesstoken}
+            })
+            getUser(dispatch,currentToken.accesstoken)            
+        }                 
+         
     }
     const inscrease =async(id)=>{
         const cartI = JSON.parse(JSON.stringify(user.cart)); 
@@ -104,7 +115,7 @@ function Cart() {
          <div className="cart-container">
             <div className="cart-container_title">
               <span>Shopping Cart</span>
-             <a href="#" className="btn-remove_cart">Remove all</a>
+             <a href="#" className="btn-remove_cart" onClick={removeAllCart}>Remove all</a>
             </div>
             {
                cart1.map((item)=>(

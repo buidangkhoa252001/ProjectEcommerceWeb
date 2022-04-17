@@ -4,7 +4,7 @@ import "./header.css";
 import Cart from "./icon/cart.svg"
 import Close from "./icon/close.svg"
 import Menu from "./icon/menu.svg"
-import  axios  from 'axios';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { logOutUser } from '../../api/LoginApi';
 import Modal from '../Modal/Modal';
