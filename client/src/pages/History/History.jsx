@@ -8,8 +8,6 @@ const History = () => {
  
     const {history} = useSelector(state=>state.history)
 
-
-   
     return (
         <div className="history-page">
                     <h2>History</h2>

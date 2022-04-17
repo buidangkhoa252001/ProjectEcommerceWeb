@@ -5,7 +5,6 @@ class APIfeatures {
     constructor(query,queryString){
         this.query= query;
         this.queryString= queryString;
-
     }
     filtering(){
         const queryObj = {...this.queryString} //queryString = req.query
@@ -15,18 +14,20 @@ class APIfeatures {
         
         let queryStr = JSON.stringify(queryObj)
         queryStr = queryStr.replace(/\b(gte|gt|lt|lte|regex)\b/g, match => '$' + match)
- 
-     //    gte = greater than or equal
-     //    lte = lesser than or equal
-     //    lt = lesser than
-     //    gt = greater than
-        this.query.find(JSON.parse(queryStr))
-          
-        return this;
+        
+      /*   if(queryObj.category === 'all')
+          queryStr =queryStr.find({category:category}) */
 
-    
+        this.query.find(JSON.parse(queryStr))
+    /*    if(queryObj.category !== 'all')
+            this.query.find({category: queryObj.category})
+        if(queryObj.title !== 'all')
+            this.query.find({title: {$regex: queryObj.title}})
+
+        this.query.find() */
+       
+        return this; 
      }
- 
      sorting(){
          if(this.queryString.sort){
              const sortBy = this.queryString.sort.split(',').join(' ')
@@ -37,7 +38,6 @@ class APIfeatures {
  
          return this;
      }
- 
      paginating(){
          const page = this.queryString.page * 1 || 1
          const limit = this.queryString.limit * 1 || 20
@@ -45,9 +45,7 @@ class APIfeatures {
          this.query = this.query.skip(skip).limit(limit)
          return this;
      }
-
 }
-
 const productCtrl ={
     getProducts: async(req,res)=>{
        try{

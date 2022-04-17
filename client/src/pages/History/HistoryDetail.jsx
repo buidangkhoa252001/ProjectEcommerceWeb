@@ -37,10 +37,10 @@ const HistoryDetail = () => {
             </thead>
             <tbody>
                 <tr>
-                    <td>{historyDetails.address.recipient_name}</td>
-                    <td>{historyDetails.address.line1 + " - " + historyDetails.address.city}</td>
-                    <td>{historyDetails.address.postal_code}</td>
-                    <td>{historyDetails.address.country_code}</td>
+                    <td>{historyDetails?.address?.recipient_name}</td>
+                    <td>{historyDetails?.address?.line1 + " - " + historyDetails?.address?.city}</td>
+                    <td>{historyDetails?.address?.postal_code}</td>
+                    <td>{historyDetails?.address?.country_code}</td>
                 </tr>
             </tbody>
         </table>
@@ -55,8 +55,8 @@ const HistoryDetail = () => {
                 </tr>
             </thead>
             <tbody>
-            {/*     {
-                    historyDetails?.cart.map(item =>(
+                {
+                    historyDetails?.cart?.map(item =>(
                     <tr key={item._id}>
                         <td><img src={item.images.url} alt="" /></td>
                         <td>{item.title}</td>
@@ -64,7 +64,7 @@ const HistoryDetail = () => {
                         <td>$ {item.price * item.quantity}</td>
                     </tr>
                     ))
-                } */}
+                }
                 
             </tbody>
         </table>

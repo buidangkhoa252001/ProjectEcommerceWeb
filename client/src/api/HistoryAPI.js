@@ -1,7 +1,8 @@
 
+import axios from "../axios/axios"
 import { getHistoryFailure, getHistoryStart, getHistorySuccess } from "../redux/historySlice"
 
-import axios from "../axios/axios"
+
 
 export const getHistory =async(dispatch,token)=>{
     if(token){

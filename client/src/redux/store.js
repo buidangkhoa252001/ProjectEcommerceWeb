@@ -6,6 +6,7 @@ import cartReducer from "./cartSlice"
 import historyReducer from './historySlice';
 
 
+
 import {
     persistStore,
     persistReducer,
@@ -28,7 +29,8 @@ import {
     login:loginReducer,
     user:userReducer,
     cart:cartReducer,
-    history:historyReducer
+    history:historyReducer,
+ 
   })
   
   const persistedReducer = persistReducer(persistConfig, rootReducer)

@@ -13,7 +13,7 @@ import History from './pages/History/History';
 import HistoryDetail from './pages/History/HistoryDetail';
 import Search from './pages/Search/Search';
 import Filter from './pages/Filter/Filter';
-import Cart1 from './pages/Cart1/Cart1';
+
 
 
 
@@ -49,14 +49,7 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route
-          path="/cart1"
-          element={
-            <PrivateRoute>
-              <Cart1 />
-            </PrivateRoute>
-          }
-        />
+      
      
        <Route
           path="/products/:id"

@@ -15,7 +15,7 @@ const Products = React.memo(({products}) => {
                     (<ProductItem key={product._id} product={product}  />)  
                   )
                   :
-                  <h1 className="text">dont have the product</h1>
+                  <h1 className="text">Dont have the product</h1>
             }
          
         </div>
