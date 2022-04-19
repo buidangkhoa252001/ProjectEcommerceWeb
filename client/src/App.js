@@ -14,7 +14,8 @@ import HistoryDetail from './pages/History/HistoryDetail';
 import Search from './pages/Search/Search';
 import Filter from './pages/Filter/Filter';
 import { useSelector } from 'react-redux';
-
+import { useEffect, useState } from 'react';
+import CreateProduct from './pages/CreateProduct/CreateProduct';
 
 function App() {
   const { isAuth } = useSelector(state => state.login);
@@ -55,7 +56,7 @@ function App() {
             </PrivateRoute>
           }
         />
-        {/*   <Route path="/category" exact element={admin ? Categories : NotFound} /> */}
+         {/*  <Route path="/createProduct" exact element={CreateProduct} /> */}
        <Route
           path="/products/:id"
           element={
@@ -97,7 +98,15 @@ function App() {
             </PrivateRoute>
           }
         />
-       
+       <Route
+          path="/createProduct"
+          element={
+            <PrivateRoute>
+              <CreateProduct />
+            </PrivateRoute>
+          }
+        />
+      
         <Route  path="/login" element={<Login />}/>
         <Route  path="/register" element={<Register />}/> 
         <Route  path="*" element={<NotFound/>} />

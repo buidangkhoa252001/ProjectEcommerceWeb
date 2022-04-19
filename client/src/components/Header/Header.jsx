@@ -57,7 +57,7 @@ const Header = () => {
   const adminRouter = () =>{
       return(
           <>
-              <li><Link style={{ textDecoration: "none" }} to="/create_product">Create Product</Link></li>
+              <li><Link style={{ textDecoration: "none" }} to="/createProduct">Create Product</Link></li>
               <li><Link style={{ textDecoration: "none" }} to="/category">Categories</Link></li>
           </>
       )
