@@ -9,7 +9,7 @@ import axios from '../../axios/axios';
 import Categories from '../../components/Categories/Categories';
 const Product = () => {
     const [products,setProducts]=useState([])
-    const [limit,setLimit]=useState(2)
+    const [limit,setLimit]=useState(6)
     const [totalPages,setTotalPages]=useState(1)
     const [pageResult,setPageResult] = useState(1)
     const [data1,setData1]=useState("")
@@ -53,7 +53,7 @@ const Product = () => {
           }
       }
        getProduct() 
-       return 
+     
     
    },[search1,limit,page,sort,category])
    /* set page va` product */

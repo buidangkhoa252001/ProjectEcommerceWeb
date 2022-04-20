@@ -35,9 +35,7 @@ const Header = () => {
     const loggedRouter = () =>{
       return(
           <>
-              <li><Link style={{ textDecoration: "none" }} to="/history">History</Link></li>
-              <li onClick={() => setOpenSearch(true)}>Search</li>
-              <li onClick={() => setOpenFilter(true)}>Filter </li>
+      
               <li><Link to="/" style={{ textDecoration: "none" , cursor: "pointer" }}  onClick={logoutUser}>Logout</Link></li>
               {
         openSearch &&
@@ -54,11 +52,33 @@ const Header = () => {
           </>
       )
   }
+  const userRouter=()=>{
+    return(
+        <>
+            <li><Link style={{ textDecoration: "none" }} to="/history">History</Link></li>
+            <li onClick={() => setOpenSearch(true)}>Search</li>
+            <li onClick={() => setOpenFilter(true)}>Filter </li>
+            {
+      openSearch &&
+      <Modal titleTxt="Search" setOpen={setOpenSearch}>
+        <SearchForm />
+      </Modal>
+    }
+           {
+      openFilter &&
+      <Modal titleTxt="Filter" setOpen={setOpenFilter}>
+        <FilterForm />
+      </Modal>
+    }
+        </>
+    )
+  }
   const adminRouter = () =>{
       return(
           <>
               <li><Link style={{ textDecoration: "none" }} to="/createProduct">Create Product</Link></li>
               <li><Link style={{ textDecoration: "none" }} to="/category">Categories</Link></li>
+              <li><Link style={{ textDecoration: "none" }} to="/payment">All Payment</Link></li>
           </>
       )
   }
@@ -69,7 +89,7 @@ const Header = () => {
             </div>
             <div>
                 <h1>
-                <Link style={{ textDecoration: "none" }} to="/">{admin ? 'Admin' : 'DevAT qweqweqwShop'}</Link>
+                <Link style={{ textDecoration: "none" }} to="/">{admin ? 'Admin' : 'User'}</Link>
                 </h1>
 
             </div>
@@ -77,6 +97,7 @@ const Header = () => {
             <li><Link style={{ textDecoration: "none" }} to="/products">{admin ? 'Products' : 'Shop'}</Link></li>
 
         {admin && adminRouter()}
+        {!admin && isAuth && userRouter()}
         {
             isAuth ? loggedRouter() : <li><Link to="/login">Login ✥ </Link> <Link to="/register"> Register</Link>  
                        

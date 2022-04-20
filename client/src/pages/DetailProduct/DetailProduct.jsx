@@ -7,9 +7,10 @@ import "./detailProduct.css"
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getCart } from '../../api/CartAPI';
+
 import { addCart } from '../../redux/userSlice';
 import { getUser } from '../../api/UserApi';
+import ProductItem from '../../components/ProductItem/ProductItem';
 
 
 
@@ -19,12 +20,49 @@ const DetailProduct = () => {
     const [image,setImage]=useState("")
     const params = useParams()
     const navigate = useNavigate();
-   /*  const [productCategory,setProductCategory]= useState([]) */
+/*     const [productCategory,setProductCategory]= useState([])
+    const [category,setCategory]= useState([]) */
     const dispatch = useDispatch();
 	const { currentToken,isAuth } = useSelector(state => state.login);
 
   const {cart} = useSelector(state => state.cart)
   const [cart1,setCart1] = useState([])
+
+  useEffect(()=>{
+        const getProductDetail = async()=>{
+            try{
+                const res = await axios.get(`/api/products/${params.id}`)
+                setProduct(res.data)
+                setImage(res.data.images.url)
+                
+            }catch(err){
+                console.log(err)
+            }
+        }
+        getProductDetail()  
+        
+        
+    },[params.id])
+        useEffect(()=>{
+            setCart1(cart)
+        /*     setCategory(product.category) */
+        },[cart])
+       /*   useEffect(()=>{
+             if(category){
+                 const getcategory=async()=>{
+                  const res = await axios.get(`/api/products?category=${category}`)
+                 console.log(res.data)
+                 setProductCategory(res.data)
+                 console.log(productCategory)
+                    
+              }
+              getcategory()
+              console.log(productCategory)
+
+             }
+      
+    },[category,product,params.id]) */
+
    const handleaddCart = async(product1)=>{
   
     if(!isAuth){
@@ -51,26 +89,6 @@ const DetailProduct = () => {
     console.log(product)
     console.log(cart1)
 }   
-
-    useEffect(()=>{
-        const getProductDetail = async()=>{
-            try{
-                const res = await axios.get(`/api/products/${params.id}`)
-             
-                setProduct(res.data)
-                setImage(res.data.images.url)
-
-            }catch(err){
-                console.log(err)
-            }
-        }
-         getProductDetail()  
-         
-        
-    },[params.id])
-    useEffect(()=>{
-        setCart1(cart)
-    },[cart])
     const handleBuy = async(product)=>{
         handleaddCart(product)
     } 
@@ -78,37 +96,37 @@ const DetailProduct = () => {
     return (
         <div>
            
-             <div className="detail">
-                <>
-                <img src={image} alt=""  />
-                </>
+             <div className="detail1">
+                <div>
+                  <img src={image} alt=""  />
+                </div>
 
-                <div className="box-detail">
+                <div className="box-detail1">
                     <div className="row">
                         <h2>{product.title} </h2>
                         <h6>#id: {product.product_id}</h6>
                     </div>
-                    <span>$ {product.price}</span>
-                    <p>{product.description}</p>
-                    <p>{product.content}</p>
-                    <p>Sold: {product.sold}</p>
-                    <button to="/cart" className="cart" onClick={()=>handleBuy(product)}
-                  >
-                        Buy Now
-                    </button>
+                        <span>$ {product.price}</span>
+                        <p>{product.description}</p>
+                        <p>{product.content}</p>
+                        <p>Sold: {product.sold}</p>
+                        <button to="/cart" className="cart1" onClick={()=>handleBuy(product)}
+                    >
+                            Buy Now
+                        </button>
                 </div>
             </div>
             <div>
                 <h2>Related products</h2>
-{/*                 <div className="products">
-                    {
-                        productCategory.map(item=>{
+            <div className="products">
+                   {/*  {
+                        productCategory.map(product=>{
                             
-                            return item.category === product.category ?<ProductItem   product={product} /> :null
+                         <ProductItem   product={product} /> 
                         })
-                    }
+                    } */}
 
-                </div> */}
+                </div>
             </div>
 
       

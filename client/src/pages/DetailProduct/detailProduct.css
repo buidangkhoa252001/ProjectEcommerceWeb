@@ -1,12 +1,13 @@
-.detail{
+.detail11{
     width: 100%;
     display: flex;
     justify-content: space-around;
+   
     flex-wrap: wrap;
     padding: 50px;
     font-size: 150%;
 }
-.detail img{
+.detail1 img{
     max-width: 400px;
     width: 100%;
     margin: 10px;
@@ -14,28 +15,28 @@
     object-fit: cover;
     display: block;
 }
-.box-detail{
+.box-detail1{
     max-width: 500px;
     width: 100%;
     margin: 5px 20px;
 }
-.box-detail .row{
+.box-detail1 .row1{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.box-detail h2{
+.box-detail1 h2{
     text-transform: uppercase;
     color: darkblue;
     letter-spacing: 2px;
     font-weight: 2rem;
 }
-.box-detail p{
+.box-detail1 p{
     line-height: 1.5;
     margin: 10px 0;
     opacity: 0.8;
 }
-.box-detail .cart{
+.box-detail1 .cart1{
     background: #333;
     color: white;
     margin-top: 10px;

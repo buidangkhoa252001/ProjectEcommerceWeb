@@ -28,18 +28,12 @@ const Categories = ({sort , page,search}) => {
 
      const handleCategory = (e)=>{
         setCategory(e.target.value)
-      
-      /*   if(!category){
-            pushQuery({page:1 , sort:sort,search:""})
-        }
-        else{ */
         if(e.target.value){
             pushQuery({page:1 , sort:sort,category:e.target.value})
         }
         else{
             pushQuery({page:1 , sort:sort,search:""})
         }
-
     }
 
 
