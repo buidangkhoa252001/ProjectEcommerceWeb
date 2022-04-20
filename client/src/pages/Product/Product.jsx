@@ -37,7 +37,7 @@ const Product = () => {
               setLoading(true);
               const res = await axios.get(`/api/products?limit=${limit}&page=${page}&sort=${sort}&category=${category}`)
               setData1(res.data)
-              console.log("categoryres",res)
+            
               setLoading(false)
             }
             else{

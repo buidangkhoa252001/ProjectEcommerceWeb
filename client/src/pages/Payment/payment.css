@@ -29,3 +29,13 @@ table a{
     height: 100px;
     object-fit: cover;
 }
+.containbutton{
+    display:flex;
+    justify-content: space-between;
+}
+.changebutton{
+    background-color:green;
+}
+.deletebutton{
+    background-color:red;
+}

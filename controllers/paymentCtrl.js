@@ -6,12 +6,47 @@ const paymentCtrl={
     getPayments: async(req,res)=>{
         try{
             const payment = await Payments.find()
-            res.json(payment)
+            res.status(200).json(payment);
         }
         catch(err){
             return res.status(500).json({msg: err.message})
         }
     },
+    getPaymentDetail: async(req,res)=>{
+        try {
+            const payment = await Payments.find({user_id: req.user.id})
+
+            res.json(payment)
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    deletePayment: async(req,res)=>{
+        try {
+            await Payments.findByIdAndDelete(req.params.id);
+            res.status(200).json("Order has been deleted...");
+    
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    changeStatusPayment: async(req,res)=>{
+        try {
+            const payment = await Payments.findByIdAndUpdate(
+                req.params.id,
+                {
+                  $set: req.body,
+                },
+                { new: true }
+              );
+
+              res.status(200).json(payment)
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+
+      
     createPayment: async(req,res)=>{
         try{
             const user = await Users.findById(req.user.id).select('name email')
@@ -33,6 +68,9 @@ const paymentCtrl={
         }
     }
 }
+
+
+
 const sold = async (id, quantity, oldSold) =>{
     await Products.findOneAndUpdate({_id: id}, {
         sold: quantity + oldSold

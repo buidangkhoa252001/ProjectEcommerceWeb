@@ -17,6 +17,7 @@ import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import CreateProduct from './pages/CreateProduct/CreateProduct';
 import Payment from './pages/Payment/Payment';
+import PaymentDetail from './pages/Payment/PaymentDetail';
 
 function App() {
   const { isAuth } = useSelector(state => state.login);
@@ -74,6 +75,14 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route
+          path="/history/:id"
+          element={
+            <PrivateRoute>
+              <HistoryDetail />
+            </PrivateRoute>
+          }
+        />
        <Route
           path="/payment"
           element={
@@ -82,15 +91,16 @@ function App() {
             </PrivateRoute>
           }
         />
-        
        <Route
-          path="/history/:id"
+          path="/payment/:id"
           element={
             <PrivateRoute>
-              <HistoryDetail />
+              <PaymentDetail />
             </PrivateRoute>
           }
         />
+        
+    
        <Route
           path="/search/:value"
           element={
