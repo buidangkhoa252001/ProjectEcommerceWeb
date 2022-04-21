@@ -4,7 +4,7 @@ import loginReducer from "./loginSlice"
 import userReducer from "./userSlice"
 import cartReducer from "./cartSlice"
 import historyReducer from './historySlice';
-import categoryReducer from './categorySlice';
+import categoriesReducer from './categoriesSlice';
 import paymentReducer from './paymentSlice';
 
 
@@ -32,7 +32,7 @@ import {
     user:userReducer,
     cart:cartReducer,
     history:historyReducer,
-    category:categoryReducer,
+    categories:categoriesReducer,
     payment:paymentReducer
  
   })

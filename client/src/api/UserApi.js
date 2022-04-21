@@ -3,7 +3,7 @@ import axios from "../axios/axios"
 import { addCart, getUserFailure, getUserStart, getUserSuccess } from "../redux/userSlice"
 import { getCart } from './CartAPI';
 import { getHistory } from './HistoryAPI';
-import { getCategory } from './CategoryAPI';
+import { getCategories } from './CategoriesAPI';
 import { getPayment } from "./PaymentAPI ";
 
 
@@ -18,7 +18,7 @@ export const getUser = async(dispatch,token)=>{
                 getCart(dispatch,res.data.cart)
                 getHistory(dispatch,token)
                 getPayment(dispatch,token)
-                getCategory(dispatch)
+                getCategories(dispatch)
                 console.log(res)
               
             }catch(err){

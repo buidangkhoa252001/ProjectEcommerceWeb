@@ -22,12 +22,9 @@ const CreateProduct = () => {
     /* const [categories] = state.categoriesAPI.categories */
     const [images, setImages] = useState(false)
     const [loading, setLoading] = useState(false)
-    const {category} = useSelector(state => state.category)
+    const {categories} = useSelector(state => state.categories)
     const {currentToken} = useSelector(state => state.login)
     const {user} = useSelector(state => state.user)
-    const [isAdmin,setIsAdmin] = useState(false)
-    const [token,setToken] = useState("")
-
     const [onEdit, setOnEdit] = useState(false)
     const navigate = useNavigate()
     const param =useParams()
@@ -124,7 +121,8 @@ const CreateProduct = () => {
                 {
                     headers:{Authorization:currentToken.accesstoken }
                 })
-            }    else{
+            }  
+            else{
                 await axios.post("/api/products",{...product,images},
                     {
                         headers:{Authorization:currentToken.accesstoken }
@@ -193,7 +191,7 @@ const CreateProduct = () => {
                     <select name="category" value={product.category} onChange={handleChangeInput}  >
                         <option value="">Please select a category</option>
                         {
-                            category.map(category => (
+                            categories.map(category => (
                                 <option value={category._id} key={category._id}>
                                     {category.name}
                                 </option>

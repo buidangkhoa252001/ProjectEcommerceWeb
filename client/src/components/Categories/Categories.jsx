@@ -7,7 +7,6 @@ import useQuery from '../../hooks/useQuery';
 
 const Categories = ({sort , page,search}) => {
     const [categories,setCategories] = useState([])
-    const [category, setCategory] = useState("")
     const { pushQuery } = useCustomRouter()
     
   
@@ -27,7 +26,7 @@ const Categories = ({sort , page,search}) => {
      },[])
 
      const handleCategory = (e)=>{
-        setCategory(e.target.value)
+      
         if(e.target.value){
             pushQuery({page:1 , sort:sort,category:e.target.value})
         }

@@ -14,6 +14,7 @@ const ProductItem = ({product}) => {
     const dispatch = useDispatch();
 	const { currentToken,isAuth } = useSelector(state => state.login);
     const {cart} = useSelector(state => state.cart)
+    const {user} = useSelector(state => state.user)
   const [cart1,setCart1] = useState([])
    const handleaddCart = async(product1)=>{
   
@@ -47,6 +48,23 @@ useEffect(()=>{
     const handleBuy = async(product)=>{
         handleaddCart(product)
     } 
+    const adminButton = () =>{
+        return(
+            <>
+           
+               <Link to={`/createProduct/${product._id}`}> <button  to="/cart" className="product_button_edit" >Edit</button></Link>
+                <button className="product_button_delete" >Delete</button>
+            </>
+        )
+    }
+    const userButton = () =>{
+        return(
+            <>
+                 <button  to="/cart" className="product_button_buy" onClick={()=>handleBuy(product)}>Buy </button>
+                    <Link to={`/products/${product._id}`}> <button className="product_button_view">view</button></Link>
+            </>
+        )
+    }
     return (
         <div className="product_card">
             
@@ -56,10 +74,9 @@ useEffect(()=>{
                  <h1 className="product_title">{product.title}</h1>
                  <div className="product_price">Price:${product.price}</div>
                  <div className="product_description">Desc:{product.description}</div>
-                 <div className="product_button">
-           
-                    <button  to="/cart" className="product_button_buy" onClick={()=>handleBuy(product)}>Buy </button>
-                    <Link to={`/products/${product._id}`}> <button className="product_button_view">view</button></Link>
+                 <div className="product_button">        
+               {user.role===1 && adminButton() }
+                {user.role!==1 && userButton() }                     
                  </div>
             </div>
         </div>
