@@ -25,6 +25,7 @@ const CreateProduct = () => {
     const {categories} = useSelector(state => state.categories)
     const {currentToken} = useSelector(state => state.login)
     const {user} = useSelector(state => state.user)
+ 
     const [onEdit, setOnEdit] = useState(false)
     const navigate = useNavigate()
     const param =useParams()
@@ -40,9 +41,9 @@ const CreateProduct = () => {
             const getProductDetail = async()=>{
                 try{
                     const res = await axios.get(`/api/products/${param.id}`)
-                 
-                   /*  setProduct(res.data)
-                    setImage(res.data.images.url) */
+                    console.log(res)
+                    setProduct(res.data)
+                    setImages(res.data.images)
     
                 }catch(err){
                     console.log(err)
@@ -71,10 +72,8 @@ const CreateProduct = () => {
             if(file.size> 1024*1024) return alert("Size is too large")
             if(file.type !== "image/jpeg" && file.type !== "image/png") return alert("File is not the image")
             console.log(file)
-            let formData = new FormData()
-           
+            let formData = new FormData()   
             formData.append('file',file);
-         
             setLoading(true)
             const res = await axios.post("/api/upload",formData,{
                 headers:{"content-type":"multipart/form-data",Authorization:currentToken.accesstoken}
