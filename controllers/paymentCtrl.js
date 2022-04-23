@@ -38,7 +38,6 @@ const paymentCtrl={
                 },
                 { new: true }
               );
-
               res.status(200).json(payment)
         } catch (err) {
             return res.status(500).json({msg: err.message})

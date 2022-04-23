@@ -17,6 +17,7 @@ const History = () => {
                     <tr>
                         <th>Payment ID</th>
                         <th>Date of Purchased</th>
+                        <th>Delivery</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -26,6 +27,7 @@ const History = () => {
                             <tr key={items._id}>
                                 <td>{items.paymentID}</td>
                                 <td>{new Date(items.createdAt).toLocaleDateString()}</td>
+                                <td>{items.status===false ? <div>Pending</div> : <div>Ok</div>  } </td>
                                 <td><Link to={`/history/${items._id}`}>View</Link></td>
                             </tr>
                         ))
