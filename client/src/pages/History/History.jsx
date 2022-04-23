@@ -5,33 +5,41 @@ import { Link } from 'react-router-dom';
 import './history.css'
 
 const History = () => {
- 
-    const {history} = useSelector(state=>state.history)
+
+    const { history } = useSelector(state => state.history)
 
     return (
-        <div className="history-page">
-                    <h2>History</h2>
-                    <h4>You have a {history.length}</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Payment ID</th>
-                        <th>Date of Purchased</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        history.map(items => (
-                            <tr key={items._id}>
-                                <td>{items.paymentID}</td>
-                                <td>{new Date(items.createdAt).toLocaleDateString()}</td>
-                                <td><Link to={`/history/${items._id}`}>View</Link></td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </table>
+        <div className="history_page">
+            <div className="history_page-logo">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <h2>History</h2>
+            </div>
+            <div className="history_page_total-product">
+                <h3>Finalized <i class="fa-solid fa-caret-up"></i></h3>
+                <h3>Total Product: {history.length}</h3>
+            </div>
+            <div className="history_page_title-detail">
+                <h3>Payment ID <i class="fa-brands fa-airbnb"></i></h3>
+                <h3>Date of Purchased <i class="fa-brands fa-airbnb"></i></h3>
+                <h3><i class="fa-solid fa-file-circle-check"></i></h3>
+            </div>
+            {history.map(items => (
+                <div className="history_page-detail1" key={items._id}>
+                    <div className="history_page-detail1-ID">
+                        <i class="fa-solid fa-barcode"></i>
+                        <span>{items.paymentID}</span>
+                    </div>
+                    <div className="history_page-detail1-Date">
+                        <i class="fa-solid fa-calendar"></i>
+                        {new Date(items.createdAt).toLocaleDateString()}
+                    </div>
+                    <div className="history_page-detail1-view">
+                        <i class="fa-solid fa-check"></i>
+                        <Link to={`/history/${items._id}`} style={{ textDecoration: 'none' }}>View</Link>
+                    </div>
+                </div>
+            ))
+            }
         </div>
     );
 };

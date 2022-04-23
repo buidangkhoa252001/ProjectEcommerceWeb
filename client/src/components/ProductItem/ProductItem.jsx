@@ -53,13 +53,13 @@ useEffect(()=>{
                 <img src={product.images.url} alt="" />
             
             <div>
-                 <h1 className="product_title">{product.title}</h1>
-                 <div className="product_price">Price:${product.price}</div>
-                 <div className="product_description">Desc:{product.description}</div>
+                 <h1 className="product_title"><i class="fa-solid fa-laptop"></i> {product.title}</h1>
+                 
+                 <div className="product_description">{product.description}</div>
+                 <div className="product_price">${product.price}</div>
                  <div className="product_button">
-           
-                    <button  to="/cart" className="product_button_buy" onClick={()=>handleBuy(product)}>Buy </button>
-                    <Link to={`/products/${product._id}`}> <button className="product_button_view">view</button></Link>
+                    <Link to={`/products/${product._id}`}> <button className="product_button_view"><i class="fa-solid fa-eye"></i></button></Link>
+                    <button  to="/cart" className="product_button_buy" onClick={()=>handleBuy(product)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
                  </div>
             </div>
         </div>
