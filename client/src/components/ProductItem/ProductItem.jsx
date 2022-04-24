@@ -79,8 +79,8 @@ useEffect(()=>{
     const userButton = () =>{
         return(
             <>
-                <Link to={`/products/${product._id}`}> <button className="product_button_view"><i class="fa-solid fa-eye"></i></button></Link>
-                 <button  to="/cart" className="product_button_buy" onClick={()=>handleBuy(product)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                <Link to={`/products/${product._id}`}> <button className="product_button_view"><i className="fa-solid fa-eye"></i></button></Link>
+                 <button  to="/cart" className="product_button_buy" onClick={()=>handleBuy(product)}><i className="fa-solid fa-cart-shopping"></i> Add to Cart</button>
                 
             </>
         )
