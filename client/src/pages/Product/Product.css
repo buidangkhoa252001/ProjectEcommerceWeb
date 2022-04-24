@@ -3,3 +3,21 @@
     display: grid;
     grid-template-columns: 13% 87%;
 }
+.feature{
+    display: flex;
+    justify-content: space-around;
+
+}
+.text{
+    font-weight: 300;
+    font-size:22px;
+    margin-left: 2px;
+
+
+}
+.sorting{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}

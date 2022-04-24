@@ -112,14 +112,25 @@ const Product = () => {
 
 
   return (
-    <div>
-      <SearchForm search={search1} page={page} sort={sort} />
-      <Sorting search={search1} page={page} sort={sort} category={category} />
+    <div >
+     
+     
       <div className="layout">
+        
         <Categories page={page} sort={sort} category={category} />
         {/*  <FilterForm /> */}
         {loading ? <Loading />
-          : <Products products={products} style={{ width: "80%" }} />
+          : <div>
+            <div className="feature">  
+            <SearchForm search={search1} page={page} sort={sort} />
+            <div className="sorting">
+              <p className="text">Sort:</p>
+            <Sorting search={search1} page={page} sort={sort} category={category} />
+
+            </div>
+            </div>
+            <Products products={products} style={{ width: "80%" }} />
+          </div>
         }
       </div>
 
