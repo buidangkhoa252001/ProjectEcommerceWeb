@@ -1,6 +1,6 @@
 .product_card {
     /*    margin:10px 20px; */
-    max-width: 250px;
+    max-width: 350px;
     overflow: hidden;
     border-radius: 20px;
     height: 500px;
@@ -18,7 +18,7 @@
 
 .product_card img {
     /*  margin:5px 20px; */
-    width: 250px;
+    width: 350px;
     height: 55%;
     object-fit: cover;
     cursor: pointer;
@@ -43,15 +43,11 @@
 
 .product_price {
     font-size: 2.0rem;
-    padding: 20px;
+    padding: 20px 15px;
     width: 100%;
     color: rgb(207, 41, 41);
     height: 50px;
-    width: 100px;
     border-radius: 8px;
-
-    display: flex;
-    justify-content: center;
     transition: 0.2s ease-in-out;
 }
 
@@ -78,7 +74,7 @@
 .product_button_buy {
     font-family: Verdana, sans-serif;
     color: rgb(207, 41, 41);
-    padding: 15px 30px;
+    padding: 20px 25px;
     border-radius: 4px;
     background-color: transparent;
     cursor: pointer;
@@ -88,7 +84,12 @@
     font-size: 16px;
     position: relative;
     isolation: isolate;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.product_button_buy i {
+    padding-right: 5px;
 }
 
 .product_button_buy::before {

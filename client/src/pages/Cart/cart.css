@@ -136,14 +136,19 @@
 }
 
 .cart-container_detail-change button {
-    padding: 15px;
-    margin: 0 15px 0 15px;
+    background: #dde3fb;
+    padding: 23px;
     border-radius: 50%;
+    margin: 15px;
+    color: #3351e7;
     border: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
 }
 
 .cart-container_detail-change button:active {
-    transform: scale(0.97);
+    transform: scale(0.8);
 }
 
 .cart-container_detail-change span {

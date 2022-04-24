@@ -87,9 +87,4 @@ const Categories = ({sort , page,search}) => {
   )
 }
 
-export default Categories
-
-
-
-
-   4 
+export default Categories;  
