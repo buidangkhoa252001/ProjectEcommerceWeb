@@ -49,9 +49,47 @@ const Categories = ({sort , page,search}) => {
                     ))
                 }
             </select>
-  
+            <div className="category_type">
+                <div className="category_type-detail">
+                    <i class="fa-solid fa-laptop"></i>
+                    <a href="">Laptop Gaming</a>
+                </div>
+                <div className="category_type-detail">
+                    <i class="fa-solid fa-laptop"></i>
+                    <a href="">Laptop Officer</a>
+                </div>
+                <div className="category_type-detail">
+                    <i class="fa-solid fa-laptop"></i>
+                    <a href="">Laptop Dell</a>
+                </div>
+                <div className="category_type-detail">
+                    <i class="fa-solid fa-laptop"></i>
+                    <a href="">Laptop Asus</a>
+                </div>
+                <div className="category_type-detail">
+                    <i class="fa-solid fa-laptop"></i>
+                    <a href="">Laptop MSI</a>
+                </div>
+                <div className="category_type-detail">
+                    <i class="fa-solid fa-laptop"></i>
+                    <a href="">Macbook</a>
+                </div>
+                <div className="category_type-detail">
+                    <i class="fa-solid fa-laptop"></i>
+                    <a href="">Laptop sales</a>
+                </div>
+                <div className="category_type-detail">
+                    <i class="fa-solid fa-laptop"></i>
+                    <a href="">Hot</a>
+                </div>
+            </div>
     </div>
   )
 }
 
 export default Categories
+
+
+
+
+   4 

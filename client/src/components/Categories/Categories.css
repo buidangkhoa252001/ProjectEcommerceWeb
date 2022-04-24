@@ -1,0 +1,45 @@
+.Categories {
+    border-right: 1px solid #e6e7eb;
+}
+.category_type {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.category_type-detail {
+    width: 100%;
+    height: 50px;
+    font-size: 1.1rem;
+    padding: 10px 0 0 10px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+}
+
+
+.category_type-detail i {
+    padding-right: 5px;
+    padding-top: 5px;
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.category_type-detail a {
+    text-decoration: none;
+    color: #373f4c;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.2s ease;
+    font-family: Helvetica;
+}
+
+.category_type-detail:hover {
+    background-color: gainsboro;
+    border-radius: 10px;
+}
+
+.category_type-detail:hover a {
+    padding-left: 8px;
+    color: #6449a8;
+}
+
