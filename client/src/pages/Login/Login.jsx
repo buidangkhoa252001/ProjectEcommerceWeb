@@ -31,8 +31,8 @@ const Login = () => {
                             </div>
                         </div>
                         <div className="login_detail-title">
-                            <h2>start for free</h2>
-                            <h1>Create new account<span><i class="fa-solid fa-circle"></i></span></h1>
+                            <h2>login and  buy</h2>
+                            <h1>Welcome our website<span><i class="fa-solid fa-circle"></i></span></h1>
                             <p>Register Now? <Link to="/register" style={{ textDecoration: 'none', color: '#1f74c1' }}>Sign up</Link></p>
                         </div>
                         <div className="login_detail_input">

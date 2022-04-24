@@ -12,7 +12,7 @@ export const getHistory =async(dispatch,token)=>{
                 headers: {Authorization:token}
             })
             dispatch(getHistorySuccess(res.data))
-            console.log(res)
+           
             
         }catch(err){
               dispatch(getHistoryFailure())

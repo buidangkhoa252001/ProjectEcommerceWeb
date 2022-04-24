@@ -37,7 +37,6 @@
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
-    height: 900px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +45,7 @@
 
 .cart-container {
     width: 85%;
-    height: 85%;
+    margin: 40px 0;
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 25px 40px #1687d933;
@@ -68,7 +67,7 @@
 
 .btn-remove_cart {
     text-decoration: none;
-    padding: 20px 20px 40px 20px;
+    padding: 20px 20px 20px 20px;
     font-size: 1rem;
     position: relative;
     color: red;
@@ -143,9 +142,14 @@
     border: none;
 }
 
+.cart-container_detail-change button:active {
+    transform: scale(0.97);
+}
+
 .cart-container_detail-change span {
     font-size: 1.2rem;
     font-weight: bold;
+    
 }
 
 .cart-container_detail-change button i {

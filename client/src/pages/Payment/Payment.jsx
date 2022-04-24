@@ -1,6 +1,4 @@
-
 import React, { useEffect, useState } from 'react';
-
 import { Link } from 'react-router-dom';
 import './payment.css'
 import axios from "../../axios/axios"
@@ -9,21 +7,41 @@ import { getUser } from '../../api/UserApi';
 const Payment = () => {
 
     const { currentToken } = useSelector(state => state.login);
-    const {payment} = useSelector(state=>state.payment)
     const dispatch = useDispatch()
+    const {payment} = useSelector(state=>state.payment)
+    const [status,setStatus] = useState(false)
     const handleChange = async(id)=>{
-        
-        await axios.put(`/payment/${id}`,{status:true}/* ,{
-            headers:{Authorization:currentToken.accesstoken}
-        } */)
-        getUser(dispatch,currentToken.accesstoken)  
+       
+          console.log(status) 
+        try{
+            await axios.put(`/api/payment/${id}`,{status:status},{
+                headers:{Authorization:currentToken.accesstoken}
+            })
+            alert("change success")
+            setStatus(!status)
+            getUser(dispatch,currentToken.accesstoken)  
+        }
+        catch(err){
+            console.log(err)
+        }
     }
-    const handleDelete = ()=>{
+    const handleDelete = async(id)=>{
+       
+        try{
+            await axios.delete(`/api/payment/${id}`,{
+                headers:{Authorization:currentToken.accesstoken}
+            })
+            alert("delete success")
+            getUser(dispatch,currentToken.accesstoken)  
 
+        }
+        catch(err){
+            console.log(err)
+        }
     }
     return (
         <div className="history-page">
-                    <h2>History</h2>
+                    <h2>All Payment</h2>
                     <h4>You have a {payment.length}</h4>
             <table>
                 <thead>
@@ -47,12 +65,12 @@ const Payment = () => {
                                 <td>{new Date(items.createdAt).toLocaleDateString()}</td>
                                 <td><Link to={`/payment/${items._id}`}>View</Link></td>
                                 <td>{items.status===false ? <div>Pending</div> : <div>Ok</div>  } </td>
-                                <td className="containbutton"><button onClick={()=>handleChange(items._id)} className="changebutton"> Accept </button>
+                                <td className="containbutton">
+                                <button onClick={()=>handleChange(items._id)} className="changebutton"> Accept </button>
                                 <button onClick={()=>handleDelete(items._id)} className="deletebutton" > Delete </button>
                                 </td>
                             </tr>
-                        ))
-                  
+                        ))          
                 }
                 </tbody>
             </table>

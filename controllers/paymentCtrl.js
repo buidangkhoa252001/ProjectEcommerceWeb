@@ -24,8 +24,7 @@ const paymentCtrl={
     deletePayment: async(req,res)=>{
         try {
             await Payments.findByIdAndDelete(req.params.id);
-            res.status(200).json("Order has been deleted...");
-    
+            res.json({msg: "Order has been deleted..."})
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }
@@ -39,7 +38,6 @@ const paymentCtrl={
                 },
                 { new: true }
               );
-
               res.status(200).json(payment)
         } catch (err) {
             return res.status(500).json({msg: err.message})

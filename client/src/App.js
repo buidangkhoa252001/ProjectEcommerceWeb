@@ -18,6 +18,7 @@ import { useEffect, useState } from 'react';
 import CreateProduct from './pages/CreateProduct/CreateProduct';
 import Payment from './pages/Payment/Payment';
 import PaymentDetail from './pages/Payment/PaymentDetail';
+import CreateCategories from './pages/CreateCategories/CreateCategories';
 
 function App() {
   const { isAuth } = useSelector(state => state.login);
@@ -122,6 +123,22 @@ function App() {
           element={
             <PrivateRoute>
               <CreateProduct />
+            </PrivateRoute>
+          }
+        />
+       <Route
+          path="/createProduct/:id"
+          element={
+            <PrivateRoute>
+              <CreateProduct />
+            </PrivateRoute>
+          }
+        />
+       <Route
+          path="/createCategory"
+          element={
+            <PrivateRoute>
+              <CreateCategories />
             </PrivateRoute>
           }
         />

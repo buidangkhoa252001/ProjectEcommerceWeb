@@ -9,7 +9,7 @@ router.route('/payment')
     .get(auth,paymentCtrl.getPaymentDetail)
     .post(auth,paymentCtrl.createPayment)
 router.route('/payment/:id')
-    .put(auth,paymentCtrl.changeStatusPayment)
-    .delete(auth,paymentCtrl.deletePayment)
+    .put(auth,authAdmin,paymentCtrl.changeStatusPayment)
+    .delete(auth,authAdmin,paymentCtrl.deletePayment)
 
  module.exports = router

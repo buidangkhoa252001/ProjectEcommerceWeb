@@ -5,45 +5,44 @@ import useCustomRouter from '../../hooks/useCustomeRouter';
 import axios from "../../axios/axios"
 import useQuery from '../../hooks/useQuery';
 
-const Categories = ({ sort, page, search }) => {
-    const [categories, setCategories] = useState([])
-    const [category, setCategory] = useState("")
+const Categories = ({sort , page,search}) => {
+    const [categories,setCategories] = useState([])
     const { pushQuery } = useCustomRouter()
-
-
-    useEffect(() => {
-        const getCategoryDetail = async () => {
-            try {
+    
+  
+    useEffect(()=>{
+        const getCategoryDetail = async()=>{
+            try{
                 const res = await axios.get(`/api/category`)
+             
+             setCategories(res.data)
 
-                setCategories(res.data)
-
-            } catch (err) {
+            }catch(err){
                 console.log(err)
             }
         }
-        getCategoryDetail()
+         getCategoryDetail() 
+      
+     },[])
 
-    }, [])
-
-    const handleCategory = (e) => {
-        setCategory(e.target.value)
-        if (e.target.value) {
-            pushQuery({ page: 1, sort: sort, category: e.target.value })
+     const handleCategory = (e)=>{
+      
+        if(e.target.value){
+            pushQuery({page:1 , sort:sort,category:e.target.value})
         }
-        else {
-            pushQuery({ page: 1, sort: sort, search: "" })
+        else{
+            pushQuery({page:1 , sort:sort,search:""})
         }
     }
 
 
-    return (
-        <div className='Categories'>
+  return (
+    <div className='Categories'>
             <span>Filters: </span>
             <select name="category" onChange={handleCategory}>
                 <option value=""  >All Products</option>
                 {
-                    categories.map(category => (
+                    categories.map(category=>(
                         <option value={category._id} key={category._id} >
                             {category.name}
                         </option>
@@ -84,9 +83,13 @@ const Categories = ({ sort, page, search }) => {
                     <a href="">Hot</a>
                 </div>
             </div>
-
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Categories
+
+
+
+
+   4 
