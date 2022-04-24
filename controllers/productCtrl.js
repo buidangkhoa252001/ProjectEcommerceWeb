@@ -78,7 +78,7 @@ const productCtrl ={
                 return res.status(400).json({msg: "This product already exists."})
 
             const newProduct = new Products({
-                product_id, title: title.toLowerCase(), price, description, content, images, category
+                product_id, title: title, price, description, content, images, category
             })
                
             await newProduct.save()
@@ -112,7 +112,7 @@ const productCtrl ={
             if(!images) return res.status(400).json({msg: "No image upload"})
 
             await Products.findOneAndUpdate({_id: req.params.id}, {
-                title: title.toLowerCase(), price, description, content, images, category
+                title: title, price, description, content, images, category
             })
 
             res.json({msg: "Updated a Product"})

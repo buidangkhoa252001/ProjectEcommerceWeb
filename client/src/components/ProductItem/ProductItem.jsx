@@ -48,12 +48,31 @@ useEffect(()=>{
     const handleBuy = async(product)=>{
         handleaddCart(product)
     } 
+    const handleDelete = async(id,images)=>{
+        try {
+            /* setLoading(true) */
+            const destroyImg = axios.post('/api/destroy', {public_id:images.public_id},{
+                headers: {Authorization: currentToken.accesstoken}
+            })
+            const deleteProduct = axios.delete(`/api/products/${id}`, {
+                headers: {Authorization: currentToken.accesstoken}
+            })
+    
+            await destroyImg
+            await deleteProduct
+            getUser(dispatch,currentToken.accesstoken)
+            navigate("/products", { replace: true })
+          /*   setLoading(false) */
+        } catch (err) {
+            alert(err.response.data.msg)
+        }
+    }
     const adminButton = () =>{
         return(
             <>
            
                <Link to={`/createProduct/${product._id}`}> <button  to="/cart" className="product_button_edit" >Edit</button></Link>
-                <button className="product_button_delete" >Delete</button>
+                <button className="product_button_delete" onClick={()=>handleDelete(product._id,product.images)} >Delete</button>
             </>
         )
     }
