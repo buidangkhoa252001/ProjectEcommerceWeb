@@ -7,6 +7,7 @@ import Sorting from '../../components/Sorting/Sorting';
 import SearchForm from './../../components/SearchForm/SearchForm';
 import axios from '../../axios/axios';
 import Categories from '../../components/Categories/Categories';
+import IMG from "./noproduct.png"
 import "./Product.css";
 const Product = () => {
   const [products, setProducts] = useState([])
@@ -101,7 +102,11 @@ const Product = () => {
   if (data1.result === 0)
     return (<div>
       <SearchForm search={search1} page={page} sort={sort} />
-      <h2 style={{ textAlign: "center", fontSize: "8rem" }}>No product</h2></div>
+      <div style={{ textAlign: "center", fontSize: "8rem" }}> 
+      <img alt="#" src={IMG} /> 
+    
+      </div>
+      </div>
     )
 
 

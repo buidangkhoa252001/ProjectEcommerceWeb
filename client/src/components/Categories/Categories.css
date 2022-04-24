@@ -4,6 +4,8 @@
 .category_type {
     width: 100%;
     padding: 10px 0;
+    background-color: gray;
+    min-height: 350px;
 }
 
 .category_type-detail {
