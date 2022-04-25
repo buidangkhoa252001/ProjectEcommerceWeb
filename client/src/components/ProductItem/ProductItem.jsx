@@ -60,8 +60,8 @@ useEffect(()=>{
     
             await destroyImg
             await deleteProduct
+            window.location.reload(true);
             getUser(dispatch,currentToken.accesstoken)
-            navigate("/products", { replace: true })
           /*   setLoading(false) */
         } catch (err) {
             alert(err.response.data.msg)

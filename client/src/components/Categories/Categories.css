@@ -1,11 +1,15 @@
 .Categories {
     border-right: 1px solid #e6e7eb;
+    width: 100%;
+    position: relative;
 }
 .category_type {
     width: 100%;
     padding: 10px 0;
-    background-color: gray;
+    background-color: white;
     min-height: 350px;
+    border-radius: 13.5px;
+    color: black
 }
 
 .category_type-detail {
@@ -16,6 +20,7 @@
     position: relative;
     cursor: pointer;
     display: flex;
+    margin-left:3.5px;
 }
 
 
@@ -33,6 +38,7 @@
     width: 100%;
     transition: 0.2s ease;
     font-family: Helvetica;
+
 }
 
 .category_type-detail:hover {

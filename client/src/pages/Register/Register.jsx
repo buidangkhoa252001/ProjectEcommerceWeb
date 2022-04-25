@@ -31,8 +31,8 @@ const Register = () => {
                     <div className="register_detail">
                         <div className="register_deatil_back-home">
                             <div className="register_deatil_back-home-title">
-                                <span><i class="fa-solid fa-circle"></i></span>
-                                <h2>LALA TEAM<i class="fa-solid fa-circle"></i></h2>
+                                <span><i className="fa-solid fa-circle"></i></span>
+                                <h2>LALA TEAM<i className="fa-solid fa-circle"></i></h2>
                             </div>
                             <div className="register_deatil_back-home-btn">
                                 <Link to="/products" style={{ textDecoration: 'none' }}><h3 className="register_Home">Home</h3></Link>
@@ -40,7 +40,7 @@ const Register = () => {
                         </div>
                         <div className="register_detail-title">
                             <h2>start for free</h2>
-                            <h1>Create new account<span><i class="fa-solid fa-circle"></i></span></h1>
+                            <h1>Create new account<span><i className="fa-solid fa-circle"></i></span></h1>
                             <p>Already now? <Link to="/login" style={{ textDecoration: 'none', color: '#1f74c1' }}>Login</Link></p>
                         </div>
                         <div className="register_detail_input">
