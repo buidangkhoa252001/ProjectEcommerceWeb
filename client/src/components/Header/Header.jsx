@@ -101,8 +101,10 @@ const Header = () => {
         {admin && adminRouter()}
         {!admin && isAuth && userRouter()}
         {
+
             isAuth ? loggedRouter() : <li><Link to="/login">Login ✥ </Link> <Link to="/register"> Register</Link>  
                    
+
                        
             </li>
                                       

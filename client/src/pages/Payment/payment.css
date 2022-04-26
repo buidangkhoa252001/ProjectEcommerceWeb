@@ -1,41 +1,148 @@
-.history-page{
-    overflow-x: auto;
-}
-.history-page h2, h4{
-    text-align: center;
-    margin: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-}
-.history-page table{
-    margin: auto;
+.payment_page {
+    background-color: #eaeaea;
     width: 100%;
 }
-.history-page table,th,tr,td{
-    border: 1px solid #ddd;
-    border-collapse: collapse;
-}
-th, td{
-    text-align: center;
-    padding: 10px;
-    text-transform: capitalize;
-}
-table a{
-    color: rgb(3, 165, 206);
+
+.fa-airbnb {
+    padding-left: 5px;
 }
 
-.history-page img{
-    width: 70px;
-    height: 100px;
-    object-fit: cover;
+.payment_page-logo {
+    display: flex;
+    padding: 25px 0 30px 15px;
 }
-.containbutton{
-    display:flex;
-    justify-content: space-between;
+
+.payment_page-logo h2 {
+    color: #1a202c;
+    font-family: Verdana;
+    font-weight: 500;
+    font-size: 2.8rem;
 }
-.changebutton{
-    background-color:green;
+
+.fa-file-invoice {
+    font-size: 2.4rem;
+    padding: 10px 10px 0 0;
 }
-.deletebutton{
-    background-color:red;
+
+.payment_page_total-product {
+    display: flex;
+}
+
+.payment_page_total-product h3 {
+    padding: 0 15px;
+}
+
+.payment_page_personal-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    color: #fffffd;
+    background-color: #1a202c;
+    width: 95%;
+    border-radius: 5px;
+    height: 30px;
+    margin: 15px;
+}
+
+.payment_page_personal-title h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.payment_page_product-title h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment_page_product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: #ffffff;
+    color: #191f2b;
+    height: 150px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid #ecf0fb;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.containbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containbutton button {
+    padding: 0 15px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 15px;
+}
+
+.containbutton button:hover {
+    transform: scale(1.05);
+}
+
+.containbutton .changebutton{
+    color: #167922;
+    background-color: #85e08f;
+}
+
+.containbutton .deletebutton{
+    color: rgb(163, 47, 47);
+    background-color: rgb(231, 158, 158);
+}
+
+.payment_page_product-detail h3,
+.payment_page_product-detail span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+}
+
+/* icon */
+.fa-user {
+    background: #e5f1fd;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #52a8f5;
+}
+
+.fa-location-arrow {
+    background: #dde3fb;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #3351e7;
+}
+
+.fa-qrcode {
+    background: #fff4de;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #ffba2e;
+}
+
+.fa-location-dot {
+    background: #def5e1;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #37c148;
+}
+
+.fa-dollar-sign {
+    background: #def5e1;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #37c148;
 }

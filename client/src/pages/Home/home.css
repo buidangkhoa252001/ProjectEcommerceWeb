@@ -79,6 +79,23 @@ button {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.slider_2 .slick-dots li button:before {
+    font-family: FontAwesome !important;
+    content: '\2d';
+    font-size: 7rem !important;
+    line-height: 1px;
+    position: absolute;
+    top: -20px !important;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    opacity: .25;
+    color: rgb(16, 148, 224) !important;
+    -webkit-font-smoothing: antialiased;
+    z-index: 1000 !important;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 
 /* image grid */
 
@@ -138,4 +155,29 @@ button {
 .img_grid-item img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+
+/* slider_2 */
+
+.slider_2 {
+    padding: 40px 0;
+    width: 100%;
+}
+
+.slider_2 .image-slider {
+    max-height: 250px;
+} 
+
+.slider_2 img {
+    border-radius: 20px;
+    height: 220px;
+    width: 100%;
+    transition: 0.2s ease-in;
+}
+
+.slider_2 img:hover {
+    transform: scaleY(1.1);
+    z-index: 6;
 }

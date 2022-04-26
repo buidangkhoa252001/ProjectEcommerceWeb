@@ -15,24 +15,24 @@ import laptop7 from './laptop_7.png';
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: "block"}}
-        onClick={onClick}
-      />
+        <div
+            className={className}
+            style={{ ...style, display: "block" }}
+            onClick={onClick}
+        />
     );
-  }
-  
-  function SamplePrevArrow(props) {
+}
+
+function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", zIndex: "2", }}
-        onClick={onClick}
-      />
+        <div
+            className={className}
+            style={{ ...style, display: "block", zIndex: "2", }}
+            onClick={onClick}
+        />
     );
-  }
+}
 
 class Home extends Component {
     render() {
@@ -47,40 +47,84 @@ class Home extends Component {
             nextArrow: <SampleNextArrow />,
             prevArrow: <SamplePrevArrow />
         };
+        const setting1 = {
+            dots: true,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            arrows: false
+        };
         return (
-            <div className="slider">
-                <Slider {...settings}>
-                    <div className="image-slider">
-                        <div className="image-item">
-                            <img src={laptop1} alt="image_2" />
+            <div className="home">
+                <div className="slider">
+                    <Slider {...settings}>
+                        <div className="image-slider">
+                            <div className="image-item">
+                                <img src={laptop1} alt="image_2" />
+                            </div>
+                        </div>
+                        <div className="image-slider">
+                            <div className="image-item">
+                                <img src={laptop2} alt="image_2" />
+                            </div>
+                        </div>
+                        <div className="image-slider">
+                            <div className="image-item">
+                                <img src={laptop3} alt="image_3" />
+                            </div>
+                        </div>
+                        <div className="image-slider">
+                            <div className="image-item">
+                                <img src={laptop4} alt="image_4" />
+                            </div>
+                        </div>
+                    </Slider>
+                    <div className="img_grid">
+                        <div className="img_grid-item">
+                            <img src={laptop5} alt="image_5" />
+                        </div>
+                        <div className="img_grid-item">
+                            <img src={laptop6} alt="image_6" />
+                        </div>
+                        <div className="img_grid-item">
+                            <img src={laptop7} alt="image_4" />
                         </div>
                     </div>
-                    <div className="image-slider">
-                        <div className="image-item">
-                            <img src={laptop2} alt="image_2" />
+                </div>
+                <div className="slider_2">
+                    <Slider {...setting1}>
+                        <div className="image-slider">
+                            <div className="image-item">
+                                <img src={laptop1} alt="image_2" />
+                            </div>
                         </div>
-                    </div>
-                    <div className="image-slider">
-                        <div className="image-item">
-                            <img src={laptop3} alt="image_3" />
+                        <div className="image-slider">
+                            <div className="image-item">
+                                <img src={laptop2} alt="image_2" />
+                            </div>
                         </div>
-                    </div>
-                    <div className="image-slider">
-                        <div className="image-item">
-                            <img src={laptop4} alt="image_4" />
+                        <div className="image-slider">
+                            <div className="image-item">
+                                <img src={laptop3} alt="image_3" />
+                            </div>
                         </div>
-                    </div>
-                </Slider>
-                <div className="img_grid">
-                    <div className="img_grid-item">
-                        <img src={laptop5} alt="image_5" />
-                    </div>
-                    <div className="img_grid-item">
-                        <img src={laptop6} alt="image_6" />
-                    </div>
-                    <div className="img_grid-item">
-                        <img src={laptop7} alt="image_4" />
-                    </div>
+                        <div className="image-slider">
+                            <div className="image-item">
+                                <img src={laptop4} alt="image_4" />
+                            </div>
+                        </div>
+                        <div className="image-slider">
+                            <div className="image-item">
+                                <img src={laptop4} alt="image_4" />
+                            </div>
+                        </div>
+                        <div className="image-slider">
+                            <div className="image-item">
+                                <img src={laptop4} alt="image_4" />
+                            </div>
+                        </div>
+                    </Slider>
                 </div>
             </div>
         );
