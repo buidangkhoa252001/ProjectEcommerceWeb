@@ -1,15 +1,18 @@
 import React from 'react';
 import "./notfound.css"
+import notfound from "./notfound.png"
+import Header from './../../components/Header/Header';
 
 const NotFound= () => {
     return (
+        <>
+        <Header />
         <div className="containernotfound">
-            <h1>
-
-            Not Found
-            </h1>
+           <img src={notfound} />
            
         </div>
+        
+        </>
     );
 }
  

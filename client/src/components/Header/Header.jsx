@@ -36,6 +36,8 @@ const Header = () => {
       return(
           <>
       
+              <li><Link to="/profile" style={{ textDecoration: "none" , cursor: "pointer" }} >Profile</Link></li>
+              <li><div className="avatarheader"><img src={user.avatar}/></div></li>
               <li><Link to="/" style={{ textDecoration: "none" , cursor: "pointer" }}  onClick={logoutUser}>Logout</Link></li>
               {
         openSearch &&
@@ -57,7 +59,7 @@ const Header = () => {
         <>
             <li><Link style={{ textDecoration: "none" }} to="/history">History</Link></li>
             <li onClick={() => setOpenSearch(true)}>Search</li>
-            <li onClick={() => setOpenFilter(true)}>Filter </li>
+           {/*  <li onClick={() => setOpenFilter(true)}>Filter </li> */}
             {
       openSearch &&
       <Modal titleTxt="Search" setOpen={setOpenSearch}>
@@ -100,6 +102,7 @@ const Header = () => {
         {!admin && isAuth && userRouter()}
         {
             isAuth ? loggedRouter() : <li><Link to="/login">Login ✥ </Link> <Link to="/register"> Register</Link>  
+                   
                        
             </li>
                                       

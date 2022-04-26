@@ -6,14 +6,13 @@
 .feature{
     display: flex;
     justify-content: space-around;
-
+    margin-top: 4px;
+    align-items: center;
 }
 .text{
     font-weight: 300;
     font-size:22px;
     margin-left: 2px;
-
-
 }
 .sorting{
     display:flex;

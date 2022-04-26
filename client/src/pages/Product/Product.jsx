@@ -100,25 +100,10 @@ const Product = () => {
 
 
   if (data1.result === 0)
-    return (<div>
-      <SearchForm search={search1} page={page} sort={sort} />
-      <div style={{ textAlign: "center", fontSize: "8rem" }}> 
-      <img alt="#" src={IMG} /> 
-    
-      </div>
-      </div>
-    )
-
-
-
-  return (
-    <div >
-     
-     
-      <div className="layout">
-        
+    return (
+      <div>
+        <div className="layout">
         <Categories page={page} sort={sort} category={category} />
-        {/*  <FilterForm /> */}
         {loading ? <Loading />
           : <div>
             <div className="feature">  
@@ -126,16 +111,35 @@ const Product = () => {
             <div className="sorting">
               <p className="text">Sort:</p>
             <Sorting search={search1} page={page} sort={sort} category={category} />
-
+            </div>
+            </div>
+            <div style={{ textAlign: "center", fontSize: "8rem" }}> 
+      <img alt="#" src={IMG} /> 
+      </div>
+          </div>
+        }
+      </div>
+      </div>
+      
+    )
+  return (
+    <div >
+      <div className="layout"> 
+        <Categories page={page} sort={sort} category={category} />
+        {loading ? <Loading />
+          : <div>
+            <div className="feature">  
+            <SearchForm search={search1} page={page} sort={sort} />
+            <div className="sorting">
+              <p className="text">Sort:</p>
+            <Sorting search={search1} page={page} sort={sort} category={category} />
             </div>
             </div>
             <Products products={products} style={{ width: "80%" }} />
           </div>
         }
       </div>
-
       <Pagination totalPages={totalPages} search={search1} page={page} sort={sort} loading={loading} category={category} />
-
     </div>
   );
 }

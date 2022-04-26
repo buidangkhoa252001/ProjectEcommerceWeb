@@ -110,6 +110,7 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
+
     addCart: async(req,res)=>{
         try{
             const user = await Users.findById(req.user.id)
@@ -126,7 +127,41 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
-  
+    updateUser: async (req, res) => {
+        try {
+            const {name, avatar} = req.body
+            await Users.findOneAndUpdate({_id: req.user.id}, {
+                name, avatar
+            })
+
+            res.json({msg: "Update Success!"})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    resetPassword: async (req, res) => {
+        try {
+            const {password} = req.body
+            const passwordHash = await bcrypt.hash(password, 12)
+
+            await Users.findOneAndUpdate({_id: req.user.id}, {
+                password: passwordHash
+            })
+
+            res.json({msg: "Password successfully changed!"})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    deleteUser: async (req, res) => {
+        try {
+            await Users.findByIdAndDelete(req.params.id)
+
+            res.json({msg: "Deleted Success!"})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
     history: async(req, res) =>{
         try {
             const history = await Payments.find({user_id: req.user.id})

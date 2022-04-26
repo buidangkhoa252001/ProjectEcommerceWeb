@@ -45,3 +45,13 @@ header ul li:hover{
 li{
    
 }
+.avatarheader{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+}
+.avatarheader img{
+    height:100%;
+    width:100%;
+    border-radius: 50%;
+}

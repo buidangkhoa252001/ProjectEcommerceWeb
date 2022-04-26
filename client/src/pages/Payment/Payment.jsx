@@ -9,16 +9,16 @@ const Payment = () => {
     const { currentToken } = useSelector(state => state.login);
     const dispatch = useDispatch()
     const {payment} = useSelector(state=>state.payment)
-    const [status,setStatus] = useState(false)
-    const handleChange = async(id)=>{
+    /* const [status,setStatus] = useState(false) */
+    const handleChange = async(id,statusitem)=>{
        
-          console.log(status) 
+          console.log(statusitem) 
         try{
-            await axios.put(`/api/payment/${id}`,{status:status},{
+            await axios.put(`/api/payment/${id}`,{status:!statusitem},{
                 headers:{Authorization:currentToken.accesstoken}
             })
             alert("change success")
-            setStatus(!status)
+            /* setStatus(!status) */
             getUser(dispatch,currentToken.accesstoken)  
         }
         catch(err){
@@ -42,7 +42,7 @@ const Payment = () => {
     return (
         <div className="history-page">
                     <h2>All Payment</h2>
-                    <h4>You have a {payment.length}</h4>
+                    <h4>You have a {payment.length} orders</h4>
             <table>
                 <thead>
                     <tr>
@@ -50,9 +50,9 @@ const Payment = () => {
                         <th>User ID</th>
                         <th>User Account</th>
                         <th>Date of Purchased</th>
-                        <th></th>
                         <th>Delivery</th>
                         <th>Change Status</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,12 +63,12 @@ const Payment = () => {
                                 <td>{items.user_id}</td>
                                 <td>{items.name}</td>
                                 <td>{new Date(items.createdAt).toLocaleDateString()}</td>
-                                <td><Link to={`/payment/${items._id}`}>View</Link></td>
                                 <td>{items.status===false ? <div>Pending</div> : <div>Ok</div>  } </td>
                                 <td className="containbutton">
-                                <button onClick={()=>handleChange(items._id)} className="changebutton"> Accept </button>
+                                <button onClick={()=>handleChange(items._id,items.status)} className="changebutton">Change </button>
                                 <button onClick={()=>handleDelete(items._id)} className="deletebutton" > Delete </button>
                                 </td>
+                                <td><Link to={`/payment/${items._id}`}>View</Link></td>
                             </tr>
                         ))          
                 }
