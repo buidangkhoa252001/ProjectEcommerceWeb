@@ -122,12 +122,12 @@ const Product = () => {
         {loading ? <Loading />
           : <div>
             <div className="feature">  
-            <SearchForm search={search1} page={page} sort={sort} />
             <div className="sorting">
               <p className="text">Sort:</p>
             <Sorting search={search1} page={page} sort={sort} category={category} />
 
             </div>
+            <SearchForm search={search1} page={page} sort={sort} />
             </div>
             <Products products={products} style={{ width: "80%" }} />
           </div>

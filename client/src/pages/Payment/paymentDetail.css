@@ -1,0 +1,12 @@
+
+.payment-detail-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history_page_product-detail img {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+}

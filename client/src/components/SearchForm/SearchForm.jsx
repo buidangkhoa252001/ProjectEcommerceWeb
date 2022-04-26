@@ -26,7 +26,8 @@ const SearchForm = ({search,page,sort}) => {
     <div className='search_form'>
     
       <form onSubmit={handleSubmit}>
-        <input type="text"  ref={inputRef}   />
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text"  ref={inputRef} placeholder="Find products..."  />
         <button>Search</button>
       </form>
     </div>

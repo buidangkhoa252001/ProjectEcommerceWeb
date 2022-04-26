@@ -99,7 +99,7 @@ const Header = () => {
         {admin && adminRouter()}
         {!admin && isAuth && userRouter()}
         {
-            isAuth ? loggedRouter() : <li><Link to="/login">Login ✥ </Link> <Link to="/register"> Register</Link>  
+            isAuth ? loggedRouter() : <li><Link to="/login" style={{textDecoration: "none", padding: "10px"}}>Login </Link> <Link to="/register" style={{textDecoration: "none", padding: "10px", border: "1px solid #bfbfbf", borderRadius: "30px",}}> Register</Link>  
                        
             </li>
                                       
