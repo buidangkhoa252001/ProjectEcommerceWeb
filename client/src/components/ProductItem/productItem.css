@@ -121,3 +121,30 @@
     cursor: pointer;
     padding: 0  10px;
 }
+
+/* button admin: delete & edit */
+
+.product_button_edit {
+    width: 100px;
+    color: rgb(26, 85, 194);
+    background-color: rgb(150, 205, 226);
+    border-radius: 15px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.product_button_edit:hover,
+.product_button_delete:hover {
+    transform: scale(1.07);
+}
+
+.product_button_delete {
+    width: 100px;
+    color: rgb(238, 105, 105);
+    background-color: rgb(240, 179, 179);
+    border-radius: 15px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}

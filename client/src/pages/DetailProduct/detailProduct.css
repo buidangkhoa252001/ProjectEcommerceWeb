@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     background: whitesmoke;
+    width: 100%;
     height: 900px;
     display: flex;
     justify-content: center;
@@ -11,7 +12,7 @@
 
 .box-detail {
     width: 85%;
-    height: 85%;
+    max-height: 800px;
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 25px 40px #1687d933;
@@ -25,18 +26,27 @@
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    max-height: 800px;
+    width: 100%;
+}
+
+.box-detail_img-set {
+    height: 90%;
+    width: 80%;
 }
 
 .box-detail_img img {
-    width: 80%;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     border-radius: 35px;
+    object-fit: fill;
 }
 
 .box-detail_title {
     display: flex;
     flex-direction: column;
     padding: 50px 100px;
+    height: 100%;
 }
 
 .box-detail_title h1 {

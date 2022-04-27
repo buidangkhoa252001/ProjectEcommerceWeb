@@ -99,7 +99,9 @@ const DetailProduct = () => {
             <div className="detail">
                 <div className="box-detail">
                     <div class="box-detail_img">
-                        <img src={image} alt="" />
+                        <div className="box-detail_img-set">
+                            <img src={image} alt="" />
+                        </div>
                     </div>
                     <div className="box-detail_title">
                         <h1>{product.title} </h1>
