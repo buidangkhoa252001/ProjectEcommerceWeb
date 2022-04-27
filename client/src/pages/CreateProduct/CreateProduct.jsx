@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import "./createProduct.css"
 import Loading from '../../utils/Loading/Loading'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 const initialState = {
     product_id: '',
     title: '',
@@ -28,9 +28,9 @@ const CreateProduct = () => {
 
     const [onEdit, setOnEdit] = useState(false)
     const navigate = useNavigate()
-    const param = useParams()
-    /*    navigate("/login", { replace: true }) */
-
+    const param =useParams()
+/*    navigate("/login", { replace: true }) */
+const dispatch = useDispatch();
     const styleUpload = {
         display: images ? "block" : "none"
     }
