@@ -2,27 +2,93 @@
     border-right: 1px solid #e6e7eb;
     width: 100%;
     position: relative;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .category_type {
     width: 100%;
     padding: 10px 0;
-    background-color: white;
     min-height: 350px;
     border-radius: 13.5px;
     color: black
 }
 
-.category_type-detail {
+
+.category_type-logo {
     width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category_type-line {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1px;
+    background-color: rgb(189, 186, 186);
+    margin: auto;
+}
+
+.category_type-logo ion-icon {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 7px;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 1.8rem;
+}
+
+.category_type-logo span {
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: 600;
+}
+
+
+
+.category_type-menu {
+    text-transform: uppercase;
+    padding: 10px 0 10px 20px;
+    color: #5D6265;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.category_type-detail {
+    width: 90%;
     height: 50px;
-    font-size: 1.1rem;
-    padding: 10px 0 0 10px;
-    position: relative;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 15px 0 10px 15px;
     cursor: pointer;
     display: flex;
     margin-left:3.5px;
+    color: #77828B;
+    transition: width 0.3s ease;
 }
 
+.category_type-detail1 {
+    width: 90%;
+    height: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 15px 0 10px 15px;
+    margin: 5px 5px;
+    cursor: pointer;
+    display: flex;
+    margin-left:3.5px;
+    color: #77828B;
+}
+
+.category_type-detail1 a {
+    color: #77828B;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
 
 .category_type-detail i {
     padding-right: 5px;
@@ -38,16 +104,24 @@
     width: 100%;
     transition: 0.2s ease;
     font-family: Helvetica;
-
 }
 
 .category_type-detail:hover {
-    background-color: gainsboro;
+    background-color: #f8f9d2;
+    background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+    border-radius: 10px;
+    color: #31373E;
+    transform: scaleY(5px);
+}
+
+.category_type-detail1:hover {
+    background-color: #f8f9d2;
+    background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
     border-radius: 10px;
 }
 
-.category_type-detail:hover a {
-    padding-left: 8px;
-    color: #6449a8;
+.category_type-detail1:hover a {
+    color: #31373E;
+    transform: translateX(8px);
 }
 
