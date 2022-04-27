@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState } from 'react'
 import "./CreateCategories.css"
 import { getUser } from '../../api/UserApi';
 import axios from "../../axios/axios"
@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const CreateCategories = () => {
   const { currentToken } = useSelector(state => state.login);
-  /* const [categories,setCategories] = state.categoriesAPI.categories */
   const { categories } = useSelector(state => state.categories)
   const [category, setCategory] = useState("")
   const [onEdit, setOnEdit] = useState(false)
@@ -66,7 +65,7 @@ const CreateCategories = () => {
     <div className="categories">
       <form onSubmit={createCategory}>
 
-        <label htmlFor="category">Category</label>
+        <label>Category</label>
 
         <input type="text" name="category" value={category} required
           onChange={e => setCategory(e.target.value)} placeholder="Enter category" />
@@ -80,10 +79,10 @@ const CreateCategories = () => {
             <p>Name</p>
           </div>
           <div className="cateogry_create-title_detail">
-            <i class="fa-solid fa-square-plus"></i>
+            <i className="fa-solid fa-square-plus"></i>
           </div>
           <div className="cateogry_create-title_detail">
-            <i class="fa-solid fa-folder-minus"></i>
+            <i className="fa-solid fa-folder-minus"></i>
           </div>
         </div>
         {

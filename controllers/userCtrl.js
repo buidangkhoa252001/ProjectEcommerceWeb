@@ -98,13 +98,26 @@ const userCtrl = {
 
      
     },
+    getAllUser: async (req,res)=>{
+        try{
+          const query = req.query.new
+         const users= query
+         ? await Users.find().sort({_id:-1}).limit(10)
+         : await Users.find()
+        
+         res.status(200).json(users);
+          
+        }
+        catch(err){
+          res.status(500).json(err)
+        }
+      },
+      
     getUser: async(req,res)=>{
         try{
             const user = await Users.findById(req.user.id)
             if(!user) return res.status(400).json({msg:"User does not exist"})
             res.json(user)
-
-
         }
         catch(err){
             return res.status(500).json({msg: err.message})

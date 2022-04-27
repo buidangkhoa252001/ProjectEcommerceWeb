@@ -125,18 +125,7 @@ const DetailProduct = () => {
                     </div>
                 </div>
             </div>    
-                <div>
-                    <h2>Related products</h2>
-                    <div className="products">
-                        {/*  {
-                        productCategory.map(product=>{
-                            
-                         <ProductItem   product={product} /> 
-                        })
-                    } */}
-
-                    </div>
-                </div>
+             
 
 
             </div>
