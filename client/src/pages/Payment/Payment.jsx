@@ -8,7 +8,7 @@ const Payment = () => {
 
     const { currentToken } = useSelector(state => state.login);
     const dispatch = useDispatch()
-<<<<<<< HEAD
+
     const {payment} = useSelector(state=>state.payment)
     /* const [status,setStatus] = useState(false) */
     const handleChange = async(id,statusitem)=>{
@@ -21,7 +21,7 @@ const Payment = () => {
             alert("change success")
             /* setStatus(!status) */
             getUser(dispatch,currentToken.accesstoken)  
-=======
+
     const { payment } = useSelector(state => state.payment)
     const [status, setStatus] = useState(false)
     const handleChange = async (id) => {
@@ -34,7 +34,7 @@ const Payment = () => {
             alert("change success")
             setStatus(!status)
             getUser(dispatch, currentToken.accesstoken)
->>>>>>> eb7846ea5976ff9e9f46ef309170c1673c175b34
+
         }
         catch (err) {
             console.log(err)
@@ -55,7 +55,7 @@ const Payment = () => {
         }
     }
     return (
-<<<<<<< HEAD
+
         <div className="history-page">
                     <h2>All Payment</h2>
                     <h4>You have a {payment.length} orders</h4>
@@ -90,7 +90,7 @@ const Payment = () => {
                 }
                 </tbody>
             </table>
-=======
+
         <div className="payment-page">
             <div className="payment_page-logo">
                 <h2><i class="fa-solid fa-file-invoice"></i>All Payment</h2>
@@ -127,7 +127,7 @@ const Payment = () => {
                     </div>
                 ))
             }
->>>>>>> eb7846ea5976ff9e9f46ef309170c1673c175b34
+
         </div>
     );
 };
