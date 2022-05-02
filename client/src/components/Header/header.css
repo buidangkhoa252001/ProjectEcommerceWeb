@@ -15,13 +15,7 @@ header a{
     text-transform: uppercase;
     color: #555;
 }
-header ul li{
-    display: inline-block;
-    opacity: 0.7;
-    padding: 0 20px;
-    cursor: pointer;
-    text-transform:uppercase;
-}
+
 header ul li:hover{
     opacity: 1;
 }
@@ -43,15 +37,86 @@ header ul li:hover{
     font-size: 10px;
 }
 li{
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
 }
+
+
+
+/* user */
 .avatarheader{
-    height:30px;
+    height:100%;
     width:30px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    
 }
 .avatarheader img{
     height:100%;
     width:100%;
     border-radius: 50%;
+    border: 2px solid grey;
+    cursor: pointer;
+}
+
+
+.header_detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.header_detail-product,
+.header_detail-history,
+.header_detail-search {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* header_profile */
+.header_proflie {
+    position: relative;
+}
+
+
+.header_profile-detail {
+    position: absolute;
+    z-index: 1000;
+    background-color: #F9F9F9;
+    box-shadow: #ddd;
+    padding: 5px 0 5px 5px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: none;
+    margin: 10px;
+}
+
+.header_profile-detail.active {
+    display: block;
+}
+
+.header_profile-detail li {
+    padding: 20px;
+    width: 95%;
+    color: black;
+}
+
+.header_profile-detail li:hover {
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    
+}
+
+/* amin */
+.header_detail-admin {
+    display: flex;
+    justify-content: space-between
 }
