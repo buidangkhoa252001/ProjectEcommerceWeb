@@ -75,7 +75,7 @@
 .col2 h2,
 .col3 h2 {
     margin-bottom: 10px;
-    color: #BE4238;
+    color: crimson;
 }
 
 .col2 li,
@@ -183,7 +183,7 @@ li:hover::after {
 }
 
 .text-last-footer span {
-    color: #A5281E;
+    color: crimson;
 }
 
 .icon{

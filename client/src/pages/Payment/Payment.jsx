@@ -24,17 +24,19 @@ const Payment = () => {
         }
     }
     const handleDelete = async (id) => {
+        if(window.confirm("Do you want to delete this product?")){
+            try {
+                await axios.delete(`/api/payment/${id}`, {
+                    headers: { Authorization: currentToken.accesstoken }
+                })
+                alert("delete success")
+                getUser(dispatch, currentToken.accesstoken)
+    
+            }
+            catch (err) {
+                console.log(err)
+            }
 
-        try {
-            await axios.delete(`/api/payment/${id}`, {
-                headers: { Authorization: currentToken.accesstoken }
-            })
-            alert("delete success")
-            getUser(dispatch, currentToken.accesstoken)
-
-        }
-        catch (err) {
-            console.log(err)
         }
     }
     return (
@@ -45,7 +47,7 @@ const Payment = () => {
             </div>
             <div className="payment_page_total-product">
                 <h3>Pending <i className="fa-solid fa-caret-up"></i></h3>
-                <h3>Total Product: {payment.length}</h3>
+                <h3>Total Payment: {payment.length}</h3>
             </div>
             <div className="payment_page_personal-title">
                 <h3>Payment ID <i className="fa-brands fa-airbnb"></i></h3>

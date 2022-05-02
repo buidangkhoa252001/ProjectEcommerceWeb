@@ -5,6 +5,8 @@ import { getCart } from './CartAPI';
 import { getHistory } from './HistoryAPI';
 import { getCategories } from './CategoriesAPI';
 import { getPayment } from "./PaymentAPI ";
+import { getAllUser } from "./AllUserAPI";
+
 
 
 export const getUser = async(dispatch,token)=>{
@@ -17,6 +19,7 @@ export const getUser = async(dispatch,token)=>{
                 dispatch(getUserSuccess(res.data))
                 getCart(dispatch,res.data.cart)
                 getHistory(dispatch,token)
+                getAllUser(dispatch,token)
                 getPayment(dispatch,token)
                 getCategories(dispatch)
                 console.log(res)

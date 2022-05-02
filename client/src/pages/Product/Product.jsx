@@ -27,7 +27,7 @@ const Product = () => {
       page: Number(page),
       sort: sort,
       category: category,
-      search1: search1.toLocaleLowerCase()
+      search1: search1
     }
   }, [search])
 
