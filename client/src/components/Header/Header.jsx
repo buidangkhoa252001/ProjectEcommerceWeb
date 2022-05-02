@@ -22,6 +22,7 @@ const Header = () => {
     const [openFilter, setOpenFilter] = useState(false)
     const [on, setOn] = useState(false)
     const logoutUser = async () => {
+        setOn((on) => !on);
         logOutUser(dispatch)
         window.location.href = "/";
     };
@@ -42,7 +43,7 @@ const Header = () => {
                 <div className="header_profile">
                     <div className="avatarheader" onClick={handLogged}><img src={user.avatar} /></div>
                     <div className={`header_profile-detail ${on ? "active" : ""}`}>
-                        <li><Link to="/profile" style={{ textDecoration: "none", cursor: "pointer" }} >Profile</Link></li>
+                        <li><Link to="/profile" onClick={handLogged} style={{ textDecoration: "none", cursor: "pointer" }} >Profile</Link></li>
                         <li><Link to="/" style={{ textDecoration: "none", cursor: "pointer" }} onClick={logoutUser}>Logout</Link></li>
                     </div>
                 </div>
@@ -103,6 +104,9 @@ const Header = () => {
             </div>
             <div header_detail-payment-admin>
                 <li><Link style={{ textDecoration: "none" }} to="/payment">All Payment</Link></li>
+            </div>
+            <div header_detail-payment-admin>
+                <li><Link style={{ textDecoration: "none" }} to="/alluser">All User</Link></li>
             </div>
             </>
         )
