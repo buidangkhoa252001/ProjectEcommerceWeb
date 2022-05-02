@@ -87,8 +87,9 @@ useEffect(()=>{
     }
     return (
         <div className="product_card">
-            
+             <Link to={`/products/${product._id}`}>
                 <img src={product.images.url} alt="" />
+             </Link>
             
             <div>
                  <h1 className="product_title">{product.title}</h1>

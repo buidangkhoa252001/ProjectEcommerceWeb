@@ -20,7 +20,7 @@
     /*  margin:5px 20px; */
     width: 350px;
     height: 55%;
-    object-fit: cover;
+    object-fit: contain;
     cursor: pointer;
 }
 

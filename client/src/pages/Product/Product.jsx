@@ -33,6 +33,13 @@ const Product = () => {
 
   /* goi product */
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  }, [page,sort,search,category]);
+  useEffect(() => {
     const getProduct = async () => {
       try {
         if (category) {

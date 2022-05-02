@@ -20,6 +20,7 @@ import Payment from './pages/Payment/Payment';
 import PaymentDetail from './pages/Payment/PaymentDetail';
 import CreateCategories from './pages/CreateCategories/CreateCategories';
 import Profile from './pages/Profile/Profile';
+import AllUser from './pages/AllUser/AllUser';
 
 function App() {
   const { isAuth } = useSelector(state => state.login);
@@ -148,6 +149,14 @@ function App() {
           element={
             <PrivateRoute>
               <Profile />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/alluser"
+          element={
+            <PrivateRoute>
+              <AllUser />
             </PrivateRoute>
           }
         />

@@ -19,5 +19,7 @@ router.get('/history/:id', auth, userCtrl.getHitory)
 router.get('/cart', auth, userCtrl.cart)
 router.post('/reset', auth, userCtrl.resetPassword)
 router.patch('/update', auth, userCtrl.updateUser)
+router.delete('/delete/:id', auth, userCtrl.deleteUser)
+router.get('/getAllUser', auth, userCtrl.getAllUser)
 
 module.exports = router

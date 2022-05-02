@@ -6,7 +6,7 @@ import usePagination from './../../hooks/usePagination';
 const Pagination = ({totalPages,page,sort,search,category}) => {
 
   const {firstArr, lastArr,  isActive, prev, next, jump} = usePagination(totalPages,page,sort,search,category)
-
+  
   return (
   
     <div className='pagination'>

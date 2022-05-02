@@ -143,7 +143,7 @@ const dispatch = useDispatch();
     return (
         <div className="create">
             <div className="create_title">
-                <i class="fa-solid fa-folder-plus"></i>
+                <i className="fa-solid fa-folder-plus"></i>
                 <h1>create product</h1>
             </div>
             <div className="create_product">
@@ -153,8 +153,8 @@ const dispatch = useDispatch();
                         <div className="upload">
                             <h2>upload image</h2>
                             <input type="file" name="file" id="file_up" onChange={handleUpload} />
-                            <label for="file_up" class="input-label">
-                                <i class="fas fa-cloud-upload-alt icon-upload"></i>
+                            <label htmlFor="file_up" className="input-label">
+                                <i className="fas fa-cloud-upload-alt icon-upload"></i>
                             </label>
                             <div id="file_img" style={styleUpload}>
                                 <img src={images ? images.url : ""} alt="" />
