@@ -11,18 +11,22 @@ const AllUser = () => {
    const dispatch = useDispatch()
     console.log(allUser)
 
-    const handleDelete=async(id)=>{
+    const handleDelete=async(id,role)=>{
         if(window.confirm("Do you want to delete this product?")){
-            try {
-                await axios.delete(`/user/delete/${id}`, {
-                    headers: { Authorization: currentToken.accesstoken }
-                })
-                alert("delete user success")
-                getUser(dispatch, currentToken.accesstoken)
-    
+            if(role==1){
+                alert("can not delete the admin ")
             }
-            catch (err) {
-                console.log(err)
+            else{
+                try {
+                    await axios.delete(`/user/delete/${id}`, {
+                        headers: { Authorization: currentToken.accesstoken }
+                    })
+                    alert("delete user success")   
+                    getUser(dispatch, currentToken.accesstoken)
+                }
+                catch (err) {
+                    console.log(err)
+                }
             }
 
         }
@@ -49,12 +53,10 @@ const AllUser = () => {
                     </div>
                     <div className="history_page-detail1-Date">
                         <i className="fa-solid fa-calendar">{user.email}</i>
-                       {/*  {new Date(user.createdAt).toLocaleDateString()} */}
-                    
                     </div>
                     <div className="history_page-detail1-view">
-                        <i className="fa-solid fa-check"></i>
-                        <button onClick={() => handleDelete(user._id)}>delete</button>
+                        {/* <i className="fa-solid fa-check"></i> */}
+                        <button onClick={() => handleDelete(user._id,user.role)}>delete</button>
                     </div>
                 </div>
             ))

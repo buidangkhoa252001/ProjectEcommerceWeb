@@ -35,10 +35,10 @@ const PaymentDetail = () => {
                 <h3>Country Code <i className="fa-brands fa-airbnb"></i></h3>
             </div>
             <div className="history_page_personal-detail">
-                <h3><i className="fa-solid fa-user"></i>{paymentDetails?.address?.recipient_name}</h3>
-                <h3><i className="fa-solid fa-location-arrow"></i>{paymentDetails?.address?.line1 + " - " + paymentDetails?.address?.city}</h3>
-                <h3><i className="fa-solid fa-qrcode"></i>{paymentDetails?.address?.postal_code}</h3>
-                <h3><i className="fa-solid fa-location-dot"></i>{paymentDetails?.address?.country_code}</h3>
+                <h3><i className="fa-solid fa-user"></i>{paymentDetails?.address?.name}</h3>
+                <h3><i className="fa-solid fa-location-arrow"></i>{paymentDetails?.address?.address}</h3>
+                <h3><i className="fa-solid fa-qrcode"></i>{paymentDetails?.address?.postalcode}</h3>
+                <h3><i className="fa-solid fa-location-dot"></i>{paymentDetails?.address?.phone}</h3>
             </div>
             <div className="history_page_product">
                 <h3>Products <i className="fa-solid fa-cart-arrow-down"></i></h3>

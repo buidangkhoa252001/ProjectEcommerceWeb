@@ -28,6 +28,7 @@ function Profile() {
     const handleChange = e => {
         const { name, value } = e.target
         setData({ ...data, [name]: value })
+        console.log(data)
     }
 
     const handlechangeAvatar = async (e) => {
@@ -67,6 +68,9 @@ function Profile() {
                 headers: { Authorization: currentToken.accesstoken }
             })
             alert("update all success")
+            getUser(dispatch, currentToken.accesstoken)
+            navigate("/", { replace: true })
+
             /* setData({...data, err: '' , success: "Updated Success!"}) */
         } catch (err) {
             alert("update fail")
@@ -92,7 +96,8 @@ function Profile() {
             axios.post('/user/reset', { password: data.password }, {
                 headers: { Authorization: currentToken.accesstoken }
             })
-            alert("successful")
+            alert("update password successful")
+            getUser(dispatch, currentToken.accesstoken)
             /* setData({...data, err: '' , success: "Updated Success!"  }) */
         } catch (err) {
             setData({ ...data, err: err.response.data.msg, success: '' })

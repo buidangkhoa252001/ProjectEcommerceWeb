@@ -96,16 +96,16 @@ const Header = () => {
     const adminRouter = () => {
         return (
             <>
-            <div header_detail-product-admin>
+            <div className="header_detail-product-admin">
                 <li><Link style={{ textDecoration: "none" }} to="/createProduct">Create Product</Link></li>
             </div>
-            <div header_detail-cate-admin>
+            <div className="header_detail-cate-admin">
                 <li><Link style={{ textDecoration: "none" }} to="/createCategory">Categories</Link></li>
             </div>
-            <div header_detail-payment-admin>
+            <div className="header_detail-payment-admin">
                 <li><Link style={{ textDecoration: "none" }} to="/payment">All Payment</Link></li>
             </div>
-            <div header_detail-payment-admin>
+            <div className="header_detail-payment-admin">
                 <li><Link style={{ textDecoration: "none" }} to="/alluser">All User</Link></li>
             </div>
             </>

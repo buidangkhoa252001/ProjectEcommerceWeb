@@ -21,6 +21,8 @@ import PaymentDetail from './pages/Payment/PaymentDetail';
 import CreateCategories from './pages/CreateCategories/CreateCategories';
 import Profile from './pages/Profile/Profile';
 import AllUser from './pages/AllUser/AllUser';
+import Checkout from './pages/Checkout/Checkout';
+
 
 function App() {
   const { isAuth } = useSelector(state => state.login);
@@ -61,7 +63,14 @@ function App() {
             </PrivateRoute>
           }
         />
-         {/*  <Route path="/createProduct" exact element={CreateProduct} /> */}
+        <Route
+          path="/checkout"
+          element={
+            <PrivateRoute>
+              <Checkout />
+            </PrivateRoute>
+          }
+        />
        <Route
           path="/products/:id"
           element={
