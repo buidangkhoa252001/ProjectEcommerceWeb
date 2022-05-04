@@ -11,6 +11,7 @@ import laptop4 from './laptop_4.png';
 import laptop5 from './laptop_5.png';
 import laptop6 from './laptop_6.png';
 import laptop7 from './laptop_7.png';
+import { Link } from 'react-router-dom';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -61,7 +62,8 @@ class Home extends Component {
                     <Slider {...settings}>
                         <div className="image-slider">
                             <div className="image-item">
-                                <img src={laptop1} alt="image_2" />
+                                <Link to="/products?page=1&sort=-createdAt&category=61bc3eb603e81bf349d64e48">  <img src={laptop1} alt="image_2" /> </Link>
+                               
                             </div>
                         </div>
                         <div className="image-slider">

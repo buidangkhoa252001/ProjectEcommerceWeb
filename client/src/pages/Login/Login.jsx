@@ -7,8 +7,10 @@ import { Link } from 'react-router-dom';
 const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [passwordT, setPasswordT] = useState("password")
     const dispatch = useDispatch()
     const navigate = useNavigate()
+
     const { isFetching } = useSelector(state => state.login)
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -16,6 +18,17 @@ const Login = () => {
         navigate("/products", { replace: true });
 
     }
+    const handleEye=()=>{
+        console.log("gg")
+        console.log(passwordT)
+        if(passwordT=="password"){
+        setPasswordT("text");
+        }
+        else{
+        setPasswordT("password");
+        }
+        }
+        
     return (
         <div className='box1'>
             <div className="box_2">
@@ -41,9 +54,9 @@ const Login = () => {
                             <i className="fa-solid fa-envelope"></i>
                         </div>
                         <div className="login_detail_input">
-                            <input type="password" required placeholder=' ' onChange={e => setPassword(e.target.value)} ></input>
+                            <input type={passwordT} required placeholder=' ' onChange={e => setPassword(e.target.value)} ></input>
                             <label>Password</label>
-                            <i className="fa-solid fa-eye"></i>
+                            <i onClick={()=> handleEye()} className="fa-solid fa-eye eye"></i>
                         </div>
                         <div className="login_detail-record">
                             <input type="reset" value={"change method"} />

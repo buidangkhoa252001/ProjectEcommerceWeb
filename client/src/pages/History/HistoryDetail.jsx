@@ -36,13 +36,13 @@ const HistoryDetail = () => {
                 <h3>Name <i className="fa-brands fa-airbnb"></i></h3>
                 <h3>Address <i className="fa-brands fa-airbnb"></i></h3>
                 <h3>Postal Code <i className="fa-brands fa-airbnb"></i></h3>
-                <h3>Country Code <i className="fa-brands fa-airbnb"></i></h3>
+                <h3>Phone number <i className="fa-brands fa-airbnb"></i></h3>
             </div>
             <div className="history_page_personal-detail">
-                <h3><i className="fa-solid fa-user"></i>{historyDetails?.address?.recipient_name}</h3>
-                <h3><i className="fa-solid fa-location-arrow"></i>{historyDetails?.address?.line1 + " - " + historyDetails?.address?.city}</h3>
-                <h3><i className="fa-solid fa-qrcode"></i>{historyDetails?.address?.postal_code}</h3>
-                <h3><i className="fa-solid fa-location-dot"></i>{historyDetails?.address?.country_code}</h3>
+                <h3><i className="fa-solid fa-user"></i>{historyDetails?.address?.name}</h3>
+                <h3><i className="fa-solid fa-location-arrow"></i>{historyDetails?.address?.address}</h3>
+                <h3><i className="fa-solid fa-qrcode"></i>{historyDetails?.address?.postalcode}</h3>
+                <h3><i className="fa-solid fa-location-dot"></i>{historyDetails?.address?.phone}</h3>
             </div>
             <div className="history_page_product">
                 <h3>Products <i className="fa-solid fa-cart-arrow-down"></i></h3>
