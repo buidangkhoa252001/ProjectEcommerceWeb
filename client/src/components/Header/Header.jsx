@@ -128,12 +128,11 @@ const Header = () => {
                 {!admin && isAuth && userRouter()}
                 {
 
-                    isAuth ? loggedRouter() : <li><Link to="/login">Login ✥ </Link> <Link to="/register"> Register</Link>
-
-
-
-                    </li>
-
+                    isAuth ? loggedRouter() : 
+                    <div className="header_login-register">
+                        <li><ion-icon name="log-out-outline"></ion-icon><Link to="/login" style={{textDecoration: "none"}}>Login</Link></li>
+                        <li><Link to="/register" style={{textDecoration: "none"}}> Register</Link></li>
+                    </div>
                 }
                 
             </div>

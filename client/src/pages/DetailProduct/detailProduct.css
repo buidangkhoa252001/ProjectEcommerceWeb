@@ -1,127 +1,148 @@
-.detail {
-    margin: 0;
+.detail_product {
     padding: 0;
-    background: whitesmoke;
-    width: 100%;
-  
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Raleway", sans-serif;
- }
+    width: 100%;
+    height: 200vh;
+}
 
-.box-detail {
-    width: 85%;
+.detail_product-container {
+    width: 90%;
+    height: 100%;
+}
 
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0px 25px 40px #1687d933;
+.detail_product-title {
+    height: auto;
+    padding: 30px 0 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail_product-title h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+.detail_product-title ion-icon {
+    font-size: 1.7rem;
+    margin-right: 15px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+}
+
+.detail_product-line {
+    height: 1;
+    border-bottom: 1px solid gainsboro;
+}
+
+/* box-detail 1*/
+.detail_product-layout {
     display: grid;
-    grid-template-columns: 55% 45%;
-    margin: 50px 0;
+    grid-template-columns: 60% 40%;
+    gap: 30px;
 }
 
 .box-detail_img {
-    background: #ff3f40;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    max-height: 100%;
     width: 100%;
-}
-
-.box-detail_img-set {
-    height: 90%;
-    width: 80%;
+    height: 600px;
+    margin-top: 15px;
 }
 
 .box-detail_img img {
+    height: 100%;
     width: 100%;
-    height: 100%;
-    border-radius: 35px;
-    object-fit: fill;
-}
-
-.box-detail_title {
-    display: flex;
-    flex-direction: column;
-    padding: 50px 100px;
-    height: 100%;
-}
-
-.box-detail_title h1 {
-    color: #4c4c4c;
-    padding-bottom: 10px;
-    font-size: 2.4em;
-    font-weight: 900;
-}
-
-.box-detail_title span {
-    font-size: 1.4em;
-    color: #a6a6a6;
-    padding-bottom: 35px;
-}
-
-.box-detail_title-price {
-    display: flex;
-    align-items: center;
-    color: #ff3f40;
-}
-
-.box-detail_title p {
-    padding-bottom: 20px;
-    font-size: 1.2rem;
-    font-family: cursive;
-}
-
-.box-detail_title-price span {
-    font-size: 7rem;
-    padding-left: 30px;
-    color: #ff3f40;
-}
-
-.box-detail_title-price p {
-    padding-bottom: 30px;
-    font-size: 1.6rem;
+    object-fit: contain;
 }
 
 .box-detail_title-script {
-    padding: 20px 0;
+    width: 100%;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
 }
 
-.box-detail_title-buy {
+.box-detail_title-script span {
     display: flex;
     justify-content: center;
-    align-items: center;
+    color: #D70018;
+    font-size: 1.4rem;
+    line-height: 3.5;
+    font-weight: 900;
 }
 
-.box-detail_title-btn-buy {
-    height: 75px;
-    width: 350px;
-    padding: 1.5em 3.1em;
+.box-detail_title-script p {
+    padding: 10px;
+    color: rgb(100, 99, 99);
+}
+
+/* box-detail 2*/
+.box-detail_sold {
     margin-top: 30px;
+    font-size: 1rem;
+}
+
+.box-detail_sold h2 {
+    font-weight: 500;
+}
+
+.box-detail_sold h2 span {
+    border: 1px solid gainsboro;
+    padding: 10px 20px;
+}
+
+.box-detail_price {
+    font-size: 1.9rem;
+    margin-top: 40px;
+}
+
+.box-detail_price span {
+    color: red;
+}
+
+.box-detail_buy {
+    width: 100%;
+    height: 50px;
+}
+
+.box-detail_buy button {
+    height: 100%;
+    width: 100%;
+    margin-top: 40px;
+    background-color: #EB2528;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 5px;
     border: none;
-    border-radius: 7px;
-    font-size: 0.8em;
-    font-weight: 700;
-    letter-spacing: 1.3px;
-    color: #fff;
-    background-color: #ff3f40;
-    box-shadow: 2px 2px 25px -7px #a6a6a6;
-    cursor: pointer;
 }
 
-.box-detail_title-btn-buy:active {
-    transform: scale(0.97);
+.box-detail_buy button:active {
+    transform: scale(1.05);
 }
 
-.box-detail_title-buy .fa-cart-shopping {
-    font-size: 2rem;
-    padding-top: 40px;
-    padding-left: 40px;
-}
-.box-detail_title-buy button:hover + i {
-    color: #ff3f40;
+.box-detail_configuation-title {
+    padding-top: 80px;
+    color: rgb(49, 49, 49);
 }
 
+.box-detail_configuation-table table {
+    margin-top: 30px;
+    border: 1px solid #F2F2F2;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.box-detail_configuation-table table tr {
+    height: 30px;
+}
+
+.box-detail_configuation-table table tr:nth-child(odd) {
+    background-color: #F2F2F2;
+}
+
+.box-detail_configuation-table table tr td {
+    padding: 5px 15px 5px 0;
+}
