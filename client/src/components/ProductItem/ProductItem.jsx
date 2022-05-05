@@ -71,7 +71,7 @@ useEffect(()=>{
         return(
             <>
            
-               <Link to={`/createProduct/${product._id}`}> <button  to="/cart" className="product_button_edit" >Edit</button></Link>
+               <Link to={`/createProduct/${product._id}`}> <button className="product_button_edit" >Edit</button></Link>
                 <button className="product_button_delete" onClick={()=>handleDelete(product._id,product.images)} >Delete</button>
             </>
         )

@@ -41,7 +41,6 @@ const dispatch = useDispatch();
             const getProductDetail = async () => {
                 try {
                     const res = await axios.get(`/api/products/${param.id}`)
-                    console.log(res)
                     setProduct(res.data)
                     setImages(res.data.images)
 
@@ -52,7 +51,6 @@ const dispatch = useDispatch();
             getProductDetail()
 
         } else {
-            console.log(currentToken.accesstoken)
             setProduct(initialState)
             setImages(false)
             setOnEdit(false)
@@ -78,7 +76,6 @@ const dispatch = useDispatch();
             const res = await axios.post("/api/upload", formData, {
                 headers: { "content-type": "multipart/form-data", Authorization: currentToken.accesstoken }
             })
-            console.log(res)
             setLoading(false)
             setImages(res.data)
         }

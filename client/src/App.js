@@ -22,6 +22,7 @@ import CreateCategories from './pages/CreateCategories/CreateCategories';
 import Profile from './pages/Profile/Profile';
 import AllUser from './pages/AllUser/AllUser';
 import Checkout from './pages/Checkout/Checkout';
+import UpdateUser from './pages/UpdateUser/UpdateUser';
 
 
 function App() {
@@ -166,6 +167,14 @@ function App() {
           element={
             <PrivateRoute>
               <AllUser />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/update/:id"
+          element={
+            <PrivateRoute>
+              <UpdateUser />
             </PrivateRoute>
           }
         />

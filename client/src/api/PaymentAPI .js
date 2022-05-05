@@ -12,7 +12,7 @@ export const getPayment =async(dispatch,token)=>{
                 headers: {Authorization:token}
             })
             dispatch(getPaymentSuccess(res.data))
-            console.log(res)
+
             
         }catch(err){
               dispatch(getPaymentFailure())

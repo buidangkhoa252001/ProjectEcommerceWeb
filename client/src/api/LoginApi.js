@@ -32,7 +32,6 @@ export const refreshToken = async()=>{
     if(firstLogin){
         const refreshToken= async()=>{
             const token = await axios.get("/user/refresh_token")
-            console.log(token)
             getToken(token.data.accesstoken)
             setTimeout(()=>{
                 refreshToken()

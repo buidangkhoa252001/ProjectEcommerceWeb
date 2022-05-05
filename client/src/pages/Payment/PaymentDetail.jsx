@@ -16,7 +16,6 @@ const PaymentDetail = () => {
                     setPaymentDetails(paymentDetail)
     
                 }
-                console.log(paymentDetails)
             })      
 
     },[params,payment])

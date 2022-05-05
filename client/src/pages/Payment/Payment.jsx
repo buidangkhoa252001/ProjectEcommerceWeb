@@ -10,7 +10,6 @@ const Payment = () => {
     const {payment} = useSelector(state=>state.payment)
 
     const handleChange = async(id,statusitem)=>{
-          console.log(statusitem) 
         try{
             await axios.put(`/api/payment/${id}`,{status:!statusitem},{
                 headers:{Authorization:currentToken.accesstoken}

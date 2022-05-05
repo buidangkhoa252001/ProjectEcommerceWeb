@@ -81,7 +81,6 @@ const Product = () => {
     if (search1) {
       const gg = async () => {
         const res = await axios.get(`/api/products?title[regex]=${search1}`)
-        console.log("ressearch", res.data)
         setPageResult(res.data.result)
         if (!res.data?.result) return 0;
         setTotalPages(Math.ceil(pageResult / limit))
@@ -91,7 +90,6 @@ const Product = () => {
     else if (category) {
       const category1 = async () => {
         const res = await axios.get(`/api/products?category=${category}`)
-        console.log("rescate", res.data)
         setPageResult(res.data.result)
         if (!res.data?.result) return 0;
         setTotalPages(Math.ceil(pageResult / limit))
