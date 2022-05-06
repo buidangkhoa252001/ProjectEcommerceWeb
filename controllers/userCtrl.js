@@ -175,6 +175,14 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
+    getUserId: async(req,res)=>{
+        try {
+            const user = await Users.findById(req.params.id);
+            res.status(200).json(user);
+          } catch (err) {
+            return res.status(500).json({msg: err.message})
+          }
+    },
     history: async(req, res) =>{
         try {
             const history = await Payments.find({user_id: req.user.id})

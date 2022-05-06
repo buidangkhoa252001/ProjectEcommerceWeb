@@ -21,5 +21,6 @@ router.post('/reset', auth, userCtrl.resetPassword)
 router.patch('/update', auth, userCtrl.updateUser)
 router.delete('/delete/:id', auth, userCtrl.deleteUser)
 router.get('/getAllUser', auth, userCtrl.getAllUser)
+router.get('/getUser/:id', auth, userCtrl.getUserId)
 
 module.exports = router
