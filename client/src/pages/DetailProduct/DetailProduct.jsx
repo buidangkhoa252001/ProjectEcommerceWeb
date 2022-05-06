@@ -94,9 +94,97 @@ const DetailProduct = () => {
     }
 
     return (
-        <div>
-
-            <div className="detail">
+        <div className="detail_product">
+            <div className="detail_product-container">
+                <div className="detail_product-title">
+                    <h2>{product.title}</h2>
+                    <ion-icon name="happy-outline"></ion-icon>
+                </div>
+                <div className="detail_product-line"></div>
+                <div className="detail_product-layout">
+                    <div className="box-detail_1">
+                        <div className="box-detail_img">
+                            <img src={image} alt="" />
+                        </div>
+                        <div className="box-detail_title-script">
+                            <span>Discription</span>
+                            <p>{product.description}</p>
+                        </div>
+                    </div>
+                    <div className="box-detail_2">
+                        <div className="box-detail_sold">
+                            <h2>Sold: <span>{product.sold}</span></h2>
+                        </div>
+                        <div className="box-detail_price">
+                            <span>$ {product.price}</span>
+                        </div>
+                        <div className="box-detail_buy">
+                            <button to="/cart" className="box-detail_title-btn-buy" onClick={() => handleBuy(product)}>
+                                Buy Now <i className="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                        <div className="box-detail_configuation-title">
+                            <h2>Configuration: {product.title}</h2>
+                        </div>
+                        <div className="box-detail_configuation-table">
+                            <table>
+                                <tr>
+                                    <td>CPU</td>
+                                    <td>Intel Core i5-1135G7 thế hệ 11</td>
+                                </tr>
+                                <tr>
+                                    <td>Loại card đồ họa</td>
+                                    <td>Intel Iris Xe</td>
+                                </tr>
+                                <tr>
+                                    <td>Dung lượng RAM</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <td>Ổ cứng</td>
+                                    <td>Ổ cứng SSD NVMe PCIe 512 GB</td>
+                                </tr>
+                                <tr>
+                                    <td>Kích thước màn hình</td>
+                                    <td>14 inches</td>
+                                </tr>
+                                <tr>
+                                    <td>Độ phân giải màn hình</td>
+                                    <td>2160 x 1440 pixels</td>
+                                </tr>
+                                <tr>
+                                    <td>Cổng giao tiếp</td>
+                                    <td>USB-C x 1 (hỗ trợ dữ liệu, sạc và DisplayPort)
+                                        USB 3.2 Gen1 × 2
+                                        HDMI × 1
+                                        Tai nghe 3,5 mm và jack micrô x 1</td>
+                                </tr>
+                                <tr>
+                                    <td>Hệ điều hành</td>
+                                    <td>Windows 10 Home SL</td>
+                                </tr>
+                                <tr>
+                                    <td>Pin</td>
+                                    <td>56 Wh</td>
+                                </tr>
+                                <tr>
+                                    <td>Trọng lượng</td>
+                                    <td>1,49 kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Công nghệ màn hình</td>
+                                    <td>IPS, sRGB 100%</td>
+                                </tr>
+                                <tr>
+                                    <td>Bluetooth</td>
+                                    <td>v5.1</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* <div className="detail">
                 <div className="box-detail">
                     <div class="box-detail_img">
                         <div className="box-detail_img-set">
@@ -126,12 +214,10 @@ const DetailProduct = () => {
                         </div>
                     </div>
                 </div>
-            </div>    
-             
-
-
             </div>
-            );
+ */}
+        </div>
+    );
 }
 
-            export default DetailProduct;
+export default DetailProduct;

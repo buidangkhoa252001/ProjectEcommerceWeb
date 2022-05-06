@@ -16,7 +16,15 @@ header a{
     color: #555;
 }
 
-header ul li:hover{
+header li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+header li:hover{
     opacity: 1;
 }
 .menu{
@@ -36,13 +44,7 @@ header ul li:hover{
     padding: 5px 7px;
     font-size: 10px;
 }
-li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    cursor: pointer;
-}
+
 
 
 
@@ -79,6 +81,7 @@ li{
     display: flex;
     justify-content: center;
 }
+
 
 
 /* header_profile */
@@ -119,4 +122,26 @@ li{
 .header_detail-admin {
     display: flex;
     justify-content: space-between
+}
+
+
+/* home_login&register */
+.header_login-register {
+    display: flex;
+    gap: 30px;
+}
+
+.header_login-register li:nth-child(2) {
+    border: 1px solid rgb(190, 184, 184);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.header_login-register ion-icon {
+    font-size: 1.5rem;
+    padding-right: 6px;
+}
+
+.header_login-register li:hover {
+    opacity: 0.7;
 }
