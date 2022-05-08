@@ -152,6 +152,30 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
+    updateUserAdmin: async(req, res) =>{
+        try {
+            const {name} = req.body;
+            await Users.findOneAndUpdate({_id: req.params.id}, {name})
+
+            res.json({msg: "Updated name success"})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    resetAdminPassword: async (req, res) => {
+        try {
+            const {password} = req.body
+            const passwordHash = await bcrypt.hash(password, 12)
+
+            await Users.findOneAndUpdate({_id: req.params.id}, {
+                password: passwordHash
+            })
+
+            res.json({msg: "Password successfully changed!"})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
     resetPassword: async (req, res) => {
         try {
             const {password} = req.body
