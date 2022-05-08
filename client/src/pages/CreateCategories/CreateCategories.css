@@ -23,6 +23,7 @@
 }
 .categories input{
     width: 300px;
+    margin-top: 6px;
 }
 .categories form button{
     width: 70px;
