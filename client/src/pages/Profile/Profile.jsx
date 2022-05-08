@@ -28,7 +28,6 @@ function Profile() {
     const handleChange = e => {
         const { name, value } = e.target
         setData({ ...data, [name]: value })
-        console.log(data)
     }
 
     const handlechangeAvatar = async (e) => {
@@ -42,14 +41,12 @@ function Profile() {
             if (!file) return alert("file is not exist!")
             if (file.size > 1024 * 1024) return alert("Size is too large")
             if (file.type !== "image/jpeg" && file.type !== "image/png") return alert("File is not the image")
-            console.log(file)
             let formData = new FormData()
             formData.append('file', file);
             setLoading(true)
             const res = await axios.post("/api/upload", formData, {
                 headers: { "content-type": "multipart/form-data", Authorization: currentToken.accesstoken }
             })
-            console.log(res)
             setLoading(false)
             setAvatar(res.data.url)
         }
@@ -58,8 +55,6 @@ function Profile() {
         }
     }
     const updateInfor = () => {
-        console.log("name:", data.name)
-        console.log("avatar:", avatar)
         try {
             axios.patch('/user/update', {
                 name: data.name ? data.name : user.name,
@@ -79,8 +74,6 @@ function Profile() {
     }
 
     const updatePassword = () => {
-        console.log("passworduser", data.password)
-        console.log("passwordusercf", data.cf_password)
         if (data.password.length < 6) {
             alert("Password greater than 6")
         }
@@ -105,9 +98,6 @@ function Profile() {
     }
 
     const handleUpdate = () => {
-        console.log("name:", data.name)
-        console.log("avatar:", avatar)
-
         if (data.name || data.avatar) updateInfor()
         if (data.password) updatePassword()
         getUser(dispatch, currentToken.accesstoken)
@@ -199,60 +189,13 @@ function Profile() {
                             <i className="fa-solid fa-eye"></i>
                         </div>
 
-                        <div className="profile-detail_notify">
-                            <em style={{ color: "crimson" }}>
-                                * If you update your password here, you will not be able
-                                to login quickly using google and facebook.
-                            </em>
-                        </div>
                         <div className="profile_detail-record">
                             <input type="reset" value={"change method"} />
                             <button disabled={loading} onClick={handleUpdate}>Update</button>
                         </div>
                     </form>
                 </div>
-                {/*  <div className="col-right">
-                <h2>{isAdmin ? "Users" : "My Orders"}</h2>
 
-                <div style={{overflowX: "auto"}}>
-                    <table className="customers">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Admin</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody> */}
-                {/*      {
-                                users.map(user => (
-                                    <tr key={user._id}>
-                                        <td>{user._id}</td>
-                                        <td>{user.name}</td>
-                                        <td>{user.email}</td>
-                                        <td>
-                                            {
-                                                user.role === 1
-                                                ? <i className="fas fa-check" title="Admin"></i>
-                                                : <i className="fas fa-times" title="User"></i>
-                                            }
-                                        </td>
-                                        <td>
-                                            <Link to={`/edit_user/${user._id}`}>
-                                                <i className="fas fa-edit" title="Edit"></i>
-                                            </Link>
-                                            <i className="fas fa-trash-alt" title="Remove"
-                                            onClick={() => handleDelete(user._id)} ></i>
-                                        </td>
-                                    </tr>
-                                ))
-                            } */}
-                {/*     </tbody>
-                    </table>
-                </div>
-            </div> */}
             </div>
         </>
     )

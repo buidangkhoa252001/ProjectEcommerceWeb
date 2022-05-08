@@ -19,7 +19,6 @@ const Login = () => {
 
     }
     const handleEye=()=>{
-        console.log("gg")
         console.log(passwordT)
         if(passwordT=="password"){
         setPasswordT("text");

@@ -21,6 +21,7 @@ const History = () => {
             <div className="history_page_title-detail">
                 <h3>Payment ID <i className="fa-brands fa-airbnb"></i></h3>
                 <h3>Date of Purchased <i className="fa-brands fa-airbnb"></i></h3>
+                <h3>Delivery <i className="fa-brands fa-airbnb"></i></h3>
                 <h3><i className="fa-solid fa-file-circle-check"></i></h3>
             </div>
             {history.map(items => (
@@ -32,6 +33,10 @@ const History = () => {
                     <div className="history_page-detail1-Date">
                         <i className="fa-solid fa-calendar"></i>
                         {new Date(items.createdAt).toLocaleDateString()}
+                    </div>
+                    <div className="history_page-detail1-view">
+                        <i className="fa-solid fa-check"> </i>
+                        <h3>{items.status === false ? <div>Pending</div> : <div>Ok</div>} </h3>
                     </div>
                     <div className="history_page-detail1-view">
                         <i className="fa-solid fa-check"></i>

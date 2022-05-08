@@ -43,8 +43,7 @@ const paymentCtrl={
             return res.status(500).json({msg: err.message})
         }
     },
-
-      
+ 
     createPayment: async(req,res)=>{
         try{
             const user = await Users.findById(req.user.id).select('name email')

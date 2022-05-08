@@ -10,15 +10,10 @@ const HistoryDetail = () => {
     const [historyDetails, setHistoryDetails] = useState([])
 
     useEffect(() => {
-        console.log(history.history)
-        console.log(params.id)
-
-
         history?.history.map(historyDetail => {
             if (historyDetail._id === params.id) {
                 setHistoryDetails(historyDetail)
             }
-            console.log(historyDetails)
         })
 
 

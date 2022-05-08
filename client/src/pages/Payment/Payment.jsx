@@ -10,7 +10,6 @@ const Payment = () => {
     const {payment} = useSelector(state=>state.payment)
 
     const handleChange = async(id,statusitem)=>{
-          console.log(statusitem) 
         try{
             await axios.put(`/api/payment/${id}`,{status:!statusitem},{
                 headers:{Authorization:currentToken.accesstoken}
@@ -47,7 +46,7 @@ const Payment = () => {
             </div>
             <div className="payment_page_total-product">
                 <h3>Pending <i className="fa-solid fa-caret-up"></i></h3>
-                <h3>Total Payment: {payment.length}</h3>
+                <h3>Total Order: {payment.length}</h3>
             </div>
             <div className="payment_page_personal-title">
                 <h3>Payment ID <i className="fa-brands fa-airbnb"></i></h3>
