@@ -52,7 +52,7 @@ const AllUser = () => {
                         <span>{user._id}</span>
                     </div>
                     <div className="history_page-detail1-Date">
-                        <i className="fa-solid fa-calendar">{user.email}</i>
+                        <i className="fa-solid fa-calendar"></i> {user.email}
                     </div>
                     <div className="history_page-detail1-view">
                         {/* <i className="fa-solid fa-check"></i> */}

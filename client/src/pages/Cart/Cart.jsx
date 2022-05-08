@@ -133,7 +133,7 @@ function Cart() {
                             <h1> ${total}</h1>
                         </div>
                         <div className="cart-container_total-price-detail-button">
-                         <button><Link style={{ textDecoration: "none" }} to="/checkout">Checkout</Link></button> 
+                         <button><Link style={{ textDecoration: "none", color: "white" }} to="/checkout">Continue</Link><ion-icon name="arrow-forward-circle-outline"></ion-icon></button> 
                         </div>
                     </div>
                 </div>

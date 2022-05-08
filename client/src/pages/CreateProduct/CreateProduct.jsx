@@ -28,9 +28,9 @@ const CreateProduct = () => {
 
     const [onEdit, setOnEdit] = useState(false)
     const navigate = useNavigate()
-    const param =useParams()
-/*    navigate("/login", { replace: true }) */
-const dispatch = useDispatch();
+    const param = useParams()
+    /*    navigate("/login", { replace: true }) */
+    const dispatch = useDispatch();
     const styleUpload = {
         display: images ? "block" : "none"
     }
@@ -142,76 +142,154 @@ const dispatch = useDispatch();
     }
     return (
         <div className="create">
-            <div className="create_title">
-                <i className="fa-solid fa-folder-plus"></i>
-                <h1>create product</h1>
-            </div>
-            <div className="create_product">
-                {
-                    loading ? <Loading />
-                        :
-                        <div className="upload">
-                            <h2>upload image</h2>
-                            <input type="file" name="file" id="file_up" onChange={handleUpload} />
-                            <label htmlFor="file_up" className="input-label">
-                                <i className="fas fa-cloud-upload-alt icon-upload"></i>
-                            </label>
-                            <div id="file_img" style={styleUpload}>
-                                <img src={images ? images.url : ""} alt="" />
-                                <span onClick={handleDelete}>X</span>
-                            </div>
+            <div className="create_detail">
+                <div className="create_detail-title">
+                    <i className="fa-solid fa-folder-plus"></i>
+                    <h1>create product</h1>
+                </div>
+                <div className="create_detail-layout">
+                    <div className="create_detail-col1">
+
+                        {
+                            loading ? <Loading />
+                                :
+                                <div className="upload">
+                                    <input type="file" name="file" id="file_up" onChange={handleUpload} />
+                                    <label htmlFor="file_up" className="input-label">
+                                        <i class="fa-solid fa-image"></i>
+                                        <h2>Choose Photo Product</h2>
+                                        <span>or drag and drop image here</span>
+                                    </label>
+                                    <div id="file_img" style={styleUpload}>
+                                        <img src={images ? images.url : ""} alt="" />
+                                        <span onClick={handleDelete}>X</span>
+                                    </div>
+                                </div>
+                        }
+                        <div className="create_detail-img-note">
+                            <h2>Upload Image</h2>
+                            <span>Image format .jpg .jpeg .png and minimum size 300x300px (For optimal image use minimum size 700x700 px)</span>
                         </div>
-                }
-
-                <form onSubmit={handleSubmit} >
-                    <div className="row">
-                        <label htmlFor="product_id">Product ID</label>
-                        <input autoComplete="nope" type="text" name="product_id" id="product_id" required
-                            value={product.product_id} onChange={handleChangeInput} disabled={onEdit} placeholder="Enter Product ID" />
                     </div>
+                    <div className="create_product">
+                        <form onSubmit={handleSubmit} >
+                            <div className="row">
+                                <label htmlFor="product_id">Product ID</label>
+                                <input autoComplete="nope" type="text" name="product_id" id="product_id" required
+                                    value={product.product_id} onChange={handleChangeInput} disabled={onEdit} placeholder="Enter Product ID" />
+                            </div>
 
-                    <div className="row">
-                        <label htmlFor="title">Title</label>
-                        <input autoComplete="nope" placeholder="Enter title" type="text" name="title" id="title" required
-                            value={product.title} onChange={handleChangeInput} />
+                            <div className="row">
+                                <label htmlFor="title">Title</label>
+                                <input autoComplete="nope" placeholder="Enter title" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} />
+                            </div>
+
+                            <div className="row">
+                                <label htmlFor="price">Price</label>
+                                <input autoComplete="nope" type="number" name="price" id="price" required
+                                    value={product.price} onChange={handleChangeInput} />
+                            </div>
+
+                            <div className="row">
+                                <label htmlFor="description">Description</label>
+                                <textarea placeholder="Enter Description" type="text" name="description" id="description" required
+                                    value={product.description} rows="5" onChange={handleChangeInput} />
+                            </div>
+
+                            <div className="row">
+                                <label htmlFor="content">Content</label>
+                                <textarea placeholder="Enter Content" type="text" name="content" id="content" required
+                                    value={product.content} rows="7" onChange={handleChangeInput} />
+                            </div>
+
+                            <div className="row">
+                                <label htmlFor="categories">Categories</label>
+                                <select name="category" value={product.category} onChange={handleChangeInput}  >
+                                    <option value="">Please select a category</option>
+                                    {
+                                        categories.map(category => (
+                                            <option value={category._id} key={category._id}>
+                                                {category.name}
+                                            </option>
+                                        ))
+                                    }
+                                </select>
+                            </div>
+                            <div className="box-detail_configuation-title1">
+                                <h2>Configuration</h2>
+                            </div>
+                            <div className="box-detail_configuation-table">
+                                <table>
+                                    <tr>
+                                        <td>CPU</td>
+                                        <td><input autoComplete="nope" placeholder="Enter CPU" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Graphics card type</td>
+                                        <td><input autoComplete="nope" placeholder="Enter Card" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Amount of RAM</td>
+                                        <td><input autoComplete="nope" placeholder="Enter RAM" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hard Drive</td>
+                                        <td><input autoComplete="nope" placeholder="Enter Hard Drive" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Screen size</td>
+                                        <td><input autoComplete="nope" placeholder="Enter Screen size" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Screen resolution</td>
+                                        <td><input autoComplete="nope" placeholder="Enter Screen resolution" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>The web of communication</td>
+                                        <td><input autoComplete="nope" placeholder="Enter The web of communication" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Operating system</td>
+                                        <td><input autoComplete="nope" placeholder="Enter operating system" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>The battery</td>
+                                        <td><input autoComplete="nope" placeholder="Enter the battery" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weight</td>
+                                        <td><input autoComplete="nope" placeholder="Enter weight" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Screen technology</td>
+                                        <td><input autoComplete="nope" placeholder="Enter screen technology" type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bluetooth</td>
+                                        <td><input autoComplete="nope" placeholder="Enter detail bluetooth " type="text" name="title" id="title" required
+                                    value={product.title} onChange={handleChangeInput} /></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <button type="submit">{onEdit ? "Update" : "Create"}</button>
+                        </form>
                     </div>
-
-                    <div className="row">
-                        <label htmlFor="price">Price</label>
-                        <input autoComplete="nope" type="number" name="price" id="price" required
-                            value={product.price} onChange={handleChangeInput} />
-                    </div>
-
-                    <div className="row">
-                        <label htmlFor="description">Description</label>
-                        <textarea placeholder="Enter Description" type="text" name="description" id="description" required
-                            value={product.description} rows="5" onChange={handleChangeInput} />
-                    </div>
-
-                    <div className="row">
-                        <label htmlFor="content">Content</label>
-                        <textarea placeholder="Enter Content" type="text" name="content" id="content" required
-                            value={product.content} rows="7" onChange={handleChangeInput} />
-                    </div>
-
-                    <div className="row">
-                        <label htmlFor="categories">Categories: </label>
-                        <select name="category" value={product.category} onChange={handleChangeInput}  >
-                            <option value="">Please select a category</option>
-                            {
-                                categories.map(category => (
-                                    <option value={category._id} key={category._id}>
-                                        {category.name}
-                                    </option>
-                                ))
-                            }
-                        </select>
-                    </div>
-
-                    <button type="submit">{onEdit ? "Update" : "Create"}</button>
-                </form>
+                </div>
             </div>
         </div>
+
     )
 }
 export default CreateProduct
