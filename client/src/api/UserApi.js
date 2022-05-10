@@ -4,7 +4,7 @@ import { addCart, getUserFailure, getUserStart, getUserSuccess } from "../redux/
 import { getCart } from './CartAPI';
 import { getHistory } from './HistoryAPI';
 import { getCategories } from './CategoriesAPI';
-import { getPayment } from "./PaymentAPI ";
+import { getOrder } from "./OrderAPI ";
 import { getAllUser } from "./AllUserAPI";
 
 
@@ -20,7 +20,7 @@ export const getUser = async(dispatch,token)=>{
                 getCart(dispatch,res.data.cart)
                 getHistory(dispatch,token)
                 getAllUser(dispatch,token)
-                getPayment(dispatch,token)
+                getOrder(dispatch,token)
                 getCategories(dispatch)
                 console.log(res)
               

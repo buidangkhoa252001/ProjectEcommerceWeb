@@ -10,8 +10,6 @@ const Categories = ({ sort, page, search }) => {
   /* const [categories,setCategories] = useState([]) */
   const { categories } = useSelector(state => state.categories)
   const { pushQuery } = useCustomRouter()
-
-
   const handleCategory = (id) => {
     if (id) {
       pushQuery({ page: 1, sort: sort, category: id })
@@ -38,7 +36,6 @@ const Categories = ({ sort, page, search }) => {
         {
           categories.map(category => (
             <div className="category_type-detail1" key={category._id} onClick={() => { handleCategory(category._id) }}>
-             
               <a href="">{category.name}</a>
             </div>
 

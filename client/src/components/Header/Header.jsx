@@ -103,7 +103,7 @@ const Header = () => {
                 <li><Link style={{ textDecoration: "none" }} to="/createCategory">Categories</Link></li>
             </div>
             <div className="header_detail-payment-admin">
-                <li><Link style={{ textDecoration: "none" }} to="/payment">All Payment</Link></li>
+                <li><Link style={{ textDecoration: "none" }} to="/payment">All Orders</Link></li>
             </div>
             <div className="header_detail-payment-admin">
                 <li><Link style={{ textDecoration: "none" }} to="/alluser">All User</Link></li>

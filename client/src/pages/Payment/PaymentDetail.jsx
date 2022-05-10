@@ -6,19 +6,19 @@ import "./paymentDetail.css"
  
 const PaymentDetail = () => {
     const params = useParams()
-    const {payment} = useSelector(state=>state.payment)
+    const {order} = useSelector(state=>state.order)
     const [paymentDetails, setPaymentDetails] = useState([])
    
     useEffect(()=>{
      
-      payment?.map(paymentDetail=>{
+      order?.map(paymentDetail=>{
                 if(paymentDetail._id===params.id){
                     setPaymentDetails(paymentDetail)
     
                 }
             })      
 
-    },[params,payment])
+    },[params,order])
     return (
         <div className="history-page">
              <div className="history_page-logo">

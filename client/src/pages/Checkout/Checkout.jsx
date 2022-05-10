@@ -36,7 +36,7 @@ function Checkout() {
 
     const tranSuccess = async(payment)=>{
         const {paymentID} = payment;
-        await axios.post('/api/payment', {cart, paymentID, address:data}, {
+        await axios.post('/api/order', {cart, paymentID, address:data}, {
             headers: {Authorization: currentToken.accesstoken}
         })
         await axios.patch('/user/addcart',{cart:[]},{
