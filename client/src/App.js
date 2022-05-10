@@ -24,6 +24,8 @@ import AllUser from './pages/AllUser/AllUser';
 import Checkout from './pages/Checkout/Checkout';
 import UpdateUser from './pages/UpdateUser/UpdateUser';
 
+import AboutUs from './pages/AboutUs/AboutUs';
+
 
 function App() {
   const { isAuth } = useSelector(state => state.login);
@@ -175,6 +177,14 @@ function App() {
           element={
             <PrivateRoute>
               <UpdateUser />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/aboutus"
+          element={
+            <PrivateRoute>
+              <AboutUs />
             </PrivateRoute>
           }
         />

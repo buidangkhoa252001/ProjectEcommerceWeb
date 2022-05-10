@@ -68,6 +68,9 @@ const Header = () => {
                 <div className="header_detail-history">
                 <li><Link style={{ textDecoration: "none" }} to="/history">History</Link></li>
                 </div>
+                <div className="header_detail-history">
+                <li><Link style={{ textDecoration: "none" }} to="/aboutus">AboutUs</Link></li>
+                </div>
                 <div className="header_detail-search">
                 <li onClick={() => setOpenSearch(true)}>Search</li>
                 </div>
