@@ -103,3 +103,14 @@
     color: #3ac149;
 }
 
+.history_page-detail1-view button {
+    border: none;
+    background-color: rgb(231, 169, 169);
+    color: rgb(165, 55, 55);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.history_page-detail1-view button:active {
+    transform: scale(1.05);
+}
