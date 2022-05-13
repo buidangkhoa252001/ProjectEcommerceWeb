@@ -20,10 +20,10 @@ const AboutUs = () => {
             </div> 
             <div className="section-about">
                 <div className="section-about-script">
-                    <div className="section-title">About us </div>
-                    <div className="section-script">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta accusamus labore nam officiis facere aliquam, sint non distinctio architecto harum. Consequatur sapiente, perferendis illum rem ratione veritatis? Corrupti, officiis consectetur.
+                    <div className="section-title">About shop </div>
+                    <div className="section-script">The Laptop Shop is a local  company in Ho Chi Minh city.Buy cheap laptop, 100% genuine laptop, thoughtful after-sales warranty, always update new laptop daily,
                     </div>
-                    <button className="btn-section">Learn more &rarr;</button>
+                    <button className="btn-section"><Link style={{ textDecoration: "none" }}  to="/products">Know more</Link> &rarr;</button>
                 </div>
                 <div className="about-imgs">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6S6SiqLikmS5E_tJyjaps4R3AxlQ7vogWrQ&usqp=CAU" alt="photo1" className="about-img img1" />
@@ -33,7 +33,7 @@ const AboutUs = () => {
             </div>  
             <div className="about-location">Location</div>
                     <div className="about-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5311584323636!2d106.66981381433668!3d10.77057056224804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ede404fe8d1%3A0x4df37527d1c86b27!2sYaMe%20Shop!5e0!3m2!1svi!2s!4v1647570875934!5m2!1svi!2s" width="100%" height="300px" /* style="border:2;" */ allowFullScreen="" loading="lazy" />{/* </iframe> */}
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15676.64597678239!2d106.6474462!3d10.7989404!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6aece518177f9a92!2sGEARVN!5e0!3m2!1svi!2s!4v1652169642179!5m2!1svi!2s" width="100%" height="300px" /* style="border:0;" */ allowFullScreen="" loading="lazy" />
             </div>
         </div>
     );

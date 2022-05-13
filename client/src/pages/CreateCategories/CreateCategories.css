@@ -86,7 +86,7 @@
 }
 
 .create_category_detail-edit {
-    width: 50px;
+    width: 60px;
     border-radius: 15px;
     color: rgb(24, 122, 24);
     background-color: rgb(141, 233, 141);
@@ -94,7 +94,7 @@
 }
 
 .create_category_detail-delete {
-    width: 50px;
+    width: 60px;
     border-radius: 15px;
     color: rgb(156, 43, 43);
     background-color: rgb(230, 141, 141);

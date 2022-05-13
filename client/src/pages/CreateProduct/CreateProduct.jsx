@@ -213,73 +213,7 @@ const CreateProduct = () => {
                                     }
                                 </select>
                             </div>
-                            <div className="box-detail_configuation-title1">
-                                <h2>Configuration</h2>
-                            </div>
-                            <div className="box-detail_configuation-table">
-                                <table>
-                                    <tr>
-                                        <td>CPU</td>
-                                        <td><input autoComplete="nope" placeholder="Enter CPU" type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Graphics card type</td>
-                                        <td><input autoComplete="nope" placeholder="Enter Card" type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Amount of RAM</td>
-                                        <td><input autoComplete="nope" placeholder="Enter RAM" type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hard Drive</td>
-                                        <td><input autoComplete="nope" placeholder="Enter Hard Drive" type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Screen size</td>
-                                        <td><input autoComplete="nope" placeholder="Enter Screen size" type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Screen resolution</td>
-                                        <td><input autoComplete="nope" placeholder="Enter Screen resolution" type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>The web of communication</td>
-                                        <td><input autoComplete="nope" placeholder="Enter The web of communication" type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Operating system</td>
-                                        <td><input autoComplete="nope" placeholder="Enter operating system" type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>The battery</td>
-                                        <td><input autoComplete="nope" placeholder="Enter the battery" type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Weight</td>
-                                        <td><input autoComplete="nope" placeholder="Enter weight" type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Screen technology</td>
-                                        <td><input autoComplete="nope" placeholder="Enter screen technology" type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Bluetooth</td>
-                                        <td><input autoComplete="nope" placeholder="Enter detail bluetooth " type="text" name="title" id="title" required
-                                    value={product.title} onChange={handleChangeInput} /></td>
-                                    </tr>
-                                </table>
-                            </div>
+                          
                             <button type="submit">{onEdit ? "Update" : "Create"}</button>
                         </form>
                     </div>

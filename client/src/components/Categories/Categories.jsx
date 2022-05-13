@@ -18,6 +18,10 @@ const Categories = ({ sort, page, search }) => {
       pushQuery({ page: 1, sort: sort, search: "" })
     }
   }
+  useEffect(()=>{
+      console.log(window.location.search)
+   
+  },[])
 
 
   return (
