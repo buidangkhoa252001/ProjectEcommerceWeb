@@ -1,6 +1,7 @@
 .history_page {
     background-color: #f7f8fc;
     width: 100%;
+    height: 150vh;
 }
 
 .history_page-logo {
@@ -43,7 +44,7 @@
 
 .history_page_title-detail {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     color: #fffffd;
     background-color: #1a202c;
@@ -60,7 +61,7 @@
 
 .history_page-detail1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: #ffffff;
     color: #191f2b;
     height: 70px;

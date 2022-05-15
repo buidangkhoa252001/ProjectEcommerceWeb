@@ -18,14 +18,14 @@ const History = () => {
                 <h3>Finalized <i className="fa-solid fa-caret-up"></i></h3>
                 <h3>Total Product: {history.length}</h3>
             </div>
-            <div className="history_page_title-detail">
+            <div className="history_page_personal-title">
                 <h3>Payment ID <i className="fa-brands fa-airbnb"></i></h3>
                 <h3>Date of Purchased <i className="fa-brands fa-airbnb"></i></h3>
                 <h3>Delivery <i className="fa-brands fa-airbnb"></i></h3>
                 <h3><i className="fa-solid fa-file-circle-check"></i></h3>
             </div>
             {history.map(items => (
-                <div className="history_page-detail1" key={items._id}>
+                <div className="history_page_personal-detail" key={items._id}>
                     <div className="history_page-detail1-ID">
                         <i className="fa-solid fa-barcode"></i>
                         <span>{items.paymentID}</span>

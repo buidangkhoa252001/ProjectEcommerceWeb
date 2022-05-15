@@ -23,6 +23,7 @@ import Profile from './pages/Profile/Profile';
 import AllUser from './pages/AllUser/AllUser';
 import Checkout from './pages/Checkout/Checkout';
 import UpdateUser from './pages/UpdateUser/UpdateUser';
+import ProductTable from './components/ProductTable/ProductTable';
 
 
 function App() {
@@ -53,6 +54,14 @@ function App() {
           element={
             <PrivateRoute>
               <Product />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/productTable"
+          element={
+            <PrivateRoute>
+              <ProductTable />
             </PrivateRoute>
           }
         />

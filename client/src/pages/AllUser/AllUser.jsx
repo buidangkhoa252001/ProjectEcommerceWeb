@@ -56,8 +56,8 @@ const AllUser = () => {
                     </div>
                     <div className="history_page-detail1-view">
                         {/* <i className="fa-solid fa-check"></i> */}
-                        <Link to={`/update/${user._id}`}> <button className="product_button_edit" >Edit</button></Link>
-                        <button onClick={() => handleDelete(user._id,user.role)}>delete</button>
+                        <Link to={`/update/${user._id}`}> <button className="edit_button" >Edit</button></Link>
+                        <button onClick={() => handleDelete(user._id,user.role)} className="delete_button">delete</button>
                     </div>
                 </div>
             ))

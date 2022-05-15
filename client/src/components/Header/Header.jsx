@@ -127,6 +127,9 @@ const Header = () => {
                 <div className="header_detail-product">
                     <li><Link style={{ textDecoration: "none" }} to="/products">{admin ? 'Products' : 'Shop'}</Link></li>
                 </div>
+                <div className="header_detail-product">
+                    <li><Link style={{ textDecoration: "none" }} to="/productTable">{admin ? 'Products_table' : 'Product'}</Link></li>
+                </div>
                 
 
                 {admin && adminRouter()}
