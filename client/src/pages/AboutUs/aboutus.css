@@ -1,5 +1,5 @@
 .about{
-    background-image: linear-gradient(to right , rgba(251,226,184,0.6),  rgba(255,119,48,0.7)), url(https://www.wavecitycenter.in/wp-content/uploads/2019/07/wcc-hssc.jpg);
+    background-image: linear-gradient(to right , rgba(251,226,184,0.6),  rgba(255,119,48,0.7)), url(https://jobsgo.vn/media/img/employer/48507-cover-app.jpg);
     background-size: cover;  
     
     background-position: top;
@@ -46,8 +46,8 @@
     cursor: pointer;
 }
 .btn--white{
-    height: 63px;
-    width: 172px
+    height: 58px;
+    width: 166px
 }
 
 
@@ -64,13 +64,14 @@
     align-items: center;
 }
 .section-title{
+    color:crimson;
     font-size:40px;
     font-weight:700;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 .section-script{
-    font-size:20px;
+    font-size:24px;
     margin: 2px 40px;
 }
 .btn-section{
@@ -79,7 +80,7 @@
     text-decoration: none;
     margin-top: 10px;
     padding: 3px;
-    font-size: 20px;
+    font-size: 22px;
     outline: none;
     border: none;
     border-bottom: 1px solid #5173fc;
@@ -91,7 +92,7 @@
 .about-imgs{
     margin-left: 66px;
 width:400px;
-height:300px;
+height:275px;
 position: relative;
 }
 .about-img{
@@ -106,19 +107,24 @@ position: relative;
     transition:all 0.2s
 }
 .img1{
+    z-index: 2;
     left: -3px;
     top: -1px;
 }
 .img2{
+    z-index: 3;
     right: 34px;
     top: 35px;
 }
 .img3{
-    left: 23px;
+    z-index: 4;
+    width:53%;
+    left: 15px;
     top: 85px;
 
 }
 .about-location{
+    color:crimson;
     font-size: 48px;
     font-weight: 600;
     letter-spacing: 2px;

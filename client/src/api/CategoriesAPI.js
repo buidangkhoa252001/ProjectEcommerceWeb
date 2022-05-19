@@ -9,6 +9,7 @@ export const getCategories =async(dispatch)=>{
         dispatch(getCategoriesStart())
         try{
             const res = await axios.get('/api/category')
+            
             dispatch(getCategoriesSuccess(res.data))
           
             

@@ -61,7 +61,7 @@
 }
 
 .col1, .col2, .col3 {
-    padding-top: 25px;
+    padding-top: 10px;
 }
 
 .col2, .col3 {
@@ -71,7 +71,9 @@
 .col1 ul, .col2 ul, .col3 ul{
     list-style: none;
 }
-
+h2{
+    font-size:30px;
+}
 .col2 h2,
 .col3 h2 {
     margin-bottom: 10px;

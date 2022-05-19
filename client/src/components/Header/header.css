@@ -1,5 +1,5 @@
 header{
-    min-height: 70px;
+    min-height: 65px;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -50,8 +50,8 @@ header li:hover{
 
 /* user */
 .avatarheader{
-    height:100%;
-    width:30px;
+    height:110%;
+    width:35px;
     border-radius: 50%;
     display: flex;
     justify-content: center;

@@ -41,9 +41,9 @@
     font-size: 0.8rem;
 }
 
-.history_page_title-detail {
+.history_page_title-detail1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     color: #fffffd;
     background-color: #1a202c;
@@ -53,14 +53,14 @@
     margin: 15px;
 }
 
-.history_page_title-detail h3 {
+.history_page_title-detail1 h3 {
     font-size: 1rem;
     padding-top: 5px;
 }
 
-.history_page-detail1 {
+.history_page-detail11 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: #ffffff;
     color: #191f2b;
     height: 70px;
@@ -72,9 +72,10 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.history_page-detail1-ID,
-.history_page-detail1-Date,
-.history_page-detail1-view {
+.history_page-detail11-ID,
+.history_page-detail11-Date,
+.history_page-detail11-view,
+.history_page-detail11-delivery{
     display: flex;
     justify-content: center;
     align-items: center;

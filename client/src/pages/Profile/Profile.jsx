@@ -74,26 +74,24 @@ function Profile() {
     }
 
     const updatePassword = () => {
-        if (data.password.length < 6) {
+        if(data.password.length < 6) {
             alert("Password greater than 6")
         }
-
-        /* return setData({...data, err: "Password must be at least 6 characters.", success: ''}) */
-
-        if (data.password !== data.cf_password) {
+        else if(data.password !== data.cf_password) {
             alert("Password did not match")
 
         }
-        /*  return setData({...data, err: "Password did not match.", success: ''}) */
-        try {
-            axios.post('/user/reset', { password: data.password }, {
-                headers: { Authorization: currentToken.accesstoken }
-            })
-            alert("update password successful")
-            getUser(dispatch, currentToken.accesstoken)
-            /* setData({...data, err: '' , success: "Updated Success!"  }) */
-        } catch (err) {
-            setData({ ...data, err: err.response.data.msg, success: '' })
+        else{
+            try {
+                axios.post('/user/reset', { password: data.password }, {
+                    headers: { Authorization: currentToken.accesstoken }
+                })
+                alert("update password successful")
+                getUser(dispatch, currentToken.accesstoken)
+                /* setData({...data, err: '' , success: "Updated Success!"  }) */
+            } catch (err) {
+                setData({ ...data, err: err.response.data.msg, success: '' })
+            }
         }
     }
 
