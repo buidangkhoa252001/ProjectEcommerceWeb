@@ -31,7 +31,7 @@ export const PrivateRoute = ({ children }) =>{
           }
           refreshToken() && dispatch(loginSuccess())
       } */
-  },[user,cart,dispatch,currentToken])
+  },[user,dispatch,currentToken])
     return <DefaultLayout>{children}</DefaultLayout>
 
 }

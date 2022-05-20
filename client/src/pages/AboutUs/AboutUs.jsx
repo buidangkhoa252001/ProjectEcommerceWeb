@@ -12,7 +12,9 @@ const AboutUs = () => {
                         <span className="about-primary--sub">Going To Our Shop</span>
                     </h3>
                     <div>
-                    <button href="#" className="btn btn--white"><Link style={{ textDecoration: "none" }}  to="/products">see our product</Link></button>
+                    <button href="#" className="btn btn--white"><Link style={{ textDecoration: "none" ,color: "crimson",  
+                fontSize: "18px" , 
+  }}  to="/products">see our product</Link></button>
 
                     </div>
             
@@ -26,9 +28,9 @@ const AboutUs = () => {
                     <button className="btn-section"><Link style={{ textDecoration: "none" }}  to="/products">Know more</Link> &rarr;</button>
                 </div>
                 <div className="about-imgs">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6S6SiqLikmS5E_tJyjaps4R3AxlQ7vogWrQ&usqp=CAU" alt="photo1" className="about-img img1" />
-                    <img src="https://techvccloud.mediacdn.vn/2020/6/8/top-6-loi-ich-cua-may-chu-dam-may-cho-e-commerce-website-15915900672601033542225-crop-15915900716041331039284.jpg" alt="photo1" className="about-img img2" />
-                    <img src="https://www.digital38.com.vn/wp-content/uploads/2021/01/kinh-doanh-thuong-mai-dien-tu.jpg" alt="photo1" className="about-img img3" />
+                    <img src="https://cmcdistribution.com.vn/en/wp-content/uploads/2020/12/How-To-Create-An-EPIC-Laptop-Gaming-SETUP-2019.jpg" alt="photo1" className="about-img img1" />
+                    <img src="https://i.pinimg.com/564x/69/96/ad/6996ad37d46c2bca363550c12279ee63.jpg" alt="photo1" className="about-img img3" />
+                    <img src="https://i.pinimg.com/564x/82/7b/0b/827b0b102be31d3e17052a854aab2a44.jpg" alt="photo1" className="about-img img2" />
                 </div>
             </div>  
             <div className="about-location">Location</div>

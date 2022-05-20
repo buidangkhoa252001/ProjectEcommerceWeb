@@ -56,15 +56,18 @@ function UpdateUser() {
         if (data.password.length < 6) {
             alert("Password greater than 6")
         }
-        console.log(data.password)
-        try {
-            axios.post(`/user/reset//${params.id}`, { password: data.password }, {
-                headers: { Authorization: currentToken.accesstoken }
-            })
-            alert("update password successful")
-            getUser(dispatch, currentToken.accesstoken)
-        } catch (err) {
-            setData({ ...data, err: err.response.data.msg, success: '' })
+        else{
+            console.log(data.password)
+            try {
+               /*  axios.post(`/user/reset//${params.id}`, { password: data.password }, {
+                    headers: { Authorization: currentToken.accesstoken }
+                }) */
+                alert("update password successful")
+                getUser(dispatch, currentToken.accesstoken)
+            } catch (err) {
+                setData({ ...data, err: err.response.data.msg, success: '' })
+            }
+
         }
     }
 

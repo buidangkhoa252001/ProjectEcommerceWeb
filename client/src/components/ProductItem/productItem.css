@@ -17,10 +17,10 @@
 }
 
 .product_card img {
-    /*  margin:5px 20px; */
+    margin: 7px -9px;
     width: 350px;
     height: 55%;
-    object-fit: contain;
+    object-fit: scale-down;
     cursor: pointer;
 }
 

@@ -77,7 +77,7 @@ const CreateCategories = () => {
           onChange={handleChange} placeholder="Enter category" />
         <input type="text" name="description" value={category.description} required 
          onChange={handleChange} placeholder="Enter description" />
-        <button type="submit">{onEdit ? "Update" : "Create"}</button>
+        <button  type="submit">{onEdit ? "Update" : "Create"}</button>
       </form>
 
       <div className="col">

@@ -153,9 +153,12 @@ const CreateProduct = () => {
                                 <div className="upload">
                                     <input type="file" name="file" id="file_up" onChange={handleUpload} />
                                     <label htmlFor="file_up" className="input-label">
-                                        <i class="fa-solid fa-image"></i>
-                                        <h2>Choose Photo Product</h2>
-                                        <span>or drag and drop image here</span>
+                                 {
+                                     images ?  <div></div>
+                                     :<div className="clickphoto"> <i className="fa-solid fa-image"></i>
+                                     <h2>Choose Photo Product</h2>
+                                     <span>or drag and drop image here</span></div>
+                                 }      
                                     </label>
                                     <div id="file_img" style={styleUpload}>
                                         <img src={images ? images.url : ""} alt="" />
