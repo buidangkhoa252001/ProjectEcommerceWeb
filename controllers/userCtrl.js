@@ -1,5 +1,6 @@
 const Users = require("../models/userModel")
 const Payments = require('../models/paymentModel')
+const Orders = require('../models/orderModel')
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const userCtrl = {
@@ -209,7 +210,7 @@ const userCtrl = {
     },
     history: async(req, res) =>{
         try {
-            const history = await Payments.find({user_id: req.user.id})
+            const history = await Orders.find({user_id: req.user.id})
 
             res.json(history)
         } catch (err) {
@@ -218,7 +219,7 @@ const userCtrl = {
     },
     getHitory: async(req,res)=>{
         try {
-            const historyId = await Payments.findById(req.params.id);
+            const historyId = await Orders.findById(req.params.id);
             res.status(200).json(historyId);
           } catch (err) {
             return res.status(500).json({msg: err.message})

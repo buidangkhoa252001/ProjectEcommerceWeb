@@ -1,15 +1,16 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Pagination from '../../components/Pagination/Pagination';
-import Products from './../../components/Products/Products';
+import Products from '../../components/Products/Products';
+import ProductTable from '../../components/Products/ProductTable';
 import { useLocation } from 'react-router-dom';
 import Loading from '../../utils/Loading/Loading';
 import Sorting from '../../components/Sorting/Sorting';
-import SearchForm from './../../components/SearchForm/SearchForm';
+import SearchForm from '../../components/SearchForm/SearchForm';
 import axios from '../../axios/axios';
 import Categories from '../../components/Categories/Categories';
 import IMG from "./noproduct.png"
 import "./Product.css";
-const Product = () => {
+const ProductTables = () => {
   const [products, setProducts] = useState([])
   const [limit, setLimit] = useState(6)
   const [totalPages, setTotalPages] = useState(1)
@@ -40,11 +41,12 @@ const Product = () => {
     });
   }, [page, sort, search, category]);
   useEffect(() => {
-    const getProduct = async () => {
+    const getProductTables = async () => {
       try {
         if (category) {
           setLoading(true);
           const res = await axios.get(`/api/products?limit=${limit}&page=${page}&sort=${sort}&category=${category}`)
+        
           setData1(res.data)
 
           setLoading(false)
@@ -61,7 +63,7 @@ const Product = () => {
         console.log(err)
       }
     }
-    getProduct()
+    getProductTables()
 
 
   }, [search1, limit, page, sort, category])
@@ -140,7 +142,7 @@ const Product = () => {
               </div>
               <SearchForm search={search1} page={page} sort={sort} />
             </div>
-            <Products products={products} style={{ width: "80%" }} />
+            <ProductTable products={products} style={{ width: "80%" }} />
           </div>
         }
       </div>
@@ -152,4 +154,4 @@ const Product = () => {
 
 
 
-export default Product;
+export default ProductTables;

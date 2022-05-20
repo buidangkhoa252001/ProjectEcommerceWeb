@@ -38,7 +38,7 @@
     color: #FFFFFF;
     padding: 7px;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-right: 7px;
     font-size: 1.8rem;
 }
 
@@ -84,7 +84,7 @@
     color: #77828B;
 }
 
-.category_type-detail1 a {
+.category_type-detail a {
     color: #77828B;
     text-decoration: none;
     transition: 0.2s ease-in-out;
@@ -104,6 +104,7 @@
     width: 100%;
     transition: 0.2s ease;
     font-family: Helvetica;
+    font-size: 1rem;
 }
 
 .category_type-detail:hover {
@@ -114,13 +115,8 @@
     transform: scaleY(5px);
 }
 
-.category_type-detail1:hover {
-    background-color: #f8f9d2;
-    background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
-    border-radius: 10px;
-}
 
-.category_type-detail1:hover a {
+.category_type-detail:hover a {
     color: #31373E;
     transform: translateX(8px);
 }

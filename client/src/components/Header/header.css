@@ -7,6 +7,7 @@ header{
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid #ddd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 header .logo{
     flex: 1;
@@ -72,7 +73,13 @@ header li:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    gap: 20px;
+    width: 70%;
+    font-size: 0.9rem;
+}
+
+.header_detai li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .header_detail-product,

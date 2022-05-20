@@ -36,7 +36,7 @@ const History = () => {
                     </div>
                     <div className="history_page-detail1-view">
                         <i className="fa-solid fa-check"> </i>
-                        <h3>{items.status === false ? <div>Pending</div> : <div>Ok</div>} </h3>
+                        <h3>{items.DeliveryStatus === false ? <div>Pending</div> : <div>Ok</div>} </h3>
                     </div>
                     <div className="history_page-detail1-view">
                         <i className="fa-solid fa-check"></i>

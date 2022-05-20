@@ -5,7 +5,7 @@ import userReducer from "./userSlice"
 import cartReducer from "./cartSlice"
 import historyReducer from './historySlice';
 import categoriesReducer from './categoriesSlice';
-import paymentReducer from './paymentSlice';
+import orderReducer from './orderSlice';
 import alluserReducer from './AllUserSlice';
 
 
@@ -34,7 +34,7 @@ import {
     cart:cartReducer,
     history:historyReducer,
     categories:categoriesReducer,
-    payment:paymentReducer,
+    order:orderReducer,
     alluser:alluserReducer
  
   })

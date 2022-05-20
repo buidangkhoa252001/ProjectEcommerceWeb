@@ -80,6 +80,10 @@
     align-items: center;
 }
 
+.history_page-detail1-view i {
+    margin-right: 5px;
+}
+
 .fa-barcode {
     background: #e5f1fd;
     padding: 10px;

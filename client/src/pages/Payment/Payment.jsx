@@ -7,11 +7,11 @@ import { getUser } from '../../api/UserApi';
 const Payment = () => {
     const { currentToken } = useSelector(state => state.login);
     const dispatch = useDispatch()
-    const {payment} = useSelector(state=>state.payment)
+    const {order} = useSelector(state=>state.order)
 
     const handleChange = async(id,statusitem)=>{
         try{
-            await axios.put(`/api/payment/${id}`,{status:!statusitem},{
+            await axios.put(`/api/order/${id}`,{DeliveryStatus:!statusitem},{
                 headers:{Authorization:currentToken.accesstoken}
             })
             alert("change success")
@@ -25,7 +25,7 @@ const Payment = () => {
     const handleDelete = async (id) => {
         if(window.confirm("Do you want to delete this product?")){
             try {
-                await axios.delete(`/api/payment/${id}`, {
+                await axios.delete(`/api/order/${id}`, {
                     headers: { Authorization: currentToken.accesstoken }
                 })
                 alert("delete success")
@@ -46,7 +46,7 @@ const Payment = () => {
             </div>
             <div className="payment_page_total-product">
                 <h3>Pending <i className="fa-solid fa-caret-up"></i></h3>
-                <h3>Total Order: {payment.length}</h3>
+               {/*  <h3>Total Order: {order.length}</h3> */}
             </div>
             <div className="payment_page_personal-title">
                 <h3>Payment ID <i className="fa-brands fa-airbnb"></i></h3>
@@ -59,7 +59,7 @@ const Payment = () => {
             </div>
 
             {
-                payment?.map(items => (
+                order?.map(items => (
                     <div className="payment_page_product-detail" key={items._id}>
                         <h3>{items.paymentID}</h3>
                         <h3>{items.user_id}</h3>
@@ -68,10 +68,10 @@ const Payment = () => {
                         <h3><Link to={`/payment/${items._id}`} style={{textDecoration:"none",
                         padding: "15px", color: "#3351e7", background: " #dde3fb", borderRadius: "50%"
                         }}>View</Link></h3>
-                        <h3>{items.status === false ? <div>Pending</div> : <div>Ok</div>} </h3>
+                        <h3>{items.DeliveryStatus === false ? <div className="payment_page_product-detail_pending"><i class="fa-regular fa-clock"></i>Pending</div> : <div><i class="fa-solid fa-check"></i>Ok</div>} </h3>
                         <div className="containbutton">
-                            <button onClick={() => handleChange(items._id,items.status)} className="changebutton"> Accept </button>
-                            <button onClick={() => handleDelete(items._id)} className="deletebutton" > Delete </button>
+                            <button onClick={() => handleChange(items._id,items.DeliveryStatus)} className="changebutton"><i class="fa-solid fa-pen"></i> Update</button>
+                            <button onClick={() => handleDelete(items._id)} className="deletebutton" > <i class="fa-solid fa-trash"></i>Delete</button>
                         </div>
                     </div>
                 ))

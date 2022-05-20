@@ -106,27 +106,23 @@ const DetailProduct = () => {
                         <div className="box-detail_img">
                             <img src={image} alt="" />
                         </div>
-                        <div className="box-detail_title-script">
-                            <span>Discription</span>
-                            <p>{product.description}</p>
-                        </div>
                     </div>
                     <div className="box-detail_2">
                         <div className="box-detail_sold">
                             <h2>Sold: <span>{product.sold}</span></h2>
                         </div>
                         <div className="box-detail_price">
-                            <span>$ {product.price}</span>
+                            $<span> {product.price}.00</span>
                         </div>
                         <div className="box-detail_buy">
                             <button to="/cart" className="box-detail_title-btn-buy" onClick={() => handleBuy(product)}>
                                 Buy Now <i className="fa-solid fa-cart-shopping"></i>
                             </button>
                         </div>
-                        <div className="box-detail_configuation-title">
+                        {/* <div className="box-detail_configuation-title">
                             <h2>Configuration: {product.title}</h2>
-                        </div>
-                        <div className="box-detail_configuation-table">
+                        </div> */}
+                        {/* <div className="box-detail_configuation-table">
                             <table>
                                 <tr>
                                     <td>CPU</td>
@@ -180,8 +176,12 @@ const DetailProduct = () => {
                                     <td>v5.1</td>
                                 </tr>
                             </table>
-                        </div>
+                        </div> */}
                     </div>
+                </div>
+                <div className="box-detail_title-script">
+                    <span>Discription</span>
+                    <p>{product.description}</p>
                 </div>
             </div>
             {/* <div className="detail">

@@ -68,6 +68,9 @@ const Header = () => {
                 <div className="header_detail-history">
                 <li><Link style={{ textDecoration: "none" }} to="/history">History</Link></li>
                 </div>
+                <div className="header_detail-history">
+                <li><Link style={{ textDecoration: "none" }} to="/aboutus">AboutUs</Link></li>
+                </div>
                 <div className="header_detail-search">
                 <li onClick={() => setOpenSearch(true)}>Search</li>
                 </div>
@@ -80,7 +83,7 @@ const Header = () => {
                 {/*  <li onClick={() => setOpenFilter(true)}>Filter </li> */}
                 {
                     openSearch &&
-                    <Modal titleTxt="Search" setOpen={setOpenSearch}>
+                    <Modal titleTxt="Search" setOpen={setOpenSearch} >
                         <SearchForm />
                     </Modal>
                 }
@@ -103,7 +106,7 @@ const Header = () => {
                 <li><Link style={{ textDecoration: "none" }} to="/createCategory">Categories</Link></li>
             </div>
             <div className="header_detail-payment-admin">
-                <li><Link style={{ textDecoration: "none" }} to="/payment">All Payment</Link></li>
+                <li><Link style={{ textDecoration: "none" }} to="/payment">All Orders</Link></li>
             </div>
             <div className="header_detail-payment-admin">
                 <li><Link style={{ textDecoration: "none" }} to="/alluser">All User</Link></li>
@@ -125,7 +128,7 @@ const Header = () => {
             </div>
             <div className="header_detail">
                 <div className="header_detail-product">
-                    <li><Link style={{ textDecoration: "none" }} to="/products">{admin ? 'Products' : 'Shop'}</Link></li>
+                    <li><Link style={{ textDecoration: "none"}} to="/products">{admin ? 'Products' : 'Shop'}</Link></li>
                 </div>
                 <div className="header_detail-product">
                     <li><Link style={{ textDecoration: "none" }} to="/productTable">{admin ? 'Products_table' : 'Product'}</Link></li>

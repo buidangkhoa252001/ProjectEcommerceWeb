@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './pages/Home/Home';
 import Product from './pages/Product/Product';
+import ProductTables from './pages/ProductTable/ProductTables';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import NotFound from './pages/NotFound/NotFound';
@@ -23,6 +24,7 @@ import Profile from './pages/Profile/Profile';
 import AllUser from './pages/AllUser/AllUser';
 import Checkout from './pages/Checkout/Checkout';
 import UpdateUser from './pages/UpdateUser/UpdateUser';
+import AboutUs from './pages/AboutUs/AboutUs';
 
 
 
@@ -54,6 +56,14 @@ function App() {
           element={
             <PrivateRoute>
               <Product />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/productTable"
+          element={
+            <PrivateRoute>
+              <ProductTables />
             </PrivateRoute>
           }
         />
@@ -176,6 +186,14 @@ function App() {
           element={
             <PrivateRoute>
               <UpdateUser />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/aboutus"
+          element={
+            <PrivateRoute>
+              <AboutUs />
             </PrivateRoute>
           }
         />

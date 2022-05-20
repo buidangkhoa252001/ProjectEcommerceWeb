@@ -10,8 +10,6 @@ const Categories = ({ sort, page, search }) => {
   /* const [categories,setCategories] = useState([]) */
   const { categories } = useSelector(state => state.categories)
   const { pushQuery } = useCustomRouter()
-
-
   const handleCategory = (id) => {
     if (id) {
       pushQuery({ page: 1, sort: sort, category: id })
@@ -20,6 +18,10 @@ const Categories = ({ sort, page, search }) => {
       pushQuery({ page: 1, sort: sort, search: "" })
     }
   }
+  useEffect(()=>{
+      console.log(window.location.search)
+   
+  },[])
 
 
   return (
@@ -33,12 +35,11 @@ const Categories = ({ sort, page, search }) => {
         </div>
         <div className="category_type-line"></div>
         <div className="category_type-menu">menu</div>
-        <div className="category_type-detail" onClick={() => { handleCategory() }} >All Products</div>
+        <div className="category_type-detail" onClick={() => { handleCategory() }} ><a href="">All Products</a></div>
 
         {
           categories.map(category => (
-            <div className="category_type-detail1" key={category._id} onClick={() => { handleCategory(category._id) }}>
-             
+            <div className="category_type-detail" key={category._id} onClick={() => { handleCategory(category._id) }}>
               <a href="">{category.name}</a>
             </div>
 

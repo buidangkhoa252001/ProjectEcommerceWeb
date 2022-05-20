@@ -6,9 +6,8 @@
 .feature{
     display: flex;
     justify-content: space-between;
-    margin: 10px 25px;
+    margin-top: 4px;
     align-items: center;
-    padding-top: 20px;
 }
 .text{
     font-weight: 300;
