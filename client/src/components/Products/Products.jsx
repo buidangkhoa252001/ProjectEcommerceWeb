@@ -8,16 +8,7 @@ const Products = React.memo(({ products }) => {
 
     return (
         <div className="container">
-            <h1 className="heading">
-                <span>p</span>
-                <span>r</span>
-                <span>o</span>
-                <span>d</span>
-                <span>u</span>
-                <span>c</span>
-                <span>t</span>
-                <span>s</span>
-            </h1>
+          
 
             <div className="wrapper">
                 {

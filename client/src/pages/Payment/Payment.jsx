@@ -68,7 +68,10 @@ const Payment = () => {
                         <h3><Link to={`/payment/${items._id}`} style={{textDecoration:"none",
                         padding: "15px", color: "#3351e7", background: " #dde3fb", borderRadius: "50%"
                         }}>View</Link></h3>
-                        <h3>{items.DeliveryStatus === false ? <div><i className="fa-regular fa-clock"></i>Pending</div> : <div><i className="fa-solid fa-check"></i>Ok</div>} </h3>
+
+                        <h3>{items.DeliveryStatus === false ? <div className="payment_page_product-detail_pending"><i class="fa-regular fa-clock"></i>Pending</div> : <div><i class="fa-solid fa-check"></i>Ok</div>} </h3>
+
+
                         <div className="containbutton">
                             <button onClick={() => handleChange(items._id,items.DeliveryStatus)} className="changebutton"><i className="fa-solid fa-pen"></i> Update</button>
                             <button onClick={() => handleDelete(items._id)} className="deletebutton" > <i className="fa-solid fa-trash"></i>Delete</button>

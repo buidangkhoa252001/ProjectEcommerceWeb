@@ -78,6 +78,7 @@ h2{
 .col3 h2 {
     margin-bottom: 10px;
     color: crimson;
+    font-size: 1.4rem;
 }
 
 .col2 li,
@@ -186,6 +187,10 @@ li:hover::after {
 
 .text-last-footer span {
     color: crimson;
+}
+
+.text-last-footer h2 {
+    font-size: 1rem;
 }
 
 .icon{

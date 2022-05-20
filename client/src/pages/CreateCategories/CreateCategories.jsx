@@ -99,10 +99,10 @@ const CreateCategories = () => {
                 <p>{category.name}</p>
               </div>
               <div className="create_category_detail">
-                <button className="create_category_detail-edit" onClick={() => editCategory(category._id, category.name,category.description)}><i class="fa-solid fa-pen"></i>Edit</button>
+                <button className="create_category_detail-edit" onClick={() => editCategory(category._id, category.name,category.description)}><i className="fa-solid fa-pen"></i>Edit</button>
               </div>
               <div className="create_category_detail">
-                <button className="create_category_detail-delete" onClick={() => deleteCategory(category._id)} ><i class="fa-solid fa-trash"/>Delete</button>
+                <button className="create_category_detail-delete" onClick={() => deleteCategory(category._id)} ><i className="fa-solid fa-trash"/>Delete</button>
               </div>
 
             </div>

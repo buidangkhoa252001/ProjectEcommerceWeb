@@ -1,6 +1,7 @@
 .payment_page {
     background-color: #eaeaea;
     width: 100%;
+    height: 150vh;
 }
 
 .fa-airbnb {
@@ -38,7 +39,7 @@
     text-align: center;
     color: #fffffd;
     background-color: #1a202c;
-    width: 95%;
+    width: 98%;
     border-radius: 5px;
     height: 30px;
     margin: 15px;
@@ -57,18 +58,38 @@
     align-items: center;
 }
 
+
+
 .payment_page_product-detail {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: #ffffff;
     color: #191f2b;
     height: 150px;
-    width: 95%;
+    width: 98%;
     border-radius: 5px;
     margin: 15px;
     text-align: center;
     border: 1px solid #ecf0fb;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.payment_page_product-detail_pending {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment_page_product-detail .fa-clock {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(230, 220, 201);
+    color: rgb(88, 59, 5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
 }
 
 .containbutton {
@@ -78,10 +99,10 @@
 }
 
 .containbutton button {
-    padding: 0 15px;
-    margin: 0 10px;
+    padding: 0 10px;
     border: none;
     border-radius: 15px;
+    margin-right: 5px;
 }
 
 .containbutton button:hover {
@@ -96,6 +117,11 @@
 .containbutton .deletebutton{
     color: rgb(163, 47, 47);
     background-color: rgb(231, 158, 158);
+  
+}
+
+.containbutton .deletebutton i {
+    margin-right: 5px;
 }
 
 .payment_page_product-detail h3,
@@ -103,7 +129,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: .9rem;
+    font-size: .7rem;
 }
 
 /* icon */

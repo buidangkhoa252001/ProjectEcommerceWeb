@@ -85,18 +85,24 @@
     align-items: center;
 }
 
+.create_category_detail i {
+    margin-right: 5px;
+}
+
 .create_category_detail-edit {
-    width: 60px;
+    width: 70px;
     border-radius: 15px;
     color: rgb(24, 122, 24);
     background-color: rgb(141, 233, 141);
     font-weight: 600;
+    border: none;
 }
 
 .create_category_detail-delete {
-    width: 60px;
+    width: 70px;
     border-radius: 15px;
     color: rgb(156, 43, 43);
     background-color: rgb(230, 141, 141);
     font-weight: 600;
+    border: none;
 }

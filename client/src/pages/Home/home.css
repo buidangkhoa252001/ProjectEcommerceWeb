@@ -1,4 +1,4 @@
-h2{
+.topsale h2{
    
     font-size: 43px;
   
@@ -13,12 +13,10 @@ h2{
 .product{
     display:grid ;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-bottom:8px;
+    gap: 17px;
 }
 .ribbon {
     font-size: 18px !important;
-    /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
-   
     width: 70%;
    
     position: relative;
@@ -26,7 +24,7 @@ h2{
     color: black;
     text-align: center;
     padding: 1.2em 2em; /* Adjust to suit */
-    margin: 1.5em auto 2.4em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+    margin: 1.5em auto 2.4em; 
    }
    .ribbon:before, .ribbon:after {
     content: "";
@@ -62,4 +60,8 @@ h2{
    .ribbon .ribbon-content:after {
     right: 0;
     border-width: 1em 1em 0 0;
+    
    }
+
+
+

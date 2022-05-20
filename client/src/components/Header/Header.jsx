@@ -83,7 +83,7 @@ const Header = () => {
                 {/*  <li onClick={() => setOpenFilter(true)}>Filter </li> */}
                 {
                     openSearch &&
-                    <Modal titleTxt="Search" setOpen={setOpenSearch}>
+                    <Modal titleTxt="Search" setOpen={setOpenSearch} >
                         <SearchForm />
                     </Modal>
                 }
@@ -128,7 +128,10 @@ const Header = () => {
             </div>
             <div className="header_detail">
                 <div className="header_detail-product">
-                    <li><Link style={{ textDecoration: "none" }} to="/products">{admin ? 'Products' : 'Shop'}</Link></li>
+                    <li><Link style={{ textDecoration: "none"}} to="/products">{admin ? 'Products' : 'Shop'}</Link></li>
+                </div>
+                <div className="header_detail-product">
+                    <li><Link style={{ textDecoration: "none" }} to="/productTable">{admin ? 'Products_table' : 'Product'}</Link></li>
                 </div>
                 
 

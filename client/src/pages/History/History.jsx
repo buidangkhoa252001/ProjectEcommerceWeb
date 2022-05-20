@@ -19,12 +19,14 @@ const History = () => {
                 <h3>Total Product: {history.length}</h3>
             </div>
             <div className="history_page_title-detail1">
+
                 <h3>Payment ID <i className="fa-brands fa-airbnb"></i></h3>
                 <h3>Date of Purchased <i className="fa-brands fa-airbnb"></i></h3>
                 <h3>Delivery <i className="fa-brands fa-airbnb"></i></h3>
                 <h3></h3>
             </div>
             {history.map(items => (
+
                 <div className="history_page-detail11" key={items._id}>
                     <div className="history_page-detail11-ID">
                         <i className="fa-solid fa-barcode"></i>
@@ -46,6 +48,7 @@ const History = () => {
             ))
             }
         </div>
+
     );
 };
 

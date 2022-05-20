@@ -5,8 +5,6 @@ import axios from  "../../axios/axios"
 import ProductItem from '../../components/ProductItem/ProductItem';
 
 
-
-
 function Home() {
     const [products,setProducts] =useState([])
         useEffect(()=>{

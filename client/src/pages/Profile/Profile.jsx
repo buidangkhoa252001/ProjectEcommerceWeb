@@ -188,7 +188,6 @@ function Profile() {
                         </div>
 
                         <div className="profile_detail-record">
-                            <input type="reset" value={"change method"} />
                             <button disabled={loading} onClick={handleUpdate}>Update</button>
                         </div>
                     </form>

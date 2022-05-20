@@ -80,6 +80,10 @@
     align-items: center;
 }
 
+.history_page-detail1-view i {
+    margin-right: 5px;
+}
+
 .fa-barcode {
     background: #e5f1fd;
     padding: 10px;
@@ -103,14 +107,24 @@
     color: #3ac149;
 }
 
-.user_page-detail1-view button {
+
+.edit_button {
+
     border: none;
-    background-color: rgb(231, 169, 169);
-    color: rgb(165, 55, 55);
-    padding: 10px;
-    border-radius: 20px;
+    padding: 0 20px;
+    color: #16a526;
+    background-color: #a9e4b0;
+    border-radius: 15px;
+    margin: 0 20px;
 }
 
-.user_page-detail1-view button:active {
+.delete_button {
+    border: none;
+    padding: 0 15px;
+    color: rgb(201, 47, 47);
+    background-color: rgb(231, 177, 177);
+    border-radius: 15px;
+}
+.history_page-detail1-view button:active {
     transform: scale(1.05);
 }

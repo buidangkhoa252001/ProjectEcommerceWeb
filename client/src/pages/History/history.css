@@ -1,6 +1,7 @@
 .history_page {
     background-color: #f7f8fc;
     width: 100%;
+    height: 150vh;
 }
 
 .history_page-logo {
@@ -81,11 +82,19 @@
     align-items: center;
 }
 
+.fa-clock {
+    border-radius: 50%;
+    background-color: #e2dac8;
+    color: #795810;
+    padding: 10px;
+    margin-right: 10px;
+}
+
 .fa-barcode {
     background: #e5f1fd;
     padding: 10px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-left: 40px;
 }
 
 .fa-calendar {
