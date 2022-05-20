@@ -10,13 +10,18 @@ const Login = () => {
     const [passwordT, setPasswordT] = useState("password")
     const dispatch = useDispatch()
     const navigate = useNavigate()
-
+    const {user } = useSelector(state => state.user);                                            
     const { isFetching } = useSelector(state => state.login)
     const handleSubmit = (e) => {
         e.preventDefault()
         login(dispatch, { email, password })
-        navigate("/products", { replace: true });
+        setTimeout(()=>{
+            
+                navigate("/products", { replace: true });
+            
 
+        },1000)
+      
     }
     const handleEye=()=>{
         console.log(passwordT)
@@ -58,7 +63,7 @@ const Login = () => {
                             <i onClick={()=> handleEye()} className="fa-solid fa-eye eye"></i>
                         </div>
                         <div className="login_detail-record">
-                            <input type="reset" value={"change method"} />
+                        
                             <button disabled={isFetching} >Login</button>
                         </div>
                     </div>

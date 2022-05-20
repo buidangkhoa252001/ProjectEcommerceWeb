@@ -31,6 +31,7 @@ function App() {
   const { isAuth } = useSelector(state => state.login);
   const { user } = useSelector(state => state.user);
   const [admin,setAdmin] =useState(false)
+
   useEffect(()=>{
     if(user.role===1){
       setAdmin(true)

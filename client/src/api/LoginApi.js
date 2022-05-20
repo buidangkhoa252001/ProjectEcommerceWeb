@@ -1,3 +1,4 @@
+
 import axios from "../axios/axios"
 /* import axios from "axios"; */
 import { logOutCart } from "../redux/cartSlice";
@@ -9,8 +10,6 @@ import { logOutUserStore } from "../redux/userSlice";
 import { getUser } from './UserApi';
 
 
-
-
 export const login = async (dispatch,user)=>{
     dispatch(loginStart())
     try{
@@ -19,6 +18,7 @@ export const login = async (dispatch,user)=>{
         dispatch(loginSuccess(res.data))  
        /*  localStorage.setItem("firstLogin",true) */
         getUser(dispatch,res.data.accesstoken)
+       
        /*  refreshToken() */
        
     }catch(err){

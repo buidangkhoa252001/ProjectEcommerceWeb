@@ -26,7 +26,9 @@ function Home() {
            <div className="home">
                <Slider1/>
                <div className="topsale">
-                   <h2>New Products</h2>
+               <h1 className="ribbon">
+                <strong className="ribbon-content">New Product</strong>
+               </h1>
 
                </div>
                    <div className="product">

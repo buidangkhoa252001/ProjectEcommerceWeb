@@ -77,7 +77,8 @@
 }
 
 .register_detail-title {
-    padding: 50px 0 10px 60px;
+    padding: 12px 0 10px 56px;
+
 }
 
 .register_detail-title h2 {
@@ -157,7 +158,7 @@
  
 .register_detail-record {
     padding-left: 60px;
-    padding-top: 30px;
+    padding-top: 23px;
     height: 100%;
 }
 

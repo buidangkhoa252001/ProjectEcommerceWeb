@@ -43,8 +43,8 @@ const Header = () => {
                 <div className="header_profile">
                     <div className="avatarheader" onClick={handLogged}><img src={user.avatar} /></div>
                     <div className={`header_profile-detail ${on ? "active" : ""}`}>
-                        <li><Link to="/profile" onClick={handLogged} style={{ textDecoration: "none", cursor: "pointer" }} >Profile</Link></li>
-                        <li><Link to="/" style={{ textDecoration: "none", cursor: "pointer" }} onClick={logoutUser}>Logout</Link></li>
+                        <li><Link to="/profile" onClick={handLogged} style={{ textDecoration: "none", cursor: "pointer",padding:"12px" }} >Profile</Link></li>
+                        <li><Link to="/" style={{ textDecoration: "none", cursor: "pointer",padding:"12px"  }} onClick={logoutUser}>Logout</Link></li>
                     </div>
                 </div>
                 {
