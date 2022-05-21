@@ -9,9 +9,6 @@ export const getOrder =async(dispatch,token)=>{
             const res = await axios.get('/api/order', {
                 headers: {Authorization:token}
             })
-            console.log(res)
-           /*  const token1 = await axios.get("/user/refresh_token")
-            console.log(token1) */
             dispatch(getOrderSuccess(res.data))      
         }catch(err){
               dispatch(getOrderFailure())

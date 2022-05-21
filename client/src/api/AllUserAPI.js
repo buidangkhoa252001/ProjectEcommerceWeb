@@ -11,6 +11,7 @@ export const getAllUser =async(dispatch,token)=>{
             const res = await axios.get('/user/getAllUser', {
                 headers: {Authorization:token}
             })
+            
             dispatch(getAllUserSuccess(res.data))
            
             

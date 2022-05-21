@@ -4,15 +4,64 @@
   
 }
 .topsale {
-    margin-bottom:12px;
-    display:flex;
+    margin-top:-20px;
+    /* display:flex;
     justify-content:center;
-    align-items:center;
-    background-color:#d7202c;
+    align-items:center; */
+    /* background-color:#d7202c; */
 }
 .product{
     display:grid ;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-bottom:15px;
     gap: 17px;
 }
+.ribbon {
+    font-size: 18px !important;
+    width: 70%;
+   
+    position: relative;
+    background: #d7202c;
+    color: black;
+    text-align: center;
+    padding: 1.2em 2em; /* Adjust to suit */
+    margin: 1.5em auto 2.4em; 
+   }
+   .ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid rgb(165, 52, 52);
+    z-index: -1;
+   }
+   .ribbon:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+   }
+   .ribbon:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+   }
+   .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #CE3226 transparent transparent transparent;
+    bottom: -1em;
+    
+   }
+   .ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+   }
+   .ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+    
+   }
+
+
+

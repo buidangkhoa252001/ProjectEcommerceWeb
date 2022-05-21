@@ -22,7 +22,7 @@ export const getUser = async(dispatch,token)=>{
                 getAllUser(dispatch,token)
                 getOrder(dispatch,token)
                 getCategories(dispatch)
-                console.log(res)
+            
               
             }catch(err){
                   dispatch(getUserFailure())

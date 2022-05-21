@@ -59,9 +59,9 @@ function UpdateUser() {
         else{
             console.log(data.password)
             try {
-               /*  axios.post(`/user/reset//${params.id}`, { password: data.password }, {
+                axios.patch(`/user/reset/${params.id}`, {password:data.password}, {
                     headers: { Authorization: currentToken.accesstoken }
-                }) */
+                })
                 alert("update password successful")
                 getUser(dispatch, currentToken.accesstoken)
             } catch (err) {
@@ -96,7 +96,6 @@ function UpdateUser() {
                             <i className="fa-solid fa-file-signature"></i>
                         </div>
 
-
                         <div className="form-group">
                             <input type="password" name="password" id="password"
                                 placeholder=' ' value={data.password} onChange={handleChange} />
@@ -105,7 +104,7 @@ function UpdateUser() {
                         </div>
 
                         <div className="profile_detail-record">
-                            <input type="reset" value={"change method"} />
+                           
                             <button  onClick={handleUpdate}>Update</button>
                         </div>
                     </form>

@@ -58,7 +58,6 @@ const Register = () => {
                             <i className="fa-solid fa-eye"></i>
                         </div>
                         <div className="register_detail-record">
-                            <input type="reset" value={"change method"} />
                             <button >Register</button>
                         </div>
                     </div>
