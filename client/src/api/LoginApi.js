@@ -16,7 +16,7 @@ export const login = async (dispatch,user)=>{
         const res = await axios.post("/user/login",user)
        
         dispatch(loginSuccess(res.data))  
-       /*  localStorage.setItem("firstLogin",true) */
+        localStorage.setItem("firstLogin",true)
         getUser(dispatch,res.data.accesstoken)
        
        /*  refreshToken() */

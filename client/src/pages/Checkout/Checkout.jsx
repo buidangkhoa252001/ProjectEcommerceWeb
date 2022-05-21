@@ -69,7 +69,7 @@ function Checkout() {
                     <div className="checkout_line"></div>
                     <div className="checkout_detail">
                         <div className="checkout_detail-total-price">
-                            <h2>$48.00</h2>
+                            <h2>{total}$</h2>
                             <span>Order amount</span>
                         </div>
                         <div className="checkout_detail-info">
