@@ -1,7 +1,5 @@
-.layout {
+.layout1 {
     width: 100%;
-    display: grid;
-    grid-template-columns: 13% 87%;
 }
 .feature{
     display: flex;

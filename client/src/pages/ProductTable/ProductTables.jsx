@@ -9,7 +9,7 @@ import SearchForm from '../../components/SearchForm/SearchForm';
 import axios from '../../axios/axios';
 import Categories from '../../components/Categories/Categories';
 import IMG from "./noproduct.png"
-import "./Product.css";
+import "./ProductTable.css";
 const ProductTables = () => {
   const [products, setProducts] = useState([])
   const [limit, setLimit] = useState(6)
@@ -131,8 +131,8 @@ const ProductTables = () => {
     )
   return (
     <div >
-      <div className="layout">
-        <Categories page={page} sort={sort} category={category} />
+      <div className="layout1">
+
         {loading ? <Loading />
           : <div>
             <div className="feature">

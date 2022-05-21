@@ -9,7 +9,7 @@
 .product_table-detail {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .product_table-detail-img {
@@ -33,6 +33,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 40px;
+}
+
+.product_table-detail_category {
+    display: flex;
+    align-items: center;
 }
 
 .product_table-detail_price {

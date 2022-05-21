@@ -22,7 +22,7 @@
 
 .product_table-title {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     border-bottom: 3px solid rgb(101, 101, 101);
     padding-bottom: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -33,6 +33,10 @@
 }
 
 .product_table-title h3:nth-child(4) {
+    margin-left: 35px;
+}
+
+.product_table-title h3:nth-child(5) {
     margin-left: 45px;
 }
 

@@ -14,6 +14,7 @@ const ProductTable = React.memo(({ products }) => {
                     <h3>Image</h3>
                     <h3>Name</h3>
                     <h3>Desciption</h3>
+                    <h3>Category</h3>
                     <h3>Price</h3>
                     <h3><ion-icon name="create-outline"></ion-icon></h3>
                 </div>

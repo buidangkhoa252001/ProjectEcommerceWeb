@@ -7,7 +7,7 @@ const Modal = ({ children, titleTxt, setOpen }) => {
         <h3>{titleTxt}</h3>
         { children }
         <span className='close'
-        onClick={() => setOpen(false)}>&#10006;</span>
+        onClick={() => setOpen(false)}>X</span>
       </div>
     </div>
   )

@@ -95,6 +95,7 @@ const ProductItem = ({ product }) => {
                 </div>
                 <div className="product_table-detail_title">{product.title}</div>
                 <div className="product_table-detail_description">{product.description}</div>
+                <div className="product_table-detail_category">{product.category}</div>
                 <div className="product_table-detail_price"><i className="fa-solid fa-dollar-sign"></i>{product.price}</div>
                 <div className="product_table-detail_button">
                     {user.role === 1 && adminButton()}

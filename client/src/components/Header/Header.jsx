@@ -43,8 +43,8 @@ const Header = () => {
                 <div className="header_profile">
                     <div className="avatarheader" onClick={handLogged}><img src={user.avatar} /></div>
                     <div className={`header_profile-detail ${on ? "active" : ""}`}>
-                        <li><Link to="/profile" onClick={handLogged} style={{ textDecoration: "none", cursor: "pointer" }} >Profile</Link></li>
-                        <li><Link to="/" style={{ textDecoration: "none", cursor: "pointer" }} onClick={logoutUser}>Logout</Link></li>
+                        <Link to="/profile" onClick={handLogged} style={{ textDecoration: "none", cursor: "pointer" }} ><li>Profile</li></Link>
+                        <Link to="/" style={{ textDecoration: "none", cursor: "pointer" }} onClick={logoutUser}><li>Logout</li></Link>
                     </div>
                 </div>
                 {
@@ -65,21 +65,24 @@ const Header = () => {
     const userRouter = () => {
         return (
             <>
-                <div className="header_detail-history">
-                <li><Link style={{ textDecoration: "none" }} to="/history">History</Link></li>
+                <div className="header_detail-product">
+                    <li><Link style={{ textDecoration: "none" }} to="/products">Shop</Link></li>
                 </div>
                 <div className="header_detail-history">
-                <li><Link style={{ textDecoration: "none" }} to="/aboutus">AboutUs</Link></li>
+                    <li><Link style={{ textDecoration: "none" }} to="/history">History</Link></li>
+                </div>
+                <div className="header_detail-history">
+                    <li><Link style={{ textDecoration: "none" }} to="/aboutus">AboutUs</Link></li>
                 </div>
                 <div className="header_detail-search">
-                <li onClick={() => setOpenSearch(true)}>Search</li>
+                    <li onClick={() => setOpenSearch(true)}>Search</li>
                 </div>
                 <div className="cart-icon">
-                        {cart ? <span>{cart.length}</span> : <span>0</span>}
-                        <Link to="/cart">
-                            <img src={Cart} alt="" width="30" />
-                        </Link>
-                    </div>
+                    {cart ? <span>{cart.length}</span> : <span>0</span>}
+                    <Link to="/cart">
+                        <img src={Cart} alt="" width="30" />
+                    </Link>
+                </div>
                 {/*  <li onClick={() => setOpenFilter(true)}>Filter </li> */}
                 {
                     openSearch &&
@@ -99,18 +102,21 @@ const Header = () => {
     const adminRouter = () => {
         return (
             <>
-            <div className="header_detail-product-admin">
-                <li><Link style={{ textDecoration: "none" }} to="/createProduct">Create Product</Link></li>
-            </div>
-            <div className="header_detail-cate-admin">
-                <li><Link style={{ textDecoration: "none" }} to="/createCategory">Categories</Link></li>
-            </div>
-            <div className="header_detail-payment-admin">
-                <li><Link style={{ textDecoration: "none" }} to="/payment">All Orders</Link></li>
-            </div>
-            <div className="header_detail-payment-admin">
-                <li><Link style={{ textDecoration: "none" }} to="/alluser">All User</Link></li>
-            </div>
+                <div className="header_detail-product">
+                    <li><Link style={{ textDecoration: "none" }} to="/productTable">Product</Link></li>
+                </div>
+                <div className="header_detail-product-admin">
+                    <li><Link style={{ textDecoration: "none" }} to="/createProduct">Create Product</Link></li>
+                </div>
+                <div className="header_detail-cate-admin">
+                    <li><Link style={{ textDecoration: "none" }} to="/createCategory">Categories</Link></li>
+                </div>
+                <div className="header_detail-payment-admin">
+                    <li><Link style={{ textDecoration: "none" }} to="/payment">All Orders</Link></li>
+                </div>
+                <div className="header_detail-payment-admin">
+                    <li><Link style={{ textDecoration: "none" }} to="/alluser">All User</Link></li>
+                </div>
             </>
         )
     }
@@ -127,27 +133,24 @@ const Header = () => {
 
             </div>
             <div className="header_detail">
-                <div className="header_detail-product">
-                    <li><Link style={{ textDecoration: "none"}} to="/products">{admin ? 'Products' : 'Shop'}</Link></li>
-                </div>
-                <div className="header_detail-product">
-                    <li><Link style={{ textDecoration: "none" }} to="/productTable">{admin ? 'Products_table' : 'Product'}</Link></li>
-                </div>
-                
 
                 {admin && adminRouter()}
                 {!admin && isAuth && userRouter()}
                 {
 
-                    isAuth ? loggedRouter() : 
-                    <div className="header_login-register">
-                        <li><ion-icon name="log-out-outline"></ion-icon><Link to="/login" style={{textDecoration: "none"}}>Login</Link></li>
-                        <li><Link to="/register" style={{textDecoration: "none"}}> Register</Link></li>
-                    </div>
+                    isAuth ? loggedRouter() :
+
+                        <div className="header_login-register">
+                            <div className="header_detail-product">
+                                <li><Link style={{ textDecoration: "none" }} to="/products">Shop</Link></li>
+                            </div>
+                            <li><ion-icon name="log-out-outline"></ion-icon><Link to="/login" style={{ textDecoration: "none" }}>Login</Link></li>
+                            <li><Link to="/register" style={{ textDecoration: "none" }}> Register</Link></li>
+                        </div>
                 }
-                
+
             </div>
-           
+
 
         </header>
     );
