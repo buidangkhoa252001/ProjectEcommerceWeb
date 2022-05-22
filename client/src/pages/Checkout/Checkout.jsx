@@ -85,6 +85,7 @@ function Checkout() {
                                 <form action="">
                                     <h3>Customer</h3>
                                     <table>
+                                    <tbody>
                                         <tr>
                                             <td>Name</td>
                                             <td><input type="text" name="name" id="name"
@@ -105,13 +106,16 @@ function Checkout() {
                                             <td><input type="text" name="postalcode" id="postalcode" value={data.postalcode}
                                                 placeholder=' ' onChange={handleChange} /></td>
                                         </tr>
+                                        </tbody>
                                     </table>
                                     <h3>Transaction</h3>
                                     <table>
-                                        <tr>
-                                            <td>Method</td>
-                                            <td>Paypal</td>
-                                        </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td>Method</td>
+                                                <td>Paypal</td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                     <div className="checkout_detail-info-form-btn">
                                         <PaypalButton style="margin-top:15px;"

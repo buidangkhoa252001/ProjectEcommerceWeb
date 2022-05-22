@@ -26,6 +26,10 @@
     border-bottom: 3px solid rgb(101, 101, 101);
     padding-bottom: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+}
+.product_table-title h3{
+    margin-left: 18px;
 }
 
 .text{
@@ -33,11 +37,11 @@
 }
 
 .product_table-title h3:nth-child(4) {
-    margin-left: 35px;
+    margin-left: 60px;
 }
 
 .product_table-title h3:nth-child(5) {
-    margin-left: 45px;
+    margin-left: 50px;
 }
 
 .product_table-title ion-icon {
