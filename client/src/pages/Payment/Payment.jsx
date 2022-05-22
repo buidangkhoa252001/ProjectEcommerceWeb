@@ -69,7 +69,7 @@ const Payment = () => {
                         padding: "15px", color: "#3351e7", background: " #dde3fb", borderRadius: "50%"
                         }}>View</Link></h3>
 
-                        <h3>{items.DeliveryStatus === false ? <div className="payment_page_product-detail_pending"><i class="fa-regular fa-clock"></i>Pending</div> : <div><i class="fa-solid fa-check"></i>Ok</div>} </h3>
+                        <h3>{items.DeliveryStatus === false ? <div className="payment_page_product-detail_pending"><i className="fa-regular fa-clock"></i>Pending</div> : <div><i className="fa-solid fa-check"></i>Ok</div>} </h3>
 
 
                         <div className="containbutton">

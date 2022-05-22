@@ -13,7 +13,7 @@ const AllUser = () => {
 
     const handleDelete=async(id,role)=>{
         if(window.confirm("Do you want to delete this product?")){
-            if(role==1){
+            if(role===1){
                 alert("can not delete the admin ")
             }
             else{
@@ -53,16 +53,14 @@ const AllUser = () => {
                         <span>{user._id}</span>
                     </div>
                     <div className="user_page-detail1-Date">
-                        <i className="fa-solid fa-calendar"></i> {user.role==1?<>Admin</>:<>User</> }
+                        <i className="fa-solid fa-calendar"></i> {user.role===1?<>Admin</>:<>User</> }
                     </div>
                     <div className="user_page-detail1-Date">
-                        <i className="fa-solid fa-calendar"></i> {user.email}
+                        <i className="fa-solid fa-user"></i>{user.email}
                     </div>
                     <div className="user_page-detail1-view">
                         <Link to={`/update/${user._id}`}> <button className="edit_button" ><i className="fa-solid fa-pen"></i>Edit</button></Link>
                         <button onClick={() => handleDelete(user._id,user.role)} className="delete_button"><i className="fa-solid fa-trash"/>delete</button>
-
-            
                     </div>
                 </div>
             ))

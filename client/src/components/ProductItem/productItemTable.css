@@ -27,6 +27,7 @@
     padding-right: 15px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .product_table-detail_description {
     width: 100%;
@@ -39,6 +40,7 @@
 .product_table-detail_category {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .product_table-detail_price {
