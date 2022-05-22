@@ -18,7 +18,7 @@ function Home() {
             catch(err){
                 console.log(err)
             }
-        },[])
+        },[products])
 
         return (
            <div className="home">
@@ -35,7 +35,7 @@ function Home() {
                         (<ProductItem key={product._id} product={product} />)
                     )
                         :
-                        <h1 className="text">Dont have the product</h1>
+                        <h1 className="text">Wait A Second</h1>
                 }
 
                    </div>

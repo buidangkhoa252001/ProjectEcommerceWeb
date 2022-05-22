@@ -6,4 +6,4 @@ we have a inspiration in the business laptop in the future so we make this proje
 # r technology  : >.>     
 Welcome to my chanel
 1
-2
+![](imgreadme/1.jpg)
