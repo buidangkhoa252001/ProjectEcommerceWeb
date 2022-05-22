@@ -61,8 +61,6 @@ const AllUser = () => {
                     <div className="user_page-detail1-view">
                         <Link to={`/update/${user._id}`}> <button className="edit_button" ><i className="fa-solid fa-pen"></i>Edit</button></Link>
                         <button onClick={() => handleDelete(user._id,user.role)} className="delete_button"><i className="fa-solid fa-trash"/>delete</button>
-
-            
                     </div>
                 </div>
             ))

@@ -106,3 +106,7 @@
     font-weight: 600;
     border: none;
 }
+
+.create_category_detail button:hover {
+    opacity: 0.8;
+}

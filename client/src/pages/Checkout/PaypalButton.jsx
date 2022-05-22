@@ -34,9 +34,9 @@ export default class PaypalButton extends React.Component {
 
         let style = {
             /* layout: 'vertical', */
-            size: 'small',
+            size: 'medium',
             color: 'gold', /* silver white ,gold  */
-            shape: 'rect',
+            shape: 'pill',
             label:  'paypal'
          /*    tagline: false */
          

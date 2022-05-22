@@ -80,6 +80,10 @@
     align-items: center;
 }
 
+.user_page-detail1-view button:hover {
+    opacity: 0.8;
+}
+
 .history_page-detail1-view i {
     margin-right: 5px;
 }
@@ -116,6 +120,10 @@
     background-color: #a9e4b0;
     border-radius: 15px;
     margin: 0 20px;
+}
+
+.edit_button i {
+    margin-right: 5px;
 }
 
 .delete_button {

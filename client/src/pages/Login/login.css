@@ -35,6 +35,7 @@
     height: 100%;
     width: 100%;
     opacity: 0.6;
+    animation: 0.3s ease-in;
 }
 
 .login_deatil_back-home {
@@ -203,3 +204,83 @@
     z-index: 3;
     cursor: pointer;
 }
+
+
+/* responsive */
+
+
+@media screen and (1280px < width < 1920px) {
+    .login_detail_input input {
+        padding: 2rem 0.5rem 1rem 1rem;
+     }
+     .login_detail_input label {
+         font-size: 1rem;
+     }
+}
+
+@media screen and (1024px < width < 1280px) {
+    .login_detail-title h2 {
+        font-size: 0.6rem;
+    }
+    .login_detail-title h1 {
+        font-size: 1.4rem;
+    }
+    .login_detail-title p {
+        font-size: 0.8rem;
+    }
+    .login_detail_input input {
+        padding: 1.9rem 0.5rem 1rem 1rem;
+     }
+     
+     .login_detail_input label {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (768px < width < 1024px) {
+    .login_detail-title h2 {
+        font-size: 0.6rem;
+    }
+    .login_detail-title h1 {
+        font-size: 1.4rem;
+    }
+    .login_detail-title p {
+        font-size: 0.8rem;
+    }
+    .login_detail_input input {
+        padding: 1.9rem 0.5rem 1rem 1rem;
+     }
+     
+     .login_detail_input label {
+        font-size: 0.9rem;
+    }
+    .login_image {
+        clip-path: none;
+    }
+}
+
+@media screen and (320px < width < 768px) {
+    .login {
+        display: block;
+    }
+    .login_detail-title h2 {
+        font-size: 0.5rem;
+    }
+    .login_detail-title h1 {
+        font-size: 1.2rem;
+    }
+    .login_detail-title p {
+        font-size: 0.6rem;
+    }
+    .login_detail_input input {
+        padding: 1.9rem 0.5rem 1rem 1rem;
+     }
+     .login_detail_input label {
+        font-size: 0.8rem;
+    }
+     .login_image {
+         display: none;
+     }
+}
+
+

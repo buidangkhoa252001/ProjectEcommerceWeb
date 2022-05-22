@@ -60,7 +60,6 @@ const Login = () => {
                             <i onClick={()=> handleEye()} className="fa-solid fa-eye eye"></i>
                         </div>
                         <div className="login_detail-record">
-                        
                             <button  >Login</button>
                         </div>
                     </div>

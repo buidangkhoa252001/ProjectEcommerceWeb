@@ -186,7 +186,11 @@
     background-color: #333333;
     color: whitesmoke;
     border-radius: 15px;
-    margin-top: 15px;
+    margin: 15px 0;
+}
+
+.create_product form button:hover {
+    opacity: 0.8;
 }
 
 .create_product form button:active {
