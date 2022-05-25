@@ -22,7 +22,7 @@ const PaymentDetail = () => {
     return (
         <div className="history-page">
              <div className="history_page-logo">
-                <h2><i className="fa-solid fa-file-invoice"></i>Payment</h2>
+                <h2><i className="fa-solid fa-file-invoice"></i>Order</h2>
             </div>
             <div className="history_page_personal">
                 <h3>Personal <i className="fa-solid fa-user-clock"></i></h3>

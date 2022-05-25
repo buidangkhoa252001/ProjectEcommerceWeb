@@ -42,7 +42,7 @@ const Payment = () => {
 
         <div className="payment-page">
             <div className="payment_page-logo">
-                <h2><i className="fa-solid fa-file-invoice"></i>All Payment</h2>
+                <h2><i className="fa-solid fa-file-invoice"></i>All Order</h2>
             </div>
             <div className="payment_page_total-product">
                 <h3>Pending <i className="fa-solid fa-caret-up"></i></h3>
