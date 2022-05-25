@@ -118,7 +118,7 @@ function Checkout() {
                                         </tbody>
                                     </table>
                                     <div className="checkout_detail-info-form-btn">
-                                        <PaypalButton style="margin-top:15px"
+                                        <PaypalButton style="margin-top:15px;"
                                             total={total}
                                             tranSuccess={tranSuccess}
                                         />

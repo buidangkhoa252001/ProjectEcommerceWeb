@@ -187,7 +187,7 @@ function Profile() {
                             <i className="fa-solid fa-eye"></i>
                         </div>
 
-                        <div className="profile_detail-record">
+                        <div className="profile_detail-record1">
                             <button disabled={loading} onClick={handleUpdate}>Update</button>
                         </div>
                     </form>

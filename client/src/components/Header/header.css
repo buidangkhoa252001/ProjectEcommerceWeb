@@ -140,19 +140,27 @@ header li:hover{
     width: 100%;
 }
 
-.header_login-register li:nth-child(2) {
-    margin-left: 400px;
+
+.header_detail-login-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.header_login-register li:nth-child(3) {
+.header_detail-login-register .header_login {
+    margin-left: 200px;
+}
+
+.header_detail-login-register .header_register {
     border: 1px solid rgb(190, 184, 184);
     padding: 10px;
     border-radius: 15px;
+    margin-left: 10px;
 }
 
 .header_login-register ion-icon {
     font-size: 1.5rem;
-    padding-right: 6px;
+    padding-right: 3px;
 }
 
 .header_login-register li:hover {
