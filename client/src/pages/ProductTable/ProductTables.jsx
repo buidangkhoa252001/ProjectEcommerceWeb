@@ -152,6 +152,4 @@ const ProductTables = () => {
   ;
 }
 
-
-
 export default ProductTables;

@@ -17,7 +17,7 @@ const Login = () => {
         login(dispatch, { email, password })
         setTimeout(()=>{
                 navigate("/products", { replace: true });
-        },1500)
+        },2000)
       
     }
     const handleEye=()=>{

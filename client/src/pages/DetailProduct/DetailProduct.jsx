@@ -20,8 +20,8 @@ const DetailProduct = () => {
     const [image, setImage] = useState("")
     const params = useParams()
     const navigate = useNavigate();
-    /*     const [productCategory,setProductCategory]= useState([])
-        const [category,setCategory]= useState([]) */
+        const [productCategory,setProductCategory]= useState([])
+        const [category,setCategory]= useState([])
     const dispatch = useDispatch();
     const { currentToken, isAuth } = useSelector(state => state.login);
 
@@ -34,7 +34,7 @@ const DetailProduct = () => {
                 const res = await axios.get(`/api/products/${params.id}`)
                 setProduct(res.data)
                 setImage(res.data.images.url)
-
+                console.log(product)
             } catch (err) {
                 console.log(err)
             }
@@ -45,10 +45,12 @@ const DetailProduct = () => {
     }, [params.id])
     useEffect(() => {
         setCart1(cart)
-        /*     setCategory(product.category) */
+     
+        setCategory(product.category)
     }, [cart])
-    /*   useEffect(()=>{
+      useEffect(()=>{
           if(category){
+              console.log(category)
               const getcategory=async()=>{
                const res = await axios.get(`/api/products?category=${category}`)
               console.log(res.data)
@@ -61,7 +63,7 @@ const DetailProduct = () => {
 
           }
    
- },[category,product,params.id]) */
+ },[category,product,])
 
     const handleaddCart = async (product1) => {
 
@@ -119,64 +121,7 @@ const DetailProduct = () => {
                                 Buy Now <i className="fa-solid fa-cart-shopping"></i>
                             </button>
                         </div>
-                        {/* <div className="box-detail_configuation-title">
-                            <h2>Configuration: {product.title}</h2>
-                        </div> */}
-                        {/* <div className="box-detail_configuation-table">
-                            <table>
-                                <tr>
-                                    <td>CPU</td>
-                                    <td>Intel Core i5-1135G7 thế hệ 11</td>
-                                </tr>
-                                <tr>
-                                    <td>Loại card đồ họa</td>
-                                    <td>Intel Iris Xe</td>
-                                </tr>
-                                <tr>
-                                    <td>Dung lượng RAM</td>
-                                    <td>8GB</td>
-                                </tr>
-                                <tr>
-                                    <td>Ổ cứng</td>
-                                    <td>Ổ cứng SSD NVMe PCIe 512 GB</td>
-                                </tr>
-                                <tr>
-                                    <td>Kích thước màn hình</td>
-                                    <td>14 inches</td>
-                                </tr>
-                                <tr>
-                                    <td>Độ phân giải màn hình</td>
-                                    <td>2160 x 1440 pixels</td>
-                                </tr>
-                                <tr>
-                                    <td>Cổng giao tiếp</td>
-                                    <td>USB-C x 1 (hỗ trợ dữ liệu, sạc và DisplayPort)
-                                        USB 3.2 Gen1 × 2
-                                        HDMI × 1
-                                        Tai nghe 3,5 mm và jack micrô x 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Hệ điều hành</td>
-                                    <td>Windows 10 Home SL</td>
-                                </tr>
-                                <tr>
-                                    <td>Pin</td>
-                                    <td>56 Wh</td>
-                                </tr>
-                                <tr>
-                                    <td>Trọng lượng</td>
-                                    <td>1,49 kg</td>
-                                </tr>
-                                <tr>
-                                    <td>Công nghệ màn hình</td>
-                                    <td>IPS, sRGB 100%</td>
-                                </tr>
-                                <tr>
-                                    <td>Bluetooth</td>
-                                    <td>v5.1</td>
-                                </tr>
-                            </table>
-                        </div> */}
+                    
                     </div>
                 </div>
                 <div className="box-detail_title-script">
