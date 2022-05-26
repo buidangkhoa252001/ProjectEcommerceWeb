@@ -63,7 +63,7 @@ function Checkout() {
                             <span><ion-icon name="information-circle-outline"></ion-icon> Pending</span>
                         </div>
                         <div className="checkout_title-back">
-                            <button><Link style={{ textDecoration: "none", color: "black" }} to="/cart">Back</Link></button>
+                            <Link style={{ textDecoration: "none", color: "black" }} to="/cart"><button>Back</button></Link>
                         </div>
                     </div>
                     <div className="checkout_line"></div>
