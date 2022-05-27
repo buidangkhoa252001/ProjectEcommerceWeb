@@ -16,7 +16,7 @@ const History = () => {
             </div>
             <div className="history_page_total-product">
                 <h3>Finalized <i className="fa-solid fa-caret-up"></i></h3>
-                <h3>Total Product: {history.length}</h3>
+                <h3>Total Orders: {history.length}</h3>
             </div>
             <div className="history_page_title-detail1">
 
