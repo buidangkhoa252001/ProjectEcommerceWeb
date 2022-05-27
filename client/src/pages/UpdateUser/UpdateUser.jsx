@@ -83,6 +83,9 @@ function UpdateUser() {
             <div className="profile_page">
                 <div className="col-left">
                     <form className="update-profile" onSubmit={handleChange}>
+                        <div className="update-profile_title">
+                            <h2>Update User</h2>
+                        </div>
                         <div className="form-group">
                             <input type="email" name="email" id="email" defaultValue={user.email}
                                 placeholder=' ' disabled />
@@ -104,7 +107,6 @@ function UpdateUser() {
                         </div>
 
                         <div className="profile_detail-record">
-                           
                             <button  onClick={handleUpdate}>Update</button>
                         </div>
                     </form>

@@ -11,11 +11,13 @@ button {
 
 .image-slider {
     padding: 20px 0 20px 10px;
+    height: 100%;
 }
 
 .image-item {
     width: 100%;
     max-height: 400px;
+    cursor: pointer;
 }
 
 .image-slider img {

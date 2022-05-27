@@ -95,7 +95,7 @@ const ProductItem = ({ product }) => {
                 </div>
                 <div className="product_table-detail_title">{product.title}</div>
                 <div className="product_table-detail_description">{product.description}</div>
-                {categories.map(category=>{
+                {categories.map(category => {
                     if(category._id===product.category){
                         return <div key={product.category} className="product_table-detail_category">{category.name}</div>
                     }

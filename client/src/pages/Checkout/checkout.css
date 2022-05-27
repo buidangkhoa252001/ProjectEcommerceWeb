@@ -153,4 +153,5 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    padding-bottom: 40px;
 }
