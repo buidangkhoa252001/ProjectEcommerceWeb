@@ -9,9 +9,9 @@ Thài Gia Lạc(frontend)
 Frontend: redux-toolkit, html ,css,reactjs
 Backend: nodejs ,mongodb
 # Use Case:
-UserUsecase
+- UserUsecase
 <img src="imgreadme/usecuser.PNG" height="300px" width="600px" >
-Admin useCase:
+- Admin useCase:
 <img src="imgreadme/usecadmin.PNG" height="300px" width="600px" >
 # UI
 # Login page
@@ -26,5 +26,6 @@ Admin useCase:
 <img src="imgreadme/profile.PNG" height="300px" width="600px" >
 # Manage Product page
 <img src="imgreadme/createproduct.PNG" height="300px" width="600px" >
-
+## Features
+gg
 
