@@ -41,7 +41,7 @@ const Header = () => {
         return (
             <>
                 <div className="header_profile">
-                    <div className="avatarheader" onClick={handLogged}><img src={user.avatar} /></div>
+                    <div className="avatarheader" onClick={handLogged}><img src={user.avatar} alt="image_avatar"/></div>
                     <div className={`header_profile-detail ${on ? "active" : ""}`}>
 
                         <Link to="/profile" onClick={handLogged} style={{ textDecoration: "none", cursor: "pointer" }} ><li>Profile</li></Link>
