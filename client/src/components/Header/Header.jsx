@@ -21,6 +21,7 @@ const Header = () => {
     const [openSearch, setOpenSearch] = useState(false)
     const [openFilter, setOpenFilter] = useState(false)
     const [on, setOn] = useState(false)
+    const [openMenu, setOpenMenu] = useState(false)
     const logoutUser = async () => {
         setOn((on) => !on);
         logOutUser(dispatch)
@@ -37,11 +38,14 @@ const Header = () => {
     const handLogged = () => {
         setOn((on) => !on);
     }
+    const handleMenu = () => {
+        setOpenMenu(!openMenu)
+    }
     const loggedRouter = () => {
         return (
             <>
                 <div className="header_profile">
-                    <div className="avatarheader" onClick={handLogged}><img src={user.avatar} /></div>
+                    <div className="avatarheader" onClick={handLogged}><img src={user.avatar} alt="image_avatar"/></div>
                     <div className={`header_profile-detail ${on ? "active" : ""}`}>
 
                         <Link to="/profile" onClick={handLogged} style={{ textDecoration: "none", cursor: "pointer" }} ><li>Profile</li></Link>
@@ -104,21 +108,25 @@ const Header = () => {
     const adminRouter = () => {
         return (
             <>
-                <div className="header_detail-product">
-                    <li><Link style={{ textDecoration: "none" }} to="/productTable">Product</Link></li>
-                </div>
-                <div className="header_detail-product-admin">
-                    <li><Link style={{ textDecoration: "none" }} to="/createProduct">Create Product</Link></li>
-                </div>
-                <div className="header_detail-cate-admin">
-                    <li><Link style={{ textDecoration: "none" }} to="/createCategory">Categories</Link></li>
-                </div>
-                <div className="header_detail-payment-admin">
-                    <li><Link style={{ textDecoration: "none" }} to="/payment">Manage Orders</Link></li>
-                </div>
-                <div className="header_detail-payment-admin">
-                    <li><Link style={{ textDecoration: "none" }} to="/alluser">Manage User</Link></li>
-                </div>
+                {openMenu ? (
+                    <div className="admin_menu_close">
+                        <ion-icon name="close-outline" onClick={handleMenu} style={{fontSize : '2.5rem'}}></ion-icon>
+                    </div>
+                ) : (
+                    <div className="admin_menu_show">
+                        <ion-icon name="menu-outline" onClick={handleMenu} style={{fontSize : '2.5rem'}}></ion-icon>
+                    </div>
+                )}
+                {openMenu && (
+                    <div className="admin_menu-detail">
+                        <p>Menu</p>
+                        <Link style={{ textDecoration: "none" }} to="/productTable"><li>Product</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/createProduct"><li>Create Product</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/createCategory"><li>Categories</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/payment"><li>Manage Orders</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/alluser"><li>Manage User</li></Link>
+                    </div>
+                )}
             </>
         )
     }
@@ -126,7 +134,7 @@ const Header = () => {
     return (
         <header>
             <div className="menu" >
-                <img src={Menu} alt="" width="30px" />
+                {admin && adminRouter()}
             </div>
             <div>
                 <h1>
@@ -135,8 +143,6 @@ const Header = () => {
 
             </div>
             <div className="header_detail">
-
-                {admin && adminRouter()}
                 {!admin && isAuth && userRouter()}
                 {
 
