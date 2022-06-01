@@ -130,7 +130,11 @@ const Header = () => {
             </div>
             <div>
                 <h1>
-                    <Link style={{ textDecoration: "none" }} to="/">{admin ? 'Admin' : 'User'}</Link>
+                    {
+                        isAuth? <Link style={{ textDecoration: "none" }} to="/">{admin&&isAuth ? 'Admin' : 'Customer'}</Link>:
+                        <Link style={{ textDecoration: "none" }} to="/">Guest</Link>
+                    }
+                   
                 </h1>
 
             </div>

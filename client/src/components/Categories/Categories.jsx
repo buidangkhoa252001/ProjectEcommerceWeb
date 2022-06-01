@@ -4,12 +4,15 @@ import "./Categories.css"
 import useCustomRouter from '../../hooks/useCustomeRouter';
 import axios from "../../axios/axios"
 import useQuery from '../../hooks/useQuery';
-import { useSelector } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
+import {getCategories} from "../../api/CategoriesAPI"
 const Categories = ({ sort, page, search }) => {
-  /* const [categories,setCategories] = useState([]) */
+  const [category,setCategory] = useState([])
   const { categories } = useSelector(state => state.categories)
+  const dispatch = useDispatch()
+
   const { pushQuery } = useCustomRouter()
+
   const handleCategory = (id) => {
     if (id) {
       pushQuery({ page: 1, sort: sort, category: id })
@@ -18,10 +21,7 @@ const Categories = ({ sort, page, search }) => {
       pushQuery({ page: 1, sort: sort, search: "" })
     }
   }
-  useEffect(()=>{
-      console.log(window.location.search)
-   
-  },[])
+ 
 
 
   return (

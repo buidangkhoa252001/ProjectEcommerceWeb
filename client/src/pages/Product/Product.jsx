@@ -75,17 +75,17 @@ const Product = () => {
       setTotalPages(1)
     }
 
-  }, [data1?.products])
+  }, [data1?.products,data1.result])
   /* set so page tu` search  */
   useEffect(() => {
     if (search1) {
-      const gg = async () => {
+      const searchfind = async () => {
         const res = await axios.get(`/api/products?title[regex]=${search1}`)
         setPageResult(res.data.result)
         if (!res.data?.result) return 0;
         setTotalPages(Math.ceil(pageResult / limit))
       }
-      gg()
+      searchfind()
     }
     else if (category) {
       const category1 = async () => {

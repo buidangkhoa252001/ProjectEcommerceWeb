@@ -16,7 +16,7 @@ const Login = () => {
         e.preventDefault()
         login(dispatch, { email, password })
         setTimeout(()=>{
-                navigate("/products", { replace: true });
+                navigate("/", { replace: true });
         },2000)
       
     }
