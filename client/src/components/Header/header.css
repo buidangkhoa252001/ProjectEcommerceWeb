@@ -29,7 +29,7 @@ header li:hover{
     opacity: 1;
 }
 .menu{
-    display: none;
+    
 }
 .cart-icon{
     position: relative;
@@ -126,9 +126,60 @@ header li:hover{
 }
 
 /* amin */
-.header_detail-admin {
+.admin_menu_show {
+    background-color: #00BFFF;
+    border-radius: 10px;
     display: flex;
-    justify-content: space-between
+    justify-self: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.admin_menu_close {
+    background-color: rgb(215, 98, 118);
+    border-radius: 10px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.admin_menu-detail {
+    position: absolute;
+    left: 0;
+    top: 65px;
+    height: auto;
+    background-color: rgb(233, 233, 233);
+    opacity: 0.95;
+    z-index: 1000;
+}
+.admin_menu-detail p {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 20px;
+    margin: 5px 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.admin_menu-detail li {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    width: auto;
+    border-radius: 25px;
+    margin: 5px 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.admin_menu-detail li:hover {
+    background-color: rgb(125, 124, 124);
+    color: #d9e4ec;
+    transform: translateX(5px);
 }
 
 
