@@ -20,6 +20,10 @@
     padding: 1.5rem 1rem;
     position: relative;
     margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   
   .modal .container h3{

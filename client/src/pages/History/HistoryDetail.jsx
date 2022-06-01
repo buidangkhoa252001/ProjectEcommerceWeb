@@ -2,76 +2,66 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import "./historyDetail.css";
 
- 
 const HistoryDetail = () => {
     const params = useParams()
-    const history = useSelector(state=>state.history)
+    const history = useSelector(state => state.history)
     const [historyDetails, setHistoryDetails] = useState([])
-   
-    useEffect(()=>{
-        console.log(history.history)
-        console.log(params.id)
-      
 
-      history?.history.map(historyDetail=>{
-                if(historyDetail._id===params.id){
-                    setHistoryDetails(historyDetail)
-                }
-                console.log(historyDetails)
-            })
-    
-        
+    useEffect(() => {
+        history?.history.map(historyDetail => {
+            if (historyDetail._id === params.id) {
+                setHistoryDetails(historyDetail)
+            }
+        })
 
-    },[params,historyDetails,history])
+
+
+    }, [params, historyDetails, history])
     return (
         <div className="history-page">
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Postal Code</th>
-                    <th>Country Code</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{historyDetails.address.recipient_name}</td>
-                    <td>{historyDetails.address.line1 + " - " + historyDetails.address.city}</td>
-                    <td>{historyDetails.address.postal_code}</td>
-                    <td>{historyDetails.address.country_code}</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <table style={{margin: "30px 0px"}}>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Products</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-            {/*     {
-                    historyDetails?.cart.map(item =>(
-                    <tr key={item._id}>
-                        <td><img src={item.images.url} alt="" /></td>
-                        <td>{item.title}</td>
-                        <td>{item.quantity}</td>
-                        <td>$ {item.price * item.quantity}</td>
-                    </tr>
-                    ))
-                } */}
-                
-            </tbody>
-        </table>
-    </div>
+            <div className="history_page-logo">
+                <h2><i className="fa-solid fa-clock-rotate-left"></i>History</h2>
+            </div>
+            <div className="history_page_personal">
+                <h3>Personal <i className="fa-solid fa-user-clock"></i></h3>
+            </div>
+            <div className="history_page_personal-title">
+                <h3>Name <i className="fa-brands fa-airbnb"></i></h3>
+                <h3>Address <i className="fa-brands fa-airbnb"></i></h3>
+                <h3>Postal Code <i className="fa-brands fa-airbnb"></i></h3>
+                <h3>Phone number <i className="fa-brands fa-airbnb"></i></h3>
+            </div>
+            <div className="history_page_personal-detail">
+                <h3><i className="fa-solid fa-user"></i>{historyDetails?.address?.name}</h3>
+                <h3><i className="fa-solid fa-location-arrow"></i>{historyDetails?.address?.address}</h3>
+                <h3><i className="fa-solid fa-qrcode"></i>{historyDetails?.address?.postalcode}</h3>
+                <h3><i className="fa-solid fa-location-dot"></i>{historyDetails?.address?.phone}</h3>
+            </div>
+            <div className="history_page_product">
+                <h3>Products <i className="fa-solid fa-cart-arrow-down"></i></h3>
+            </div>
+            <div className="history_page_product-title">
+                <h3>Image <i className="fa-brands fa-airbnb"></i></h3>
+                <h3>Name Products <i className="fa-brands fa-airbnb"></i></h3>
+                <h3>Quantity <i className="fa-brands fa-airbnb"></i></h3>
+                <h3>Price <i className="fa-brands fa-airbnb"></i></h3>
+            </div>
+            {
+                historyDetails?.cart?.map(item => (
+                    <div className="history_page_product-detail" key={item._id}>
+                        <span><img src={item.images.url} alt="" /></span>
+                        <h3>{item.title}</h3>
+                        <h3>{item.quantity}</h3>
+                        <h3><i className="fa-solid fa-dollar-sign"></i> {item.price * item.quantity}</h3>
+                    </div>
+                ))
+            }
+        </div>
     );
 }
- 
 
- 
+
+
 export default HistoryDetail;

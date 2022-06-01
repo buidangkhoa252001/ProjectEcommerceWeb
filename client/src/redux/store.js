@@ -4,7 +4,11 @@ import loginReducer from "./loginSlice"
 import userReducer from "./userSlice"
 import cartReducer from "./cartSlice"
 import historyReducer from './historySlice';
-import pageReducer from './pageSlice';
+import categoriesReducer from './categoriesSlice';
+import orderReducer from './orderSlice';
+import alluserReducer from './AllUserSlice';
+
+
 
 import {
     persistStore,
@@ -29,7 +33,10 @@ import {
     user:userReducer,
     cart:cartReducer,
     history:historyReducer,
-    page:pageReducer
+    categories:categoriesReducer,
+    order:orderReducer,
+    alluser:alluserReducer
+ 
   })
   
   const persistedReducer = persistReducer(persistConfig, rootReducer)

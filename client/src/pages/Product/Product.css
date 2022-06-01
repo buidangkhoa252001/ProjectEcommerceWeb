@@ -1,0 +1,23 @@
+.layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 13% 87%;
+}
+.feature{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 25px;
+    align-items: center;
+    padding-top: 20px;
+}
+.text{
+    font-weight: 300;
+    font-size:22px;
+    margin-left: 2px;
+}
+.sorting{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}

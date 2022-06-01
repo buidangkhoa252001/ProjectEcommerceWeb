@@ -1,0 +1,138 @@
+.about{
+    background-image: linear-gradient(to right , rgba(251,226,184,0.6),  rgba(255,119,48,0.7)), url(https://jobsgo.vn/media/img/employer/48507-cover-app.jpg);
+    background-size: cover;  
+    
+    background-position: top;
+    position:relative;
+    height:90vh;
+    clip-path: ellipse(74% 60% at 50% 33%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-primary{
+    margin-bottom: 50px;
+}
+.about-primary--main{
+    display: block;
+    font-size: 6.2rem;
+    font-weight: 400;
+    letter-spacing: 15px;
+}
+.about-primary--sub{
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 15px; 
+}
+.about .btn{
+    width:160px;
+    padding: 0px 0px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    font-size: 18px;
+    width: 131px;
+    color: #777777;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.btn--white{
+    height: 58px;
+    width: 166px
+}
+
+
+.section-about{
+
+    padding: 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.section-about-script{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.section-title{
+    color:crimson;
+    font-size:40px;
+    font-weight:700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.section-script{
+    font-size:24px;
+    margin: 2px 40px;
+}
+.btn-section{
+    color: #5173fc;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 3px;
+    font-size: 22px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #5173fc;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+.about-imgs{
+    margin-left: 66px;
+width:400px;
+height:275px;
+position: relative;
+}
+.about-img{
+  /*   width: 100%;
+    height:88%; */
+    border-radius: 2px;
+    width: 54%;
+    box-shadow: 15px 16px 22px 7px rgba(0,0,0,0.45);
+    border-radius: 2px;
+    position:absolute;
+    z-index:10;
+    transition:all 0.2s
+}
+.img1{
+    z-index: 2;
+    left: -3px;
+    top: -1px;
+}
+.img2{
+    z-index: 3;
+    right: 34px;
+    top: 35px;
+}
+.img3{
+    z-index: 4;
+    width:53%;
+    left: 15px;
+    top: 85px;
+
+}
+.about-location{
+    color:crimson;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.about-map{
+    width:100%;
+    margin-bottom: 15px;
+
+    padding:5px 40px;
+}

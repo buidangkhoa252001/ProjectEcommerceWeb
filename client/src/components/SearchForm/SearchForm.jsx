@@ -12,7 +12,7 @@ const SearchForm = ({search,page,sort}) => {
     const value = inputRef.current.value
   /*   const { value } = e.target; */
     if(!value.trim()) return;
-    pushQuery({page:1, sort ,search:value })
+    pushQuery({page:1 , sort:sort ,search:value })
     inputRef.current.value=""
   }
  /*  const navigate = useNavigate()
@@ -24,10 +24,9 @@ const SearchForm = ({search,page,sort}) => {
   } */
   return (
     <div className='search_form'>
-    
       <form onSubmit={handleSubmit}>
-        <input type="text"  ref={inputRef}   />
-        <button>Search</button>
+        <input type="text"  ref={inputRef} placeholder="Find products..."  />
+        <button><i className="fa-solid fa-magnifying-glass"></i></button>
       </form>
     </div>
   )

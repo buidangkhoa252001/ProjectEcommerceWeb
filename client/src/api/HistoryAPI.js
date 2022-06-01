@@ -1,23 +1,21 @@
+import axios from "../axios/axios";
+import {
+  getHistoryFailure,
+  getHistoryStart,
+  getHistorySuccess,
+} from "../redux/historySlice";
 
-import { getHistoryFailure, getHistoryStart, getHistorySuccess } from "../redux/historySlice"
-
-import axios from "../axios/axios"
-
-export const getHistory =async(dispatch,token)=>{
-    if(token){
-        dispatch(getHistoryStart())
-        try{
-            const res = await axios.get('/user/history', {
-                headers: {Authorization:token}
-            })
-            dispatch(getHistorySuccess(res.data))
-            console.log(res)
-            
-        }catch(err){
-              dispatch(getHistoryFailure())
-              alert(err.response.data.msg)
-        }
-    }   
-
-
-}
+export const getHistory = async (dispatch, token) => {
+  if (token) {
+    dispatch(getHistoryStart());
+    try {
+      const res = await axios.get("/user/history", {
+        headers: { Authorization: token },
+      });
+      dispatch(getHistorySuccess(res.data));
+    } catch (err) {
+      dispatch(getHistoryFailure());
+      alert(err.response.data.msg);
+    }
+  }
+};

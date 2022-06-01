@@ -1,13 +1,29 @@
 .container{
     margin:5px 30px;
-   /*  display:flex; */
-    
+    padding-top: 10px;
+}
+.heading{
+    text-align: center;
+    padding: 0.5rem 0 1.5rem 0;
+}
+
+.heading span{
+    font-size: 3.5rem;
+    background:rgba(255, 165, 0,.2);
+    color: #CE3226;
+    border-radius: .5rem;
+    padding:.2rem 1rem;
+    text-transform: uppercase;
+    margin: 0 5px;
 }
 .wrapper{
-    
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    column-gap: 20px;
-    row-gap:20px;
-    justify-items: center
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px 40px;
+    justify-items: center;
+    margin:0 5px;
+
+}
+.text{
+    font-size:50px
 }
