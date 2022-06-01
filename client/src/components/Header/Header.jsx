@@ -157,7 +157,7 @@ const Header = () => {
 
                         <div className="header_login-register">
                             <div className="header_detail-product">
-                                <li><Link style={{ textDecoration: "none" }} to="/products">Shop</Link></li>
+                               
                             </div>
                             <div className="header_detail-login-register">
                                 <Link to="/login" style={{ textDecoration: "none" }}><li className="header_login"><ion-icon name="log-out-outline"></ion-icon>Login</li></Link>
