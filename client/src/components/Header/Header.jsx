@@ -36,9 +36,12 @@ const Header = () => {
         }
     }, [user, isAuth, cart])
     const handLogged = () => {
-        setOn((on) => !on);
+        setOn(!on);
     }
     const handleMenu = () => {
+        setOpenMenu(!openMenu)
+    }
+    const setChange = ()=>{
         setOpenMenu(!openMenu)
     }
     const loggedRouter = () => {
@@ -120,11 +123,11 @@ const Header = () => {
                 {openMenu && (
                     <div className="admin_menu-detail">
                         <p>Menu</p>
-                        <Link style={{ textDecoration: "none" }} to="/productTable"><li>Product</li></Link>
-                        <Link style={{ textDecoration: "none" }} to="/createProduct"><li>Create Product</li></Link>
-                        <Link style={{ textDecoration: "none" }} to="/createCategory"><li>Categories</li></Link>
-                        <Link style={{ textDecoration: "none" }} to="/payment"><li>Manage Orders</li></Link>
-                        <Link style={{ textDecoration: "none" }} to="/alluser"><li>Manage User</li></Link>
+                        <Link  style={{ textDecoration: "none" }} to="/productTable"><li onClick={setChange}>Product</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/createProduct"><li onClick={setChange}>Create Product</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/createCategory"><li onClick={setChange}>Categories</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/payment"><li onClick={setChange}>Manage Orders</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/alluser"><li onClick={setChange}>Manage User</li></Link>
                     </div>
                 )}
             </>

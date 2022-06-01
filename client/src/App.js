@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
 import ProductTables from "./pages/ProductTable/ProductTables";
@@ -42,9 +42,7 @@ function App() {
           path="/"
           element={
             admin ? (
-              <PrivateRoute>
-                <ProductTables />
-              </PrivateRoute>
+              <Navigate to="/productTable" replace />
             ) : (
               <PrivateRoute>
                 <Home />
