@@ -9,9 +9,7 @@ const NotFound= () => {
         <Header />
         <div className="containernotfound">
            <img src={notfound} />
-           
         </div>
-        
         </>
     );
 }

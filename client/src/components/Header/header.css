@@ -28,8 +28,13 @@ header li{
 header li:hover{
     opacity: 1;
 }
-.menu{
-    
+
+.title_header {
+    width: 300px;
+}
+
+.title-customer {
+    color: rgb(132, 71, 71);
 }
 .cart-icon{
     position: relative;
@@ -107,6 +112,7 @@ header li:hover{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: none;
     margin: 10px;
+    transform: translateX(-37%);
 }
 
 .header_profile-detail.active {

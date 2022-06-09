@@ -15,7 +15,7 @@ const Payment = () => {
                 headers:{Authorization:currentToken.accesstoken}
             })
             alert("change success")
-    
+            
             getUser(dispatch,currentToken.accesstoken)  
         }
         catch (err) {

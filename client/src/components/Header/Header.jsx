@@ -11,6 +11,7 @@ import Modal from '../Modal/Modal';
 import SearchForm from '../SearchForm/SearchForm';
 import FilterForm from '../Filter/FilterForm';
 
+
 const Header = () => {
     const dispatch = useDispatch()
     const { isAuth } = useSelector(state => state.login);
@@ -136,11 +137,10 @@ const Header = () => {
             <div className="menu" >
                 {admin && adminRouter()}
             </div>
-            <div>
+            <div className="title_header">
                 <h1>
-                    <Link style={{ textDecoration: "none" }} to="/">{admin ? 'Admin' : 'User'}</Link>
+                    <Link style={{ textDecoration: "none" }} to="/">{admin ? 'Admin' : (<div className="title-customer">LALASTORE</div>)}</Link>
                 </h1>
-
             </div>
             <div className="header_detail">
                 {!admin && isAuth && userRouter()}
