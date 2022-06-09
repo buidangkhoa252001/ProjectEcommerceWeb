@@ -83,28 +83,14 @@ const Header = () => {
                 <div className="header_detail-history">
                     <li><Link style={{ textDecoration: "none" }} to="/aboutus">AboutUs</Link></li>
                 </div>
-                <div className="header_detail-search">
-                    <li onClick={() => setOpenSearch(true)}>Search</li>
-                </div>
+              
                 <div className="cart-icon">
                     {cart ? <span>{cart.length}</span> : <span>0</span>}
                     <Link to="/cart">
                         <img src={Cart} alt="" width="30" />
                     </Link>
                 </div>
-                {/*  <li onClick={() => setOpenFilter(true)}>Filter </li> */}
-                {
-                    openSearch &&
-                    <Modal titleTxt="Search" setOpen={setOpenSearch} >
-                        <SearchForm />
-                    </Modal>
-                }
-                {
-                    openFilter &&
-                    <Modal titleTxt="Filter" setOpen={setOpenFilter}>
-                        <FilterForm />
-                    </Modal>
-                }
+             
             </>
         )
     }
@@ -157,7 +143,7 @@ const Header = () => {
 
                         <div className="header_login-register">
                             <div className="header_detail-product">
-                                <li><Link style={{ textDecoration: "none" }} to="/products">Shop</Link></li>
+                               
                             </div>
                             <div className="header_detail-login-register">
                                 <Link to="/login" style={{ textDecoration: "none" }}><li className="header_login"><ion-icon name="log-out-outline"></ion-icon>Login</li></Link>

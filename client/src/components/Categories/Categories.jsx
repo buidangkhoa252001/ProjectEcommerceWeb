@@ -21,8 +21,8 @@ const Categories = ({ sort, page, search }) => {
       pushQuery({ page: 1, sort: sort, search: "" })
     }
   }
- 
 
+ 
 
   return (
     <div className='Categories'>
@@ -38,7 +38,7 @@ const Categories = ({ sort, page, search }) => {
         <div className="category_type-detail" onClick={() => { handleCategory() }} ><a href="">All Products</a></div>
 
         {
-          categories.map(category => (
+            categories.map(category => (
             <div className="category_type-detail" key={category._id} onClick={() => { handleCategory(category._id) }}>
               <a href="">{category.name}</a>
             </div>

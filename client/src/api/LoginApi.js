@@ -1,5 +1,5 @@
 import axios from "../axios/axios";
-/* import axios from "axios"; */
+
 import { logOutCart } from "../redux/cartSlice";
 import { logOutHistory } from "../redux/historySlice";
 import {
@@ -12,7 +12,7 @@ import {
 
 import { logOutUserStore } from "../redux/userSlice";
 
-import { getUser, LoginandNavigateUser } from "./UserApi";
+import { getUser } from "./UserApi";
 
 export const login = async (dispatch, user) => {
   dispatch(loginStart());
@@ -49,6 +49,8 @@ export const logOutUser = async (dispatch) => {
     dispatch(logOutUserStore());
     dispatch(logOutHistory());
     localStorage.removeItem("persist:root");
+
+    localStorage.removeItem("firstLogin");
   } catch (err) {
     dispatch(loginFailure());
     alert(err.response.data.msg);

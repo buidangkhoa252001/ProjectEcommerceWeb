@@ -39,4 +39,6 @@ Backend: nodejs ,mongodb
 # Manage Product page
 <img src="imgreadme/createproduct.PNG" height="300px" width="600px" >
 ## Features
-gg
+Account to login
+admin@gmail.com-123456
+user@gmail.com-123456
