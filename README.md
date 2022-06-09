@@ -47,9 +47,9 @@ Backend: nodejs ,mongodb
 <img src="imgreadme/diagram.png" height="300px" width="600px" >
 
 ## Features
-+CRUD users,orders,products,...
-+Pagination,search,filter products,.
+-CRUD users,orders,products,...
+-Pagination,search,filter products,.
 
 ## Account to login
-admin@gmail.com-123456
-user@gmail.com-123456
+-admin@gmail.com-123456
+-user@gmail.com-123456
