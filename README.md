@@ -38,7 +38,11 @@ Backend: nodejs ,mongodb
 <img src="imgreadme/profile.PNG" height="300px" width="600px" >
 # Manage Product page
 <img src="imgreadme/createproduct.PNG" height="300px" width="600px" >
+# Diagram
+<img src="imgreadme/diagram.png" height="300px" width="600px" >
 ## Features
-Account to login
++CRUD users,orders,products,...
++Pagination,search,filter products,.
+## Account to login
 admin@gmail.com-123456
 user@gmail.com-123456
