@@ -37,9 +37,12 @@ const Header = () => {
         }
     }, [user, isAuth, cart])
     const handLogged = () => {
-        setOn((on) => !on);
+        setOn(!on);
     }
     const handleMenu = () => {
+        setOpenMenu(!openMenu)
+    }
+    const setChange = ()=>{
         setOpenMenu(!openMenu)
     }
     const loggedRouter = () => {
@@ -81,28 +84,14 @@ const Header = () => {
                 <div className="header_detail-history">
                     <li><Link style={{ textDecoration: "none" }} to="/aboutus">AboutUs</Link></li>
                 </div>
-                <div className="header_detail-search">
-                    <li onClick={() => setOpenSearch(true)}>Search</li>
-                </div>
+              
                 <div className="cart-icon">
                     {cart ? <span>{cart.length}</span> : <span>0</span>}
                     <Link to="/cart">
                         <img src={Cart} alt="" width="30" />
                     </Link>
                 </div>
-                {/*  <li onClick={() => setOpenFilter(true)}>Filter </li> */}
-                {
-                    openSearch &&
-                    <Modal titleTxt="Search" setOpen={setOpenSearch} >
-                        <SearchForm />
-                    </Modal>
-                }
-                {
-                    openFilter &&
-                    <Modal titleTxt="Filter" setOpen={setOpenFilter}>
-                        <FilterForm />
-                    </Modal>
-                }
+             
             </>
         )
     }
@@ -121,11 +110,11 @@ const Header = () => {
                 {openMenu && (
                     <div className="admin_menu-detail">
                         <p>Menu</p>
-                        <Link style={{ textDecoration: "none" }} to="/productTable"><li>Product</li></Link>
-                        <Link style={{ textDecoration: "none" }} to="/createProduct"><li>Create Product</li></Link>
-                        <Link style={{ textDecoration: "none" }} to="/createCategory"><li>Categories</li></Link>
-                        <Link style={{ textDecoration: "none" }} to="/payment"><li>Manage Orders</li></Link>
-                        <Link style={{ textDecoration: "none" }} to="/alluser"><li>Manage User</li></Link>
+                        <Link  style={{ textDecoration: "none" }} to="/productTable"><li onClick={setChange}>Product</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/createProduct"><li onClick={setChange}>Create Product</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/createCategory"><li onClick={setChange}>Categories</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/payment"><li onClick={setChange}>Manage Orders</li></Link>
+                        <Link style={{ textDecoration: "none" }} to="/alluser"><li onClick={setChange}>Manage User</li></Link>
                     </div>
                 )}
             </>
@@ -139,7 +128,10 @@ const Header = () => {
             </div>
             <div className="title_header">
                 <h1>
-                    <Link style={{ textDecoration: "none" }} to="/">{admin ? 'Admin' : (<div className="title-customer">LALASTORE</div>)}</Link>
+                    {
+                        isAuth? <Link style={{ textDecoration: "none" }} to="/">{admin&&isAuth ? 'Admin' : (<div className="title-customer">LALASTORE</div>)}</Link>:
+                        <Link style={{ textDecoration: "none" }} to="/">Guest</Link>
+                    }
                 </h1>
             </div>
             <div className="header_detail">
@@ -150,7 +142,7 @@ const Header = () => {
 
                         <div className="header_login-register">
                             <div className="header_detail-product">
-                                <li><Link style={{ textDecoration: "none" }} to="/products">Shop</Link></li>
+                               
                             </div>
                             <div className="header_detail-login-register">
                                 <Link to="/login" style={{ textDecoration: "none" }}><li className="header_login"><ion-icon name="log-out-outline"></ion-icon>Login</li></Link>
