@@ -129,7 +129,7 @@ const CreateProduct = () => {
             setImages(false)
             setProduct(initialState)
 
-            navigate("/products", { replace: true })
+            navigate("/productTable", { replace: true })
 
         }
 
