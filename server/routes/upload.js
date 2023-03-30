@@ -40,7 +40,7 @@ router.post('/upload',auth,(req,res)=>{
                 if(err){ throw err }
 
                 removeTmp(file.tempFilePath)     
-
+                
                 res.json({public_id: result.public_id, url: result.secure_url})
 
             })

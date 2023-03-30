@@ -11,17 +11,14 @@ const SearchForm = ({search,page,sort}) => {
     e.preventDefault()
     const value = inputRef.current.value
   /*   const { value } = e.target; */
+  console.log(value)
+  console.log("current",inputRef.current)
+  console.log("currenti",inputRef)
     if(!value.trim()) return;
     pushQuery({page:1 , sort:sort ,search:value })
     inputRef.current.value=""
   }
- /*  const navigate = useNavigate()
-  const handleSubmit = (e)=>{
-    e.preventDefault()
-    const value = inputRef.current.value
-    if(!value.trim()) return;
-    return navigate(`/search/${value}`)
-  } */
+ 
   return (
     <div className='search_form'>
       <form onSubmit={handleSubmit}>

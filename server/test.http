@@ -1,0 +1,12 @@
+###
+
+GET http://localhost:5000/user/getAllUser
+###
+# @name getd
+POST http://localhost:5000/user/register
+Content-Type: application/json
+{
+     "email":"khoa1@gmail.com",
+     "password":"123456",
+     "name":"khoa"
+}

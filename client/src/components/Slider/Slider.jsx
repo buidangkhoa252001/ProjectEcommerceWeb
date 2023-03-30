@@ -67,34 +67,34 @@ function Slider1() {
                 <Slider {...settings}>
                     <div className="image-slider">
                         <div className="image-item">
-                            <Link to="/products?page=1&sort=-createdAt&category=61bc3eb603e81bf349d64e48"><img src={laptop1} alt="image_2" /></Link>
+                            <Link to="/products"><img src={laptop1} alt="image_2" /></Link>
                         </div>
                     </div>
                     <div className="image-slider">
                         <div className="image-item">
-                            <Link to="/products/62897b29871f3b9b05348daa"><img src={laptopRogFlowZ13} alt="image_2" /></Link>
+                            <Link to="/products"><img src={laptopRogFlowZ13} alt="image_2" /></Link>
                         </div>
                     </div>
                     <div className="image-slider">
                         <div className="image-item">
-                            <Link to="/products/62897a8a871f3b9b05348da5"><img src={LaptopAcerNitro} alt="image_3" /></Link>
+                            <Link to="/products"><img src={LaptopAcerNitro} alt="image_3" /></Link>
                         </div>
                     </div>
                     <div className="image-slider">
                         <div className="image-item">
-                            <Link to="/products/6268a741300ed1b8b15cf2a7"><img src={rogTrix} alt="image_4" /></Link>
+                            <Link to="/products"><img src={rogTrix} alt="image_4" /></Link>
                         </div>
                     </div>
                 </Slider>
                 <div className="img_grid">
                     <div className="img_grid-item">
-                        <Link to="/products/6284fe59b9f57a6637da55bd"><img src={earCorsair} alt="image_5" /></Link>
+                        <Link to="/products"><img src={earCorsair} alt="image_5" /></Link>
                     </div>
                     <div className="img_grid-item">
-                        <Link to="/products/628979a9871f3b9b05348d7a"><img src={mouseWireless} alt="image_5" /></Link>
+                        <Link to="/products"><img src={mouseWireless} alt="image_5" /></Link>
                     </div>
                     <div className="img_grid-item">
-                        <Link to="/products/6284d799dc5c7e6219c5468f"><img src={Logitech} alt="image_5" /></Link>
+                        <Link to="/products"><img src={Logitech} alt="image_5" /></Link>
                     </div>
                 </div>
             </div>
@@ -102,27 +102,27 @@ function Slider1() {
                 <Slider {...setting1}>
                     <div className="image-slider">
                         <div className="image-item">
-                            <Link to="/products?page=1&sort=-createdAt&category=61bc3d61c5394f092b5ae8f0"><img src={mouse} alt="image_2" /></Link>
+                            <Link to="/products"><img src={mouse} alt="image_2" /></Link>
                         </div>
                     </div>
                     <div className="image-slider">
                         <div className="image-item">
-                            <Link to="/products?page=1&sort=-createdAt&category=627da9049747ca0c144b25e1"><img src={keyboard} alt="image_2" /></Link>
+                            <Link to="/products"><img src={keyboard} alt="image_2" /></Link>
                         </div>
                     </div>
                     <div className="image-slider">
                         <div className="image-item">
-                            <Link to="/products?page=1&sort=-createdAt&category=626158ca5dc4016015aad669"><img src={monitor} alt="image_3" /></Link>
+                            <Link to="/products"><img src={monitor} alt="image_3" /></Link>
                         </div>
                     </div>
                     <div className="image-slider">
                         <div className="image-item">
-                            <Link to="/products?page=1&sort=-createdAt&category=620617ae2b660dfccd18b18f"><img src={earPhone} alt="image_4" /></Link>
+                            <Link to="/products"><img src={earPhone} alt="image_4" /></Link>
                         </div>
                     </div>
                     <div className="image-slider">
                         <div className="image-item">
-                            <Link to="/products?page=1&sort=-createdAt&category=61bc3eb603e81bf349d64e48"><img src={laptop} alt="image_4" /></Link>
+                            <Link to="/products"><img src={laptop} alt="image_4" /></Link>
                         </div>
                     </div>
                 </Slider>

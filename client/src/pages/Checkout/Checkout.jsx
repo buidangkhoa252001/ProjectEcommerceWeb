@@ -9,6 +9,7 @@ import PaypalButton from './PaypalButton';
 import "./checkout.css";
 import IMG from "./logo.png"
 
+
 const initialState = {
     name: '',
     phone: '',
@@ -118,6 +119,7 @@ function Checkout() {
                                         </tbody>
                                     </table>
                                     <div className="checkout_detail-info-form-btn">
+                                  
                                         <PaypalButton style="margin-top:15px;"
                                             total={total}
                                             tranSuccess={tranSuccess}

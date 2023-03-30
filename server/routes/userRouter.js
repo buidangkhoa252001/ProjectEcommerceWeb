@@ -22,7 +22,7 @@ router.patch('/reset/:id', auth, userCtrl.resetAdminPassword)
 router.patch('/update', auth, userCtrl.updateUser)
 router.patch('/update/:id', auth, userCtrl.updateUserAdmin)
 router.delete('/delete/:id', auth, userCtrl.deleteUser)
-router.get('/getAllUser', auth, userCtrl.getAllUser)
+router.get('/getAllUser', /* auth, */ userCtrl.getAllUser)
 router.get('/getUser/:id', auth, userCtrl.getUserId)
 
 module.exports = router

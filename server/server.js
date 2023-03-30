@@ -25,10 +25,17 @@ app.use("/api", require("./routes/orderRouter"));
 
 /* Connect to  mongodb */
 const URL = process.env.MONGODB_URL;
-mongoose.connect(URL, {}, (err) => {
-  if (err) throw err;
-  console.log("Connected to MongoDB");
-});
+mongoose.connect(
+  URL,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err) => {
+    if (err) throw err;
+    console.log("Connected to mongodb");
+  }
+);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

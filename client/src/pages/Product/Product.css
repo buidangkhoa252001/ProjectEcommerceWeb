@@ -21,3 +21,9 @@
     align-items: center;
 
 }
+@media only screen and (max-width: 1000px){
+    .layout{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+}
