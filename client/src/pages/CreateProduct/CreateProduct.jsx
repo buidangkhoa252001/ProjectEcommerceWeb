@@ -59,7 +59,7 @@ const CreateProduct = () => {
     }, [param.id])
 
     const handleUpload = async (e) => {
-
+       
         e.preventDefault()
         try {
 
@@ -71,10 +71,12 @@ const CreateProduct = () => {
             if (file.type !== "image/jpeg" && file.type !== "image/png") return alert("File is not the image")
             console.log(file)
             let formData = new FormData()
+
             formData.append('file', file);
+            console.log(formData)
             setLoading(true)
             const res = await axios.post("/api/upload", formData, {
-                headers: { "content-type": "multipart/form-data", Authorization: currentToken.accesstoken }
+                headers: { "Content-Type": "multipart/form-data", Authorization: currentToken.accesstoken }
             })
             setLoading(false)
             setImages(res.data)
