@@ -1,9 +1,9 @@
 import axios from "axios";
 
-/* const BASE_URL = "https://ecommerce-laptop--app.herokuapp.com"; */
+const BASE_URL = "https://ecommerceweb-9z39.onrender.com";
 /* const BASE_URL = "http://localhost:5000"; */
 const instance = axios.create({
-  baseURL: process.env.BACKEND_LOCAL,
+  baseURL: BASE_URL,
 });
 
 export default instance;
